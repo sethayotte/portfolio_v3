@@ -1,0 +1,23 @@
+// Inter
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800&display=swap');
+// Inconsolata
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;500;600&display=swap');
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 50px;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+a {
+  
+}
+
+@import './pages/Landing.scss';
+@import './pages/Work.scss';
+@import './pages/Resume.scss';
+@import './pages/Contact.scss';

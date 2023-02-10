@@ -1,23 +1,77 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import React, { useEffect, useState } from 'react';
+import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
+import { Contact } from './pages/Contact';
+import { Landing } from './pages/Landing';
+import { Resume } from './pages/Resume';
+import { Work } from './pages/Work';
 
-function App() {
+const App = () => {
+
+  const [isMobileSafari, setIsMobileSafari] = useState(false);
+  
+  var ua = window.navigator.userAgent;
+  var iOS = !!ua.match(/iPad/i) || !!ua.match(/iPhone/i);
+  var webkit = !!ua.match(/WebKit/i);
+  var iOSSafari = iOS && webkit && !ua.match(/CriOS/i);
+
+  useEffect(() => {
+      setIsMobileSafari(iOSSafari);
+  }, [iOSSafari])
+
+  const ScrollToTop = (props) => {
+    const location = useLocation();
+    useEffect(() => {
+      window.scrollTo({top: 0, left: 0, behavior: "instant"});
+    }, [location]);
+  
+    return <>{props.children}</>
+  };
+
+  document.addEventListener("touchstart", function(){}, true);
+
+  window.addEventListener('scroll', () => {
+      document.documentElement.style.setProperty('--scroll-y', `${window.scrollY}px`);
+  });
+
+  const watchForHover = () => {
+    // lastTouchTime is used for ignoring emulated mousemove events
+    let lastTouchTime = 0
+  
+    function enableHover() {
+      if (new Date() - lastTouchTime < 500) return
+      document.body.classList.add('hasHover')
+    }
+  
+    function disableHover() {
+      document.body.classList.remove('hasHover')
+    }
+  
+    function updateLastTouchTime() {
+      lastTouchTime = new Date()
+    }
+  
+    document.addEventListener('touchstart', updateLastTouchTime, true)
+    document.addEventListener('touchstart', disableHover, true)
+    document.addEventListener('mousemove', enableHover, true)
+  
+    enableHover();
+  }
+  
+  watchForHover();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Router>
+        <ScrollToTop>
+              <Routes>
+                  <Route path='/' element={<Landing isMobileSafari={isMobileSafari} />} />
+                  <Route path='/work' element={<Work />} />
+                  <Route path='/resume' element={<Resume />} />
+                  <Route path='/contact' element={<Contact />} />
+              </Routes>
+        </ScrollToTop>
+      </Router>
     </div>
   );
 }
