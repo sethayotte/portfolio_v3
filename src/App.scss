@@ -5,18 +5,15 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 50px;
+  scroll-padding-top: 100px;
 }
 
 body {
-  margin: 0;
+  margin: 90px 25px;
   font-family: 'Inter', sans-serif;
 }
 
-a {
-  
-}
-
+@import './components/Header.scss';
 @import './pages/Landing.scss';
 @import './pages/Work.scss';
 @import './pages/Resume.scss';

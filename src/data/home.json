@@ -1,0 +1,106 @@
+[
+    [
+        {
+            "title": "The Blocks",
+            "logoMark": "https://this-is-a-logo-url.com",
+            "color": "#ECECEC",
+            "darkColor": "#FFC832",
+            "toggleColor": "#d8d8d8a4",
+            "font": "Inter",
+            "content": {
+                "description": "This is a blurb of text introducing the specific project",
+                "slug": "the-blocks"
+            }
+        },
+        {
+            "title": "Shoebox",
+            "logoMark": "",
+            "color": "#FFC832",
+            "darkColor": "#FFC832",
+            "toggleColor": "#ffffff9f",
+            "font": "Inter",
+            "content": {
+                "description": "",
+                "slug": "shoebox"
+            }
+        }
+    ],
+    [
+        {
+            "title": "Year End Review",
+            "logoMark": "",
+            "color": "#AA0000",
+            "darkColor": "#FFC832",
+            "toggleColor": "#ffffff9f",
+            "font": "Inter",
+            "content": {
+                "description": "",
+                "slug": "year-end-review"
+            }
+        },
+        {
+            "title": "The Mitch Kitch",
+            "logoMark": "",
+            "color": "#EAF2FF",
+            "darkColor": "#FFC832",
+            "toggleColor": "#d8d8d8a4",
+            "font": "Inter",
+            "content": {
+                "description": "",
+                "slug": "the-mitch-kitch"
+            }
+        }
+    ],
+    [
+        {
+            "title": "Compound",
+            "logoMark": "",
+            "color": "#1B94FF",
+            "darkColor": "#FFC832",
+            "toggleColor": "#ffffff9f",
+            "font": "Inter",
+            "content": {
+                "description": "",
+                "slug": "compound"
+            }
+        },
+        {
+            "title": "Everyday Portfolio",
+            "logoMark": "",
+            "color": "#1DD000",
+            "darkColor": "#FFC832",
+            "toggleColor": "#ffffff9f",
+            "font": "Inter",
+            "content": {
+                "description": "",
+                "slug": "everyday-portfolio"
+            }
+        }
+    ],
+    [
+        {
+            "title": "Sprout",
+            "logoMark": "",
+            "color": "#52CA8E",
+            "darkColor": "#FFC832",
+            "toggleColor": "#ffffff9f",
+            "font": "Inter",
+            "content": {
+                "description": "",
+                "slug": "sprout"
+            }
+        },
+        {
+            "title": "Run Away",
+            "logoMark": "",
+            "color": "#F9F9F9",
+            "darkColor": "#FFC832",
+            "toggleColor": "#d8d8d8a4",
+            "font": "Inter",
+            "content": {
+                "description": "",
+                "slug": "run-away"
+            }
+        }
+    ]
+]
