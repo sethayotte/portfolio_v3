@@ -100,20 +100,32 @@
             align-items: center;
             justify-content: center;
 
+            h2 {
+                font-size: 34pt;
+                text-align: center;
+                padding: 0 15px;
+            }
+
             .tile-toggle {
                 position: absolute;
                 bottom: 0;
                 right: 0;
                 font-size: 28pt;
+                transform: rotate(0);
                 padding: 25px;
                 cursor: pointer;
+                transition: transform 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+
+                &.close {
+                    transform: rotate(45deg);
+                }
             }
         }
 
         &.row0 {
             width: 100%;
             max-width: 1200px;
-            height: 600px;
+            height: 500px;
             transition: all 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940);
             position: relative;
 
@@ -123,7 +135,7 @@
                 position: relative;
                 top: 0;
                 left: 0;
-                height: 600px;
+                height: 500px;
                 transform: translateY(0);
                 margin-right: 25px;
                 margin-bottom: 0px;
@@ -136,13 +148,13 @@
                 position: relative;
                 top: 0;
                 right: 0;
-                height: 600px;
+                height: 500px;
                 transform: translateY(0);
                 transition: all 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940);
             }
 
             &.expanded-the-blocks {
-                height: 1200px;
+                height: 1000px;
                 align-items: flex-end;
                 justify-content: flex-end;
 
@@ -152,7 +164,7 @@
                     top: 0;
                     left: 0;
                     max-width: 1200px;
-                    height: 800px;
+                    height: 600px;
                     margin-right: 0;
                     margin-bottom: 25px;
                 }
@@ -165,7 +177,7 @@
             }
 
             &.expanded-shoebox {
-                height: 1200px;
+                height: 1000px;
                 align-items: flex-end;
                 justify-content: flex-start;
 
@@ -184,7 +196,7 @@
                     position: absolute;
                     top: 0;
                     right: 0;
-                    height: 800px;
+                    height: 600px;
                     transform: translateY(0px);
                 }
             }

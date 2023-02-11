@@ -1,11 +1,16 @@
 // Inter
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 // Inconsolata
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;500;600&display=swap');
+// IBM Plex Sans
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600&display=swap');
+// Bitter
+@import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,300;0,400;0,500;1,300&display=swap');
 
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 100px;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
 body {

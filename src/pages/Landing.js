@@ -10,21 +10,26 @@ const Landing = ({isMobileSafari}) => {
     const [tileExpand, setTileExpand ] = useState('');
 
     const toggleTile = (slug, rowIndex, item) => {
-        document.querySelector(`.row${rowIndex}`).classList.toggle(`expanded-${slug}`)
+        if (tileExpand === '') {
+            document.querySelector(`.row${rowIndex}`).classList.toggle(`expanded-${slug}`);
+        } else {
+            document.querySelector(`.row${rowIndex}`).classList.toggle(`expanded-${slug}`);
+        }
+        
     }
 
     const RenderTileRow = ({row, parentIndex}) => {
         return (
             <div className={'project-row' + ' ' + "row"+parentIndex}>
-                <div className='tile' id={row[0].content.slug} style={{backgroundColor: row[0].color}} >
-                    <h2 style={{color: row[0].toggleColor}}>{row[0].title}</h2>
+                <div className='tile' id={row[0].content.slug} onClick={() => toggleTile(row[0].content.slug, parentIndex, 0)} style={{backgroundColor: row[0].color}} >
+                    <h2 style={{color: row[0].fontColor, fontFamily: row[0].font, fontWeight: row[0].weight}}>{row[0].title}</h2>
 
-                    <BsPlusCircleFill className='tile-toggle' onClick={() => toggleTile(row[0].content.slug, parentIndex, 0)} style={{color: row[0].toggleColor}} />
+                    <BsPlusCircleFill className={tileExpand === row[0].content.slug ? 'tile-toggle close' : 'tile-toggle'} style={{color: row[0].toggleColor}} />
                 </div>
                 <div className='tile' id={row[1].content.slug} style={{backgroundColor: row[1].color}} >
-                    <h2 style={{color: row[1].toggleColor}}>{row[1].title}</h2>
+                    <h2 style={{color: row[1].fontColor, fontFamily: row[1].font, fontWeight: row[1].weight}}>{row[1].title}</h2>
 
-                    <BsPlusCircleFill className='tile-toggle' onClick={() => toggleTile(row[1].content.slug, parentIndex, 1)} style={{color: row[1].toggleColor}} />
+                    <BsPlusCircleFill className={tileExpand === row[1].content.slug ? 'tile-toggle close' : 'tile-toggle'} onClick={() => toggleTile(row[1].content.slug, parentIndex, 1)} style={{color: row[1].toggleColor}} />
                 </div>
             </div>
         )

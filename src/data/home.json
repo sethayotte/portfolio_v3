@@ -6,7 +6,9 @@
             "color": "#ECECEC",
             "darkColor": "#FFC832",
             "toggleColor": "#d8d8d8a4",
-            "font": "Inter",
+            "fontColor": "#000000",
+            "font": "IBM Plex Sans",
+            "weight": "500",
             "content": {
                 "description": "This is a blurb of text introducing the specific project",
                 "slug": "the-blocks"
@@ -18,7 +20,9 @@
             "color": "#FFC832",
             "darkColor": "#FFC832",
             "toggleColor": "#ffffff9f",
+            "fontColor": "#ffffff",
             "font": "Inter",
+            "weight": "600",
             "content": {
                 "description": "",
                 "slug": "shoebox"
@@ -32,7 +36,9 @@
             "color": "#AA0000",
             "darkColor": "#FFC832",
             "toggleColor": "#ffffff9f",
-            "font": "Inter",
+            "fontColor": "#FFF5E2",
+            "font": "Inconsolata",
+            "weight": "400",
             "content": {
                 "description": "",
                 "slug": "year-end-review"
@@ -44,7 +50,9 @@
             "color": "#EAF2FF",
             "darkColor": "#FFC832",
             "toggleColor": "#d8d8d8a4",
-            "font": "Inter",
+            "fontColor": "#000000",
+            "font": "Bitter",
+            "weight": "300",
             "content": {
                 "description": "",
                 "slug": "the-mitch-kitch"
@@ -58,7 +66,9 @@
             "color": "#1B94FF",
             "darkColor": "#FFC832",
             "toggleColor": "#ffffff9f",
+            "fontColor": "#ffffff",
             "font": "Inter",
+            "weight": "800",
             "content": {
                 "description": "",
                 "slug": "compound"
@@ -70,7 +80,9 @@
             "color": "#1DD000",
             "darkColor": "#FFC832",
             "toggleColor": "#ffffff9f",
+            "fontColor": "#ffffff",
             "font": "Inter",
+            "weight": "400",
             "content": {
                 "description": "",
                 "slug": "everyday-portfolio"
@@ -84,7 +96,9 @@
             "color": "#52CA8E",
             "darkColor": "#FFC832",
             "toggleColor": "#ffffff9f",
+            "fontColor": "#ffffff",
             "font": "Inter",
+            "weight": "400",
             "content": {
                 "description": "",
                 "slug": "sprout"

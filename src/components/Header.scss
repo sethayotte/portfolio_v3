@@ -1,5 +1,5 @@
 .header {
-    width: calc(100% - 55px);
+    width: calc(100% - 50px);
     position: fixed;
     top: 0;
     left: 0;
@@ -12,7 +12,6 @@
     align-items: center;
     justify-content: space-between;
     padding: 0 25px;
-    padding-right: 30px;
 
     a {
         text-decoration: none;
