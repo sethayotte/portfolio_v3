@@ -5,7 +5,7 @@
     justify-content: center;
     position: relative;
     width: 100%;
-    height: calc(100vh - 90px);
+    height: calc(100vh - 50px);
     
     h1 {
         width: 100%;
@@ -20,7 +20,7 @@
         width: 100%;
         align-items: center;
         justify-content: space-evenly;
-        max-width: 1200px;
+        max-width: 1400px;
         margin-bottom: 100px;
 
         a {
@@ -45,7 +45,7 @@
         text-decoration: none;
         color: black;
         bottom: 0px;
-        padding: 50px;
+        padding: 40px;
 
         svg {
             font-size: 36pt;
@@ -68,7 +68,7 @@
         }
 
         &.safari {
-            margin-bottom: 60px;
+            margin-bottom: 70px;
         }
     }
 }
@@ -88,7 +88,7 @@
         align-items: center;
         justify-content: center;
         width: 100%;
-        max-width: 1200px;
+        max-width: 1400px;
         margin-bottom: 25px;
 
 
@@ -100,10 +100,18 @@
             align-items: center;
             justify-content: center;
 
-            h2 {
-                font-size: 34pt;
-                text-align: center;
-                padding: 0 15px;
+            .tile-header {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: all 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+
+                h2 {
+                    font-size: 34pt;
+                    text-align: center;
+                    padding: 0 15px;
+                    margin: 0;
+                }
             }
 
             .tile-toggle {
@@ -115,23 +123,19 @@
                 padding: 25px;
                 cursor: pointer;
                 transition: transform 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940);
-
-                &.close {
-                    transform: rotate(45deg);
-                }
             }
         }
 
-        &.row0 {
+        &.row0, &.row2 {
             width: 100%;
-            max-width: 1200px;
+            max-width: 1400px;
             height: 500px;
             transition: all 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940);
             position: relative;
 
-            #the-blocks {
+            #the-blocks, #compound {
                 width: calc(60% - 12.5px);
-                max-width: 707.5px;
+                max-width: 827.5px;
                 position: relative;
                 top: 0;
                 left: 0;
@@ -142,9 +146,9 @@
                 transition: all 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940);
             }
 
-            #shoebox {
+            #shoebox, #everyday-portfolio {
                 width: calc(40% - 12.5px);
-                max-width: 467.5px;
+                max-width: 547.5px;
                 position: relative;
                 top: 0;
                 right: 0;
@@ -153,100 +157,338 @@
                 transition: all 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940);
             }
 
-            &.expanded-the-blocks {
+            &.expanded-the-blocks, &.expanded-compound {
                 height: 1000px;
                 align-items: flex-end;
                 justify-content: flex-end;
 
-                #the-blocks {
+                #the-blocks, #compound {
                     width: 100%;
                     position: absolute;
                     top: 0;
                     left: 0;
-                    max-width: 1200px;
+                    max-width: 1400px;
                     height: 600px;
                     margin-right: 0;
                     margin-bottom: 25px;
+
+                    .tile-header {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        padding: 25px;
+                    }
+
+                    .tile-toggle {
+                        transform: rotate(45deg);
+                    }
                 }
     
-                #shoebox {
+                #shoebox, #everyday-portfolio {
                     width: calc(40% - 12.5px);
                     height: 375px;
                     transform: translateY(0px);
                 }
             }
 
-            &.expanded-shoebox {
+            &.expanded-shoebox, &.expanded-everyday-portfolio {
                 height: 1000px;
                 align-items: flex-end;
                 justify-content: flex-start;
 
-                #the-blocks {
-                    width: calc(40% - 12.5px);
-                    max-width: 467.5px;
+                #the-blocks, #compound {
+                    width: calc(60% - 12.5px);
                     height: 375px;
                     margin-right: 0;
                     margin-top: 25px;
                     transform: translateY(0px);
                 }
     
-                #shoebox {
+                #shoebox, #everyday-portfolio {
                     width: 100%;
-                    max-width: 1200px;
+                    max-width: 1400px;
                     position: absolute;
                     top: 0;
                     right: 0;
                     height: 600px;
                     transform: translateY(0px);
+
+                    .tile-header {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        padding: 25px;
+                    }
+
+                    .tile-toggle {
+                        transform: rotate(45deg);
+                    }
                 }
             }
         }
 
         &.row1 {
             width: 100%;
+            max-width: 1400px;
             height: 400px;
+            transition: all 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+            position: relative;
 
             #year-end-review {
                 width: calc(30% - 12.5px);
+                max-width: 407.5px;
                 height: 400px;
                 margin-right: 25px;
+                position: relative;
+                top: 0;
+                left: 0;
+                transform: translateY(0);
+                margin-bottom: 0px;
+                transition: all 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940);
             }
 
             #the-mitch-kitch {
                 width: calc(70% - 12.5px);
+                max-width: 967.5px;
                 height: 400px;
-            }
-        }
-    
-        &.row2 {
-            width: 100%;
-            height: 600px;
-
-            #compound {
-                width: calc(60% - 12.5px);
-                height: 600px;
-                margin-right: 25px;
+                position: relative;
+                top: 0;
+                right: 0;
+                transform: translateY(0);
+                transition: all 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940);
             }
 
-            #everyday-portfolio {
-                width: calc(40% - 12.5px);
-                height: 600px;
+            &.expanded-year-end-review {
+                height: 800px;
+                align-items: flex-end;
+                justify-content: flex-end;
+
+                #year-end-review {
+                    width: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    max-width: 1400px;
+                    height: 500px;
+                    margin-right: 0;
+                    margin-bottom: 25px;
+
+                    .tile-header {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        padding: 25px;
+                    }
+
+                    .tile-toggle {
+                        transform: rotate(45deg);
+                    }
+                }
+    
+                #the-mitch-kitch {
+                    width: calc(70% - 12.5px);
+                    height: 275px;
+                    transform: translateY(0px);
+                }
+            }
+
+            &.expanded-the-mitch-kitch {
+                height: 800px;
+                align-items: flex-end;
+                justify-content: flex-start;
+
+                #year-end-review {
+                    width: calc(30% - 12.5px);
+                    height: 275px;
+                    margin-right: 0;
+                    margin-top: 25px;
+                    transform: translateY(0px);
+                }
+    
+                #the-mitch-kitch {
+                    width: 100%;
+                    max-width: 1400px;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    height: 500px;
+                    transform: translateY(0px);
+
+                    .tile-header {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        padding: 25px;
+                    }
+
+                    .tile-toggle {
+                        transform: rotate(45deg);
+                    }
+                }
             }
         }
-    
+
         &.row3 {
             width: 100%;
+            max-width: 1400px;
             height: 400px;
+            transition: all 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+            position: relative;
 
             #sprout {
                 width: calc(45% - 12.5px);
+                max-width: 617.5px;
                 height: 400px;
                 margin-right: 25px;
+                position: relative;
+                top: 0;
+                left: 0;
+                transform: translateY(0);
+                margin-bottom: 0px;
+                transition: all 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940);
             }
 
             #run-away {
                 width: calc(55% - 12.5px);
+                max-width: 757.5px;
                 height: 400px;
+                position: relative;
+                top: 0;
+                right: 0;
+                transform: translateY(0);
+                transition: all 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+            }
+
+            &.expanded-sprout {
+                height: 800px;
+                align-items: flex-end;
+                justify-content: flex-end;
+
+                #sprout {
+                    width: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    max-width: 1400px;
+                    height: 500px;
+                    margin-right: 0;
+                    margin-bottom: 25px;
+
+                    .tile-header {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        padding: 25px;
+                    }
+
+                    .tile-toggle {
+                        transform: rotate(45deg);
+                    }
+                }
+    
+                #run-away {
+                    width: calc(55% - 12.5px);
+                    height: 275px;
+                    transform: translateY(0px);
+                }
+            }
+
+            &.expanded-run-away {
+                height: 800px;
+                align-items: flex-end;
+                justify-content: flex-start;
+
+                #sprout {
+                    width: calc(45% - 12.5px);
+                    height: 275px;
+                    margin-right: 0;
+                    margin-top: 25px;
+                    transform: translateY(0px);
+                }
+    
+                #run-away {
+                    width: 100%;
+                    max-width: 1400px;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    height: 500px;
+                    transform: translateY(0px);
+
+                    .tile-header {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        padding: 25px;
+                    }
+
+                    .tile-toggle {
+                        transform: rotate(45deg);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    #landing-tiles {
+
+        .project-row {
+            flex-direction: column;
+            margin: 0;
+
+            .tile {
+
+                &#shoebox, &#the-blocks, &#year-end-review, &#the-mitch-kitch, &#compound, &#everyday-portfolio, &#sprout, &#run-away {
+                    width: 100%;
+                    max-width: 700px;
+                    margin: 0;
+                    margin-bottom: 25px;
+                    height: 400px;
+                    padding: 0;
+                }
+            }
+
+            &.row0, &.row1, &.row2, &.row3 {
+                height: 550px;
+                
+                &.expanded-shoebox, &.expanded-the-blocks, &.expanded-year-end-review, &.expanded-the-mitch-kitch, &.expanded-compound, &.expanded-everyday-portfolio, &.expanded-sprout, &.expanded-run-away {
+                    align-items: flex-end;
+                    justify-content: flex-end;
+                    height: 800px;
+                    
+                    #shoebox, #the-blocks, #year-end-review, #the-mitch-kitch, #compound, #everyday-portfolio, #sprout, #run-away {
+                        position: relative;
+                        max-width: 700px;
+                        width: 100%;
+                        margin: 0;
+                        margin-bottom: 25px;
+                        padding: 0;
+                    }
+                }
+
+                &.expanded-the-blocks, &.expanded-year-end-review, &.expanded-compound, &.expanded-sprout {
+                    align-items: flex-end;
+                    justify-content: flex-end;
+                    #the-blocks, #year-end-review, #compound, #sprout {
+                        height: 525px;
+                    }
+                    #shoebox, #the-mitch-kitch, #everyday-portfolio, #run-away {
+                        height: 275px;
+                    }
+                }
+
+                &.expanded-shoebox, &.expanded-the-mitch-kitch, &.expanded-everyday-portfolio, &.expanded-run-away {
+                    align-items: flex-end;
+                    justify-content: flex-end;
+                    #the-blocks, #year-end-review, #compound, #sprout {
+                        height: 275px;
+                    }
+                    #shoebox, #the-mitch-kitch, #everyday-portfolio, #run-away {
+                        height: 525px;
+                    }
+                }
             }
         }
     }
