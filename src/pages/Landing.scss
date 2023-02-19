@@ -31,11 +31,11 @@
             padding-bottom: 7px;
             border-radius: 7px;
             background-color: transparent;
-            color: black;
+            color: var(--text-color-main);
             transition: background-color 0.4s ease;
 
             body.hasHover &:hover {
-                background-color: #f0f0f0;
+                background-color: var(--menu-bg-hover);
             }
         }
     }
@@ -43,7 +43,7 @@
     .fold-arrow {
         position: absolute;
         text-decoration: none;
-        color: black;
+        color: var(--text-color-main);
         bottom: 0px;
         padding: 40px;
 
@@ -104,7 +104,12 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                flex-direction: column;
                 transition: all 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+
+                img {
+                    height: 175px;
+                }
 
                 h2 {
                     font-size: 34pt;
@@ -146,6 +151,12 @@
                 transition: all 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940);
             }
 
+            #the-blocks {
+                .tile-header {
+                    margin-bottom: 50px;
+                }
+            }
+
             #shoebox, #everyday-portfolio {
                 width: calc(40% - 12.5px);
                 max-width: 547.5px;
@@ -155,6 +166,15 @@
                 height: 500px;
                 transform: translateY(0);
                 transition: all 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+            }
+
+            #shoebox {
+                .tile-header {
+                    margin-bottom: 65px;
+                    img {
+                        margin-bottom: 15px;
+                    }
+                }
             }
 
             &.expanded-the-blocks, &.expanded-compound {
@@ -177,6 +197,12 @@
                         top: 0;
                         left: 0;
                         padding: 25px;
+                        flex-direction: row;
+                        align-items: center;
+
+                        img {
+                            height: 75px;
+                        }
                     }
 
                     .tile-toggle {
@@ -218,6 +244,12 @@
                         top: 0;
                         left: 0;
                         padding: 25px;
+                        flex-direction: row;
+                        align-items: center;
+
+                        img {
+                            height: 75px;
+                        }
                     }
 
                     .tile-toggle {
@@ -256,6 +288,14 @@
                 right: 0;
                 transform: translateY(0);
                 transition: all 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+
+                .tile-header {
+                    flex-direction: row;
+                    h2 {
+                        width: 125px;
+                        text-align: left;
+                    }
+                }
             }
 
             &.expanded-year-end-review {
@@ -319,6 +359,15 @@
                         top: 0;
                         left: 0;
                         padding: 25px;
+
+                        img {
+                            height: 75px;
+                        }
+
+                        h2 {
+                            width: fit-content;
+                            text-align: left;
+                        }
                     }
 
                     .tile-toggle {

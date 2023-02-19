@@ -1,12 +1,54 @@
 import './App.scss';
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
-import { Contact } from './pages/Contact';
+import { Travel } from './pages/Travel';
 import { Landing } from './pages/Landing';
 import { Resume } from './pages/Resume';
-import { Work } from './pages/Work';
+import { Projects } from './pages/Projects';
+import { Header } from './components/Header';
 
 const App = () => {
+
+  const [ darkMode, setDarkMode ] = useState();
+
+  const setDark = () => {
+      localStorage.setItem("theme", "dark");
+      document.documentElement.setAttribute("data-theme", "dark");
+  }
+
+  const setLight = () => {
+      localStorage.setItem("theme", "light");
+      document.documentElement.setAttribute("data-theme", "light");
+  }
+
+  function changeThemeColor() {
+    var metaThemeColor = document.querySelector("meta[name=theme-color]");
+    metaThemeColor.setAttribute("content", defaultDark ? '#131313' : '#ffffff');
+  }
+
+  const storedTheme = localStorage.getItem("theme");
+
+  const prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+  const defaultDark = storedTheme === "dark" || (storedTheme === null && prefersDark);
+
+  if (defaultDark) {
+      setDark(); 
+      changeThemeColor();
+  } else {
+      setLight();
+      changeThemeColor();
+  }
+
+  const handleDarkModeToggle = () => {
+      if (darkMode) {
+          setLight();
+          setDarkMode(!darkMode);
+      } else {
+          setDark();
+          setDarkMode(!darkMode);
+      }
+  }
 
   const [isMobileSafari, setIsMobileSafari] = useState(false);
   
@@ -19,10 +61,17 @@ const App = () => {
       setIsMobileSafari(iOSSafari);
   }, [iOSSafari])
 
+  let lastPosition;
+
   const ScrollToTop = (props) => {
     const location = useLocation();
     useEffect(() => {
-      window.scrollTo({top: 0, left: 0, behavior: "instant"});
+      if (lastPosition && lastPosition !== location) {
+        window.scrollTo({top: 0, left: 0, behavior: "instant"});
+      } else {
+        return;
+      }
+      lastPosition = location;
     }, [location]);
   
     return <>{props.children}</>
@@ -32,6 +81,7 @@ const App = () => {
 
   window.addEventListener('scroll', () => {
       document.documentElement.style.setProperty('--scroll-y', `${window.scrollY}px`);
+      localStorage.setItem('scoll position', window.scrollY)
   });
 
   const watchForHover = () => {
@@ -63,12 +113,15 @@ const App = () => {
   return (
     <div>
       <Router>
+      <div>
+        <Header handleDarkModeToggle={handleDarkModeToggle} defaultDark={defaultDark} />
+      </div>
         <ScrollToTop>
               <Routes>
-                  <Route path='/' element={<Landing isMobileSafari={isMobileSafari} />} />
-                  <Route path='/work' element={<Work />} />
+                  <Route path='/' element={<Landing defaultDark={defaultDark} isMobileSafari={isMobileSafari} />} />
+                  <Route path='/projects' element={<Projects />} />
                   <Route path='/resume' element={<Resume />} />
-                  <Route path='/contact' element={<Contact />} />
+                  <Route path='/travel' element={<Travel />} />
               </Routes>
         </ScrollToTop>
       </Router>

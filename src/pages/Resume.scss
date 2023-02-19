@@ -1,5 +1,140 @@
 .resume {
-    h1 {
-        font-size: 32pt;
+    margin: 40px 0;
+
+    .section-heading {
+        font-family: 'Inconsolata', monospace;
+        font-size: 16pt;
+    }
+
+    .intro {
+        display: flex;
+        align-items: center;
+        margin-bottom: 25px;
+
+        img {
+            height: 275px;
+            border-radius: 50%;
+            margin-right: 50px;
+        }
+
+        h2 {
+            font-size: 48pt;
+            font-weight: 500;
+            margin: 0;
+        }
+
+        p {
+            font-family: 'Inconsolata', monospace;
+            font-size: 18pt;
+            margin: 10px 0;
+        }
+
+        .mobile-intro-text {
+            display: none;
+        }
+    }
+
+    @media only screen and (max-width: 740px) {
+
+        .intro {
+
+            img {
+                height: 100px;
+                border-radius: 50%;
+                margin-right: 15px;
+            }
+
+            .intro-text {
+                margin-bottom: 5px;
+            }
+    
+            h2 {
+                font-size: 28pt;
+                font-weight: 600;
+                margin: 0;
+            }
+
+            p {
+                font-size: 14pt;
+                margin: 0;
+                display: none;
+            }
+
+            .mobile-intro-text {
+                display: inline;
+            }
+
+            .mobile-intro-text::after {
+                content: "designer.";
+                animation: intro-animation 10s both infinite;
+            }
+
+            @keyframes intro-animation {
+                0% {opacity: 1; content: "designer.";}
+                30% {opacity: 1; filter: blur(0px); content: "designer.";}
+                33% {opacity: 0; filter: blur(12px); content: "designer.";}
+                36% {opacity: 0; filter: blur(12px); content: "developer.";}
+                39% {opacity: 1; filter: blur(0px); content: "developer.";}
+                60% {opacity: 1; filter: blur(0px); content: "developer.";}
+                63% {opacity: 0; filter: blur(12px); content: "developer.";}
+                66% {opacity: 0; filter: blur(12px); content: "traveler.";}
+                69% {opacity: 1; filter: blur(0px); content: "traveler.";}
+                90% {opacity: 1; filter: blur(0px); content: "traveler.";}
+                93% {opacity: 0; filter: blur(12px); content: "traveler.";}
+                96% {opacity: 0; filter: blur(12px); content: "designer.";}
+                99% {opacity: 1; filter: blur(0px); content: "designer.";}
+            }
+        }
+    }
+
+    .disclaimer {
+        margin-bottom: 30px;
+    }
+
+    .disclaimer-container {
+        background-color: var(--tile-bg-color);
+        max-width: fit-content;
+        padding: 25px;
+        font-family: 'Inconsolata', monospace;
+        font-size: 16pt;
+        border-radius: 25px;
+
+        a {
+            color: rgb(47, 68, 255);
+            transition: color 0.4s ease;
+            cursor: pointer;
+
+            body.hasHover &:hover {
+                color: rgb(75, 171, 255);
+            }
+        }
+    }
+
+    @media only screen and (max-width: 740px) {
+        .disclaimer-container {
+            font-size: 12pt;
+            padding: 20px 25px;
+        }
+    }
+
+    .education, .experience {
+        margin-bottom: 50px;
+
+        .item {
+            margin-top: 15px;
+            line-height: 24pt;
+
+            span {
+                font-size: 12pt;
+            }
+            h3 {
+                font-size: 16pt;
+                margin: 0;
+            }
+            p {
+                font-size: 16pt;
+                margin: 0;
+            }
+        }
     }
 }

@@ -1,0 +1,44 @@
+:root {
+    --background-color: #ffffff;
+    --background-color-transparent: #ffffff00;
+    --header-background: #ffffff50;
+    --text-color-main: #000000;
+    --text-color-inverted: #ffffff;
+    --button-text-color: #ffffff;
+    --menu-bg-hover: ##f0f0f0;
+    --menu-bg-active: #000000;
+    --tile-bg-color: #f3f3f3;
+    --the-blocks-tile: #ECECEC;
+    --shoebox-tile: #FFC832;
+    --review-tile: #AA0000;
+    --review-text: #fff5e1;
+    --mitch-kitch-tile: #EAF2FF;
+    --sprout-tile: #52CA8E;
+    --run-away-tile: #F9F9F9;
+    --tile-toggle-light: #ffffff9f;
+    --tile-toggle-dark: #d8d8d8a4;
+}
+
+[data-theme="dark"] {
+    --background-color: #131313;
+    --background-color-transparent: #13131300;
+    --header-background: #13131350;
+    --text-color-main: #eaeaea;
+    --text-color-inverted: #131313;
+    --button-text-color: #eaeaea;
+    --menu-bg-hover: #363636;
+    --menu-bg-active: #3C3C3C;
+    --tile-bg-color: #2c2c2c;
+    --the-blocks-tile: #2a2a2a;
+    --review-text: #131313;
+    --mitch-kitch-tile: #383e47;
+    --sprout-tile: #52CA8E;
+    --run-away-tile: #323232;
+    --tile-toggle-light: #1313139f;
+    --tile-toggle-dark: #aeaeaea4;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color-main);
+}

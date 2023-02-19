@@ -2,11 +2,11 @@
     [
         {
             "title": "The Blocks",
-            "logoMark": "https://this-is-a-logo-url.com",
-            "color": "#ECECEC",
-            "darkColor": "#FFC832",
-            "toggleColor": "#d8d8d8a4",
-            "fontColor": "#000000",
+            "logoLight": "./assets/TheBlocks_Light.svg",
+            "logoDark": "./assets/TheBlocks_Dark.svg",
+            "color": "var(--the-blocks-tile)",
+            "toggleColor": "var(--tile-toggle-dark)",
+            "fontColor": "var(--text-color-main)",
             "font": "IBM Plex Sans",
             "weight": "500",
             "content": {
@@ -16,11 +16,11 @@
         },
         {
             "title": "Shoebox",
-            "logoMark": "",
-            "color": "#FFC832",
-            "darkColor": "#FFC832",
-            "toggleColor": "#ffffff9f",
-            "fontColor": "#ffffff",
+            "logoLight": "./assets/Shoebox_Light.svg",
+            "logoDark": "./assets/Shoebox_Dark.svg",
+            "color": "var(--shoebox-tile)",
+            "toggleColor": "var(--tile-toggle-light)",
+            "fontColor": "var(--text-color-inverted)",
             "font": "Inter",
             "weight": "600",
             "content": {
@@ -33,10 +33,9 @@
         {
             "title": "Year End Review",
             "logoMark": "",
-            "color": "#AA0000",
-            "darkColor": "#FFC832",
-            "toggleColor": "#ffffff9f",
-            "fontColor": "#FFF5E2",
+            "color": "var(--review-tile)",
+            "toggleColor": "var(--tile-toggle-light)",
+            "fontColor": "var(--review-text)",
             "font": "Inconsolata",
             "weight": "400",
             "content": {
@@ -46,11 +45,11 @@
         },
         {
             "title": "The Mitch Kitch",
-            "logoMark": "",
-            "color": "#EAF2FF",
-            "darkColor": "#FFC832",
-            "toggleColor": "#d8d8d8a4",
-            "fontColor": "#000000",
+            "logoLight": "./assets/mitchkitch_light.svg",
+            "logoDark": "./assets/mitchkitch_dark.svg",
+            "color": "var(--mitch-kitch-tile)",
+            "toggleColor": "var(--tile-toggle-dark)",
+            "fontColor": "var(--text-color-main)",
             "font": "Bitter",
             "weight": "300",
             "content": {
@@ -64,9 +63,8 @@
             "title": "Compound",
             "logoMark": "",
             "color": "#1B94FF",
-            "darkColor": "#FFC832",
-            "toggleColor": "#ffffff9f",
-            "fontColor": "#ffffff",
+            "toggleColor": "var(--tile-toggle-light)",
+            "fontColor": "var(--text-color-inverted)",
             "font": "Inter",
             "weight": "800",
             "content": {
@@ -78,9 +76,8 @@
             "title": "Everyday Portfolio",
             "logoMark": "",
             "color": "#1DD000",
-            "darkColor": "#FFC832",
-            "toggleColor": "#ffffff9f",
-            "fontColor": "#ffffff",
+            "toggleColor": "var(--tile-toggle-light)",
+            "fontColor": "var(--text-color-inverted)",
             "font": "Inter",
             "weight": "400",
             "content": {
@@ -93,10 +90,9 @@
         {
             "title": "Sprout",
             "logoMark": "",
-            "color": "#52CA8E",
-            "darkColor": "#FFC832",
-            "toggleColor": "#ffffff9f",
-            "fontColor": "#ffffff",
+            "color": "var(--sprout-tile)",
+            "toggleColor": "var(--tile-toggle-light)",
+            "fontColor": "var(--text-color-inverted)",
             "font": "Inter",
             "weight": "400",
             "content": {
@@ -107,9 +103,8 @@
         {
             "title": "Run Away",
             "logoMark": "",
-            "color": "#F9F9F9",
-            "darkColor": "#FFC832",
-            "toggleColor": "#d8d8d8a4",
+            "color": "var(--run-away-tile)",
+            "toggleColor": "var(--tile-toggle-dark)",
             "font": "Inter",
             "content": {
                 "description": "",

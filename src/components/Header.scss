@@ -6,7 +6,7 @@
     padding: 0 25px;
     top: 0;
     left: 0;
-    background-color: #ffffff50;
+    background-color: var(--header-background);
     backdrop-filter: blur(15px);
     height: 75px;
     z-index: 100;
@@ -27,22 +27,23 @@
 
     a {
         text-decoration: none;
-        color: black;
+        color: var(--text-color-main);
 
         h1 {
             font-size: 20pt;
+            white-space: nowrap;
         }
     }
 
     .desktop {
         display: flex;
-        width: 300px;
+        width: 350px;
         align-items: center;
         justify-content: space-between;
 
         a {
             text-decoration: none;
-            color: black;
+            color: var(--text-color-main);
             font-family: 'Inconsolata', monospace;
             background-color: transparent;
             padding: 5px 15px;
@@ -51,17 +52,25 @@
             transition: background-color 0.4s ease;
 
             &.active {
-                color: white;
-                background-color: black;
+                color: var(--button-text-color);
+                background-color: var(--menu-bg-active);
             }
 
             body.hasHover &:hover {
-                background-color: #f0f0f0;
+                background-color: var(--menu-bg-hover);
 
                 &.active {
-                    background-color: black;
+                    background-color: var(--menu-bg-active);
                 }
             }
+        }
+
+        label {
+            padding-left: 15px;
+        }
+
+        &.hidden {
+            display: none;
         }
     }
 
@@ -69,18 +78,21 @@
         display: flex;
         align-items: flex-end;
         flex-direction: column;
+        transition: all 0.4s ease;
 
         .mobile-menu-toggle {
             padding: 15px;
+            padding-right: 0;
 
             svg {
-                font-size: 18pt;
+                font-size: 24pt;
             }
         }
 
         &.close {
             .mobile-menu-toggle {
-                padding-top: 5px;
+                padding-top: 3px;
+                padding-right: 15px;
             }
         }
     }
@@ -91,43 +103,57 @@
         align-items: flex-end;
         justify-content: space-between;
         height: 0px;
-        opacity: 0;
         visibility: hidden;
+        position: relative;
+        right: -125px;
         transition: all 0.4s ease;  
-
-        &.open {
-            height: 115px;
-            opacity: 1;
-            visibility: visible;
-        }
 
         a {
             text-decoration: none;
-            color: black;
+            color: transparent;
             font-family: 'Inconsolata', monospace;
             background-color: transparent;
             padding: 5px 15px;
             padding-bottom: 7px;
             border-radius: 7px;
-            transition: background-color 0.4s ease;
+        }
 
-            &.active {
-                color: white;
-                background-color: black;
-            }
+        label {
+            opacity: 0;
+            margin-top: 5px;
+            margin-right: 15px;
+        }
 
-            body.hasHover &:hover {
-                background-color: #f0f0f0;
+        &.open {
+            height: 175px;
+            right: 0;
+            visibility: visible;
+
+            a {
+                color: var(--text-color-main);
 
                 &.active {
-                    background-color: black;
+                    color: var(--button-text-color);
+                    background-color: var(--menu-bg-active);
                 }
+    
+                body.hasHover &:hover {
+                    background-color: var(--menu-bg-hover);
+    
+                    &.active {
+                        background-color: var(--menu-bg-active);
+                    }
+                }
+            }
+
+            label {
+                opacity: 1;
             }
         }
     }
 
     &.expanded {
-        height: 220px;
+        height: 275px;
 
         .header-content {
             align-items: flex-start;

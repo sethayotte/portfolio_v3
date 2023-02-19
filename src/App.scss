@@ -7,6 +7,8 @@
 // Bitter
 @import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,300;0,400;0,500;1,300&display=swap');
 
+@import './DarkMode.scss';
+
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 100px;
@@ -18,10 +20,11 @@ body {
   max-width: 1400px;
   padding: 50px 25px;
   font-family: 'Inter', sans-serif;
+  color: var(--text-color-main);
 }
 
 @import './components/Header.scss';
 @import './pages/Landing.scss';
-@import './pages/Work.scss';
+@import './pages/Projects.scss';
 @import './pages/Resume.scss';
-@import './pages/Contact.scss';
+@import './pages/Travel.scss';
