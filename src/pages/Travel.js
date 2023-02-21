@@ -1,7 +1,6 @@
-import React from 'react'
-import { Header } from '../components/Header'
+import React from 'react';
 
-const Travel = ({handleDarkModeToggle, defaultDark}) => {
+const Travel = () => {
   return (
     <div className='travel'>
         <h1>Travel</h1>

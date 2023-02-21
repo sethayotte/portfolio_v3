@@ -31,7 +31,7 @@ const Header = ({handleDarkModeToggle, defaultDark}) => {
     }, [])
     
   return (
-    <div className={(isDesktop || !expandedMenu) ? 'header' : 'header expanded'}>
+    <header className={(isDesktop || !expandedMenu) ? 'header' : 'header expanded'}>
         <div className='header-content'>
             <Link to='/'>
                 <h1>Seth Mitchell</h1>
@@ -59,8 +59,8 @@ const Header = ({handleDarkModeToggle, defaultDark}) => {
                                 onChange={handleDarkModeToggle} 
                                 checked={defaultDark ? true : false} 
                                 offColor='#D4D4D4'
-                                onColor='#1B1B1B'
-                                onHandleColor='#3C3C3C'
+                                onColor='#3C3C3C'
+                                onHandleColor='#1B1B1B'
                                 checkedIcon={false}
                                 uncheckedIcon={false}
                                 height={35}
@@ -78,8 +78,8 @@ const Header = ({handleDarkModeToggle, defaultDark}) => {
                                 onChange={handleDarkModeToggle} 
                                 checked={defaultDark ? true : false} 
                                 offColor='#D4D4D4'
-                                onColor='#1B1B1B'
-                                onHandleColor='#3C3C3C'
+                                onColor='#3C3C3C'
+                                onHandleColor='#1B1B1B'
                                 checkedIcon={false}
                                 uncheckedIcon={false}
                                 height={35}
@@ -91,7 +91,7 @@ const Header = ({handleDarkModeToggle, defaultDark}) => {
                 }
             </section>
         </div>
-    </div>
+    </header>
   )
 }
 

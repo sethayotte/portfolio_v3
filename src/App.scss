@@ -6,6 +6,8 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600&display=swap');
 // Bitter
 @import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,300;0,400;0,500;1,300&display=swap');
+//IBM Plex Mono
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
 
 @import './DarkMode.scss';
 
@@ -17,10 +19,13 @@ html {
 
 body {
   margin: auto;
+  position: relative;
   max-width: 1400px;
-  padding: 50px 25px;
+  padding: 50px 25px 75px 25px;
   font-family: 'Inter', sans-serif;
   color: var(--text-color-main);
+  height: fit-content;
+  min-height: calc(100vh - 125px);
 }
 
 @import './components/Header.scss';
@@ -28,3 +33,9 @@ body {
 @import './pages/Projects.scss';
 @import './pages/Resume.scss';
 @import './pages/Travel.scss';
+
+@media only screen and (max-width: 500px) {
+  body {
+    padding: 50px 15px 75px 15px;
+  }
+}

@@ -73,7 +73,7 @@
     }
 }
 
-#landing-tiles {
+#project-tiles {
     width: 100%;
     display: flex;
     align-items: center;
@@ -119,6 +119,39 @@
                 }
             }
 
+            .tile-description {
+                display: none;
+                height: fit-content;
+                margin: 0;
+                padding: 0;
+                transition: all 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+
+                a {
+                    background-color: var(--link-bg-color);
+                    width: fit-content;
+                    padding: 5px 25px;
+                    border-radius: 10px;
+                    display: flex;
+                    align-items: center;
+                    margin-top: 44px;
+                    font-size: 16pt;
+                    font-family: 'Inconsolata', monospace;
+                    color: var(--link-color);
+                    transition: all 0.4s ease;
+                    cursor: pointer;
+
+                    svg {
+                        font-size: 28pt;
+                    }
+
+                    body.hasHover &:hover {
+                        color: var(--text-color-inverted);
+                        background-color: var(--link-color);
+                        font-weight: 600;
+                    }
+                }
+            }
+
             .tile-toggle {
                 position: absolute;
                 bottom: 0;
@@ -132,9 +165,10 @@
         }
 
         &.row0, &.row2 {
+            --row-height: 500px;
             width: 100%;
             max-width: 1400px;
-            height: 500px;
+            height: var(--row-height);
             transition: all 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940);
             position: relative;
 
@@ -157,6 +191,12 @@
                 }
             }
 
+            #compound {
+                .tile-description {
+                    color: var(--text-color-inverted);
+                }
+            }
+
             #shoebox, #everyday-portfolio {
                 width: calc(40% - 12.5px);
                 max-width: 547.5px;
@@ -166,6 +206,14 @@
                 height: 500px;
                 transform: translateY(0);
                 transition: all 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+            }
+
+            #everyday-portfolio {
+                .tile-header {
+                    img {
+                        height: 100px;
+                    }
+                }
             }
 
             #shoebox {
@@ -178,17 +226,18 @@
             }
 
             &.expanded-the-blocks, &.expanded-compound {
-                height: 1000px;
+                height: var(--row-height);
                 align-items: flex-end;
                 justify-content: flex-end;
 
                 #the-blocks, #compound {
                     width: 100%;
                     position: absolute;
+                    justify-content: flex-start;
                     top: 0;
                     left: 0;
                     max-width: 1400px;
-                    height: 600px;
+                    height: fit-content;
                     margin-right: 0;
                     margin-bottom: 25px;
 
@@ -205,6 +254,20 @@
                         }
                     }
 
+                    .tile-description {
+
+                        &.open {
+                            display: flex;
+                            flex-direction: column;
+                            padding: 50px 30px;
+                            padding-top: 130px;
+                            font-size: 18pt;
+                            white-space: pre-wrap;
+                            font-family: 'IBM Plex Sans', sans-serif;
+                            font-weight: 300;
+                        }
+                    }
+
                     .tile-toggle {
                         transform: rotate(45deg);
                     }
@@ -212,19 +275,19 @@
     
                 #shoebox, #everyday-portfolio {
                     width: calc(40% - 12.5px);
-                    height: 375px;
-                    transform: translateY(0px);
+                    height: 500px;
+                    transform: translateY(0);
                 }
             }
 
             &.expanded-shoebox, &.expanded-everyday-portfolio {
-                height: 1000px;
+                height: var(--row-height);
                 align-items: flex-end;
                 justify-content: flex-start;
 
                 #the-blocks, #compound {
                     width: calc(60% - 12.5px);
-                    height: 375px;
+                    height: 500px;
                     margin-right: 0;
                     margin-top: 25px;
                     transform: translateY(0px);
@@ -233,10 +296,11 @@
                 #shoebox, #everyday-portfolio {
                     width: 100%;
                     max-width: 1400px;
+                    justify-content: flex-start;
                     position: absolute;
                     top: 0;
                     right: 0;
-                    height: 600px;
+                    height: fit-content;
                     transform: translateY(0px);
 
                     .tile-header {
@@ -252,6 +316,19 @@
                         }
                     }
 
+                    .tile-description {
+                        &.open {
+                            display: flex;
+                            flex-direction: column;
+                            color: var(--text-color-inverted);
+                            padding: 50px 30px;
+                            padding-top: 130px;
+                            font-size: 18pt;
+                            white-space: pre-wrap;
+                            font-weight: 300;
+                        }
+                    }
+
                     .tile-toggle {
                         transform: rotate(45deg);
                     }
@@ -260,9 +337,10 @@
         }
 
         &.row1 {
+            --row-height: 400px;
             width: 100%;
             max-width: 1400px;
-            height: 400px;
+            height: var(--row-height);
             transition: all 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940);
             position: relative;
 
@@ -277,6 +355,12 @@
                 transform: translateY(0);
                 margin-bottom: 0px;
                 transition: all 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+
+                .tile-header {
+                    img {
+                        height: 100px;
+                    }
+                }
             }
 
             #the-mitch-kitch {
@@ -299,17 +383,18 @@
             }
 
             &.expanded-year-end-review {
-                height: 800px;
+                height: var(--row-height);
                 align-items: flex-end;
                 justify-content: flex-end;
 
                 #year-end-review {
                     width: 100%;
                     position: absolute;
+                    justify-content: flex-start;
                     top: 0;
                     left: 0;
                     max-width: 1400px;
-                    height: 500px;
+                    height: fit-content;
                     margin-right: 0;
                     margin-bottom: 25px;
 
@@ -318,6 +403,27 @@
                         top: 0;
                         left: 0;
                         padding: 25px;
+                        flex-direction: row;
+                        align-items: center;
+
+                        img {
+                            height: 75px;
+                        }
+                    }
+
+                    .tile-description {
+
+                        &.open {
+                            display: flex;
+                            flex-direction: column;
+                            padding: 50px 30px;
+                            padding-top: 130px;
+                            color: var(--review-text);
+                            font-size: 18pt;
+                            white-space: pre-wrap;
+                            font-family: 'Inconsolata', monospace;
+                            font-weight: 300;
+                        }
                     }
 
                     .tile-toggle {
@@ -327,19 +433,19 @@
     
                 #the-mitch-kitch {
                     width: calc(70% - 12.5px);
-                    height: 275px;
+                    height: 400px;
                     transform: translateY(0px);
                 }
             }
 
             &.expanded-the-mitch-kitch {
-                height: 800px;
+                height: var(--row-height);
                 align-items: flex-end;
                 justify-content: flex-start;
 
                 #year-end-review {
                     width: calc(30% - 12.5px);
-                    height: 275px;
+                    height: 400px;
                     margin-right: 0;
                     margin-top: 25px;
                     transform: translateY(0px);
@@ -349,9 +455,10 @@
                     width: 100%;
                     max-width: 1400px;
                     position: absolute;
+                    justify-content: flex-start;
                     top: 0;
                     right: 0;
-                    height: 500px;
+                    height: fit-content;
                     transform: translateY(0px);
 
                     .tile-header {
@@ -359,14 +466,29 @@
                         top: 0;
                         left: 0;
                         padding: 25px;
-
-                        img {
-                            height: 75px;
-                        }
+                        flex-direction: row;
+                        align-items: center;
 
                         h2 {
                             width: fit-content;
                             text-align: left;
+                        }
+
+                        img {
+                            height: 75px;
+                        }
+                    }
+
+                    .tile-description {
+                        &.open {
+                            display: flex;
+                            flex-direction: column;
+                            color: var(--text-color-main);
+                            padding: 50px 30px;
+                            padding-top: 130px;
+                            font-size: 18pt;
+                            white-space: pre-wrap;
+                            font-weight: 300;
                         }
                     }
 
@@ -378,9 +500,10 @@
         }
 
         &.row3 {
+            --row-height: 400px;
             width: 100%;
             max-width: 1400px;
-            height: 400px;
+            height: var(--row-height);
             transition: all 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940);
             position: relative;
 
@@ -395,6 +518,12 @@
                 transform: translateY(0);
                 margin-bottom: 0px;
                 transition: all 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+
+                .tile-header {
+                    img {
+                        height: 80px;
+                    }
+                }
             }
 
             #run-away {
@@ -402,24 +531,35 @@
                 max-width: 757.5px;
                 height: 400px;
                 position: relative;
+                color: var(--run-away-text);
                 top: 0;
                 right: 0;
                 transform: translateY(0);
                 transition: all 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+
+                .tile-header {
+                    h2 {
+                        font-family: 'IBM Plex Mono', monospace !important;
+                        font-style: italic;
+                        font-weight: 600;
+                        font-size: 42pt;
+                    }
+                }
             }
 
             &.expanded-sprout {
-                height: 800px;
+                height: var(--row-height);
                 align-items: flex-end;
                 justify-content: flex-end;
 
                 #sprout {
                     width: 100%;
                     position: absolute;
+                    justify-content: flex-start;
                     top: 0;
                     left: 0;
                     max-width: 1400px;
-                    height: 500px;
+                    height: fit-content;
                     margin-right: 0;
                     margin-bottom: 25px;
 
@@ -428,6 +568,30 @@
                         top: 0;
                         left: 0;
                         padding: 25px;
+                        flex-direction: row;
+                        align-items: center;
+
+                        h2 {
+                            width: fit-content;
+                            text-align: left;
+                        }
+
+                        img {
+                            height: 75px;
+                        }
+                    }
+
+                    .tile-description {
+                        &.open {
+                            display: flex;
+                            flex-direction: column;
+                            color: var(--text-color-inverted);
+                            padding: 50px 30px;
+                            padding-top: 130px;
+                            font-size: 18pt;
+                            white-space: pre-wrap;
+                            font-weight: 300;
+                        }
                     }
 
                     .tile-toggle {
@@ -437,19 +601,19 @@
     
                 #run-away {
                     width: calc(55% - 12.5px);
-                    height: 275px;
+                    height: 400px;
                     transform: translateY(0px);
                 }
             }
 
             &.expanded-run-away {
-                height: 800px;
+                height: var(--row-height);
                 align-items: flex-end;
                 justify-content: flex-start;
 
                 #sprout {
                     width: calc(45% - 12.5px);
-                    height: 275px;
+                    height: 400px;
                     margin-right: 0;
                     margin-top: 25px;
                     transform: translateY(0px);
@@ -459,9 +623,10 @@
                     width: 100%;
                     max-width: 1400px;
                     position: absolute;
+                    justify-content: flex-start;
                     top: 0;
                     right: 0;
-                    height: 500px;
+                    height: fit-content;
                     transform: translateY(0px);
 
                     .tile-header {
@@ -469,6 +634,30 @@
                         top: 0;
                         left: 0;
                         padding: 25px;
+                        flex-direction: row;
+                        align-items: center;
+
+                        h2 {
+                            width: fit-content;
+                            text-align: left;
+                        }
+
+                        img {
+                            height: 75px;
+                        }
+                    }
+
+                    .tile-description {
+                        &.open {
+                            display: flex;
+                            flex-direction: column;
+                            color: var(--text-color-main);
+                            padding: 50px 30px;
+                            padding-top: 130px;
+                            font-size: 18pt;
+                            white-space: pre-wrap;
+                            font-weight: 300;
+                        }
                     }
 
                     .tile-toggle {
@@ -481,10 +670,11 @@
 }
 
 @media only screen and (max-width: 750px) {
-    #landing-tiles {
+    #project-tiles {
 
         .project-row {
             flex-direction: column;
+            height: unset;
             margin: 0;
 
             .tile {
@@ -494,18 +684,63 @@
                     max-width: 700px;
                     margin: 0;
                     margin-bottom: 25px;
-                    height: 400px;
+                    height: fit-content;
                     padding: 0;
+                    padding: 125px 0;
+
+                    .tile-header {
+                        margin: 0;
+                        margin: 0;
+                        padding: 0;
+                        margin-bottom: 25px;
+                        flex-direction: column;
+
+                        h2 {
+                            text-align: center;
+                            width: fit-content;
+
+                        }
+
+                        img {
+                            height: 100px;
+                        }
+                    }
+
+                    .tile-toggle {
+                        top: 0;
+                        right: 0;
+                    }
                 }
             }
 
             &.row0, &.row1, &.row2, &.row3 {
-                height: 550px;
+
+                height: unset;
+
+                #shoebox, #the-blocks, #year-end-review, #the-mitch-kitch, #compound, #everyday-portfolio, #sprout, #run-away {
+                    transition: height 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+                }
+
+                #compound {
+                    .tile-header {
+                        img {
+                            height: 150px;
+                        }
+                    }
+                }
+
+                #sprout {
+                    .tile-header {
+                        img {
+                            height: 75px;
+                        }
+                    }
+                }
                 
                 &.expanded-shoebox, &.expanded-the-blocks, &.expanded-year-end-review, &.expanded-the-mitch-kitch, &.expanded-compound, &.expanded-everyday-portfolio, &.expanded-sprout, &.expanded-run-away {
-                    align-items: flex-end;
-                    justify-content: flex-end;
-                    height: 800px;
+                    align-items: center;
+                    justify-content: center;
+                    height: unset;
                     
                     #shoebox, #the-blocks, #year-end-review, #the-mitch-kitch, #compound, #everyday-portfolio, #sprout, #run-away {
                         position: relative;
@@ -514,28 +749,74 @@
                         margin: 0;
                         margin-bottom: 25px;
                         padding: 0;
+                        transition: unset;
+
+                        .tile-header {
+                            padding: 10px 25px;
+
+                            h2 {
+                                text-align: left;
+                            }
+                        }
+
+                        .tile-description {
+                            font-size: 14pt !important;
+                            font-weight: 400 !important;
+
+                            a {
+                                align-self: center !important;
+                            }
+
+                            &.open {
+                                padding: 30px;
+                                padding-top: 110px;
+                            }
+                        }
                     }
                 }
 
                 &.expanded-the-blocks, &.expanded-year-end-review, &.expanded-compound, &.expanded-sprout {
                     align-items: flex-end;
                     justify-content: flex-end;
+
                     #the-blocks, #year-end-review, #compound, #sprout {
-                        height: 525px;
+                        height: fit-content;
+
+                        .tile-header {
+                            h2 {
+                                font-size: 22pt !important;
+                            }
+                        }
+                    }
+
+                    #sprout {
+                        .tile-header {
+                            img {
+                                height: 60px;
+                                margin-top: 5px;
+                            }
+                        }
                     }
                     #shoebox, #the-mitch-kitch, #everyday-portfolio, #run-away {
-                        height: 275px;
+                        height: 433px;
                     }
                 }
 
                 &.expanded-shoebox, &.expanded-the-mitch-kitch, &.expanded-everyday-portfolio, &.expanded-run-away {
                     align-items: flex-end;
                     justify-content: flex-end;
+
                     #the-blocks, #year-end-review, #compound, #sprout {
-                        height: 275px;
+                        height: 433px;
                     }
                     #shoebox, #the-mitch-kitch, #everyday-portfolio, #run-away {
-                        height: 525px;
+                        height: fit-content;
+
+                        .tile-header {
+                            h2 {
+                                font-size: 22pt !important;
+                            }
+                        }
                     }
                 }
             }

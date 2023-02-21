@@ -4,8 +4,11 @@
     --header-background: #ffffff50;
     --text-color-main: #000000;
     --text-color-inverted: #ffffff;
+    --copyright-text-color: #c1c1c1;
+    --link-color: #1f31ff;
+    --link-bg-color: #f3f3f3cc;
     --button-text-color: #ffffff;
-    --menu-bg-hover: ##f0f0f0;
+    --menu-bg-hover: #f0f0f0;
     --menu-bg-active: #000000;
     --tile-bg-color: #f3f3f3;
     --the-blocks-tile: #ECECEC;
@@ -15,8 +18,10 @@
     --mitch-kitch-tile: #EAF2FF;
     --sprout-tile: #52CA8E;
     --run-away-tile: #F9F9F9;
+    --run-away-text: #ff9b25;
     --tile-toggle-light: #ffffff9f;
     --tile-toggle-dark: #d8d8d8a4;
+    --tile-toggle-ra: #d8d8d8a4;
 }
 
 [data-theme="dark"] {
@@ -25,17 +30,22 @@
     --header-background: #13131350;
     --text-color-main: #eaeaea;
     --text-color-inverted: #131313;
+    --copyright-text-color: #525252;
+    --link-color: #8a94ff;
+    --link-bg-color: #131313;
     --button-text-color: #eaeaea;
     --menu-bg-hover: #363636;
     --menu-bg-active: #3C3C3C;
-    --tile-bg-color: #2c2c2c;
+    --tile-bg-color: #525252;
     --the-blocks-tile: #2a2a2a;
-    --review-text: #131313;
+    --review-text: #fff5e1;
     --mitch-kitch-tile: #383e47;
     --sprout-tile: #52CA8E;
-    --run-away-tile: #323232;
+    --run-away-tile: #2c2c2c;
+    --run-away-text: #ff9b25;
     --tile-toggle-light: #1313139f;
     --tile-toggle-dark: #aeaeaea4;
+    --tile-toggle-ra: #1313139f;
 }
 
 body {

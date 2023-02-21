@@ -1,5 +1,5 @@
 .resume {
-    margin: 40px 0;
+    margin-top: 30px;
 
     .section-heading {
         font-family: 'Inconsolata', monospace;
@@ -9,12 +9,14 @@
     .intro {
         display: flex;
         align-items: center;
+        justify-content: space-between;
         margin-bottom: 25px;
 
         img {
-            height: 275px;
+            height: 250px;
             border-radius: 50%;
-            margin-right: 50px;
+            margin-left: 15px;
+            margin-top: 10px;
         }
 
         h2 {
@@ -29,6 +31,27 @@
             margin: 10px 0;
         }
 
+        .intro-text {
+            .social-icons {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 200px;
+                margin-top: 20px;
+
+                .link {
+                    text-decoration: none;
+                    
+
+                    svg {
+                        font-size: 24pt;
+                        cursor: pointer;
+                        color: var(--text-color-main);
+                    }
+                }
+            }
+        }
+
         .mobile-intro-text {
             display: none;
         }
@@ -41,11 +64,24 @@
             img {
                 height: 100px;
                 border-radius: 50%;
-                margin-right: 15px;
             }
 
             .intro-text {
                 margin-bottom: 5px;
+
+                .social-icons {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    width: 175px;
+                    margin-top: 5px;
+
+                    .link {
+                        svg {
+                            font-size: 18pt;
+                        }
+                    }
+                }
             }
     
             h2 {
@@ -88,7 +124,7 @@
     }
 
     .disclaimer {
-        margin-bottom: 30px;
+        margin: 35px 0;
     }
 
     .disclaimer-container {
@@ -112,7 +148,7 @@
 
     @media only screen and (max-width: 740px) {
         .disclaimer-container {
-            font-size: 12pt;
+            font-size: 14pt;
             padding: 20px 25px;
         }
     }
@@ -136,5 +172,78 @@
                 margin: 0;
             }
         }
+    }
+
+    .proficiencies {
+        margin: 25px 0;
+        h3 {
+            font-size: 16pt;
+            display: flex;
+            margin: 0;
+            margin-top: 15px;
+            align-items: center;
+            cursor: pointer;
+
+            svg {
+                margin-left: 5px;
+                transform: rotate(0);
+                transition: transform 0.3s ease;
+
+                &.up {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+
+        .section-list {
+            display: flex;
+            flex-direction: column;
+            height: 0;
+            opacity: 0;
+            transform: translateY(15px);
+            transition: all 0.4s ease;
+            margin: 0 0;
+
+
+            &.open {
+                height: fit-content;
+                opacity: 1;
+                transform: translateY(0);
+                margin: 25px 10px; 
+                margin-top: 10px;
+
+                span {
+                    margin-bottom: 5px;
+                }
+            }
+        }
+    }
+
+    .digital-copy-text {
+        display: flex;
+        align-items: center;
+        font-family: 'Inconsolata', monospace;
+        font-size: 14pt;
+        text-align: center;
+        white-space: nowrap;
+
+        p {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+
+            a {
+                color: var(--link-color);
+                cursor: pointer;
+            }
+        }
+
+        svg {
+            font-size: 24pt;
+            margin-right: 15px;
+        }
+
+       
     }
 }

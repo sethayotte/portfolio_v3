@@ -6,6 +6,8 @@ import { Landing } from './pages/Landing';
 import { Resume } from './pages/Resume';
 import { Projects } from './pages/Projects';
 import { Header } from './components/Header';
+import { Footer } from './components/Footer';
+import { NotFound } from './components/NotFound';
 
 const App = () => {
 
@@ -65,13 +67,16 @@ const App = () => {
 
   const ScrollToTop = (props) => {
     const location = useLocation();
+
     useEffect(() => {
-      if (lastPosition && lastPosition !== location) {
+      if (lastPosition && lastPosition !== location.pathname) {
+        lastPosition = location.pathname;
         window.scrollTo({top: 0, left: 0, behavior: "instant"});
-      } else {
-        return;
       }
-      lastPosition = location;
+      if (lastPosition === undefined) {
+        lastPosition = location.pathname;
+        window.scrollTo({top: 0, left: 0, behavior: "instant"});
+      }
     }, [location]);
   
     return <>{props.children}</>
@@ -113,16 +118,22 @@ const App = () => {
   return (
     <div>
       <Router>
-      <div>
-        <Header handleDarkModeToggle={handleDarkModeToggle} defaultDark={defaultDark} />
-      </div>
+          <div>
+            <Header handleDarkModeToggle={handleDarkModeToggle} defaultDark={defaultDark} />
+          </div>
         <ScrollToTop>
               <Routes>
                   <Route path='/' element={<Landing defaultDark={defaultDark} isMobileSafari={isMobileSafari} />} />
-                  <Route path='/projects' element={<Projects />} />
+                  <Route path='/projects' element={<Projects defaultDark={defaultDark} />} />
+                  <Route path='/projects/:project' element={<Projects />} />
                   <Route path='/resume' element={<Resume />} />
                   <Route path='/travel' element={<Travel />} />
+                  <Route path='/404' element={<NotFound />} />
+                  <Route path="*" element={<Navigate to='/404' replace />} />
               </Routes>
+          <div>
+            <Footer />
+          </div>
         </ScrollToTop>
       </Router>
     </div>

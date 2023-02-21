@@ -1,25 +1,4 @@
 {
-    "header": {
-        "links": [
-            {
-                "title": "LinkedIn",
-                "address": ""
-            },
-            {
-                "title": "Twitter",
-                "address": ""
-            },
-            {
-                "title": "Email",
-                "address": ""
-            },
-            {
-                "title": "Github",
-                "address": ""
-            }
-        ],
-        "disclaimer": "While I'm not currently looking for any new positions, feel free to get in touch if you'd like to chat!"
-    },
     "education": [
         {
             "title": "Carnegie Mellon University",
@@ -75,7 +54,18 @@
     "proficiencies": [
         {
             "section": "Technologies",
-            "items": ["HTML", "Boostrap", "CSS/SCSS", "Javascript"]
+            "items": ["Javascript", "Angular", "React", "HTML", "Boostrap", "CSS/SCSS"]
+        },
+        {
+            "section": "Design",
+            "items": ["Adobe Creative Suite", "(for OCR & indexing purposes: Illustrator, InDesign, Photoshop, After Effects, Xd, Premiere)", "Sketch", "Figma"]
+        },
+        {
+            "section": "Workflow",
+            "items": ["VS Code", "JetBrains IntelliJ", "Design Thinking", "Agile", "Azure DevOps", "Jira", "Confluence", "GitHub", "Notion"]
         }
-    ]
+    ],
+    "footer": {
+        "disclaimer": "While I'm not currently looking for any new positions, feel free to get in touch if you'd like to chat!"
+    }
 }
