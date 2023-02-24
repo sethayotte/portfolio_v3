@@ -31,7 +31,7 @@ const Header = ({handleDarkModeToggle, defaultDark}) => {
     }, [])
     
   return (
-    <header className={(isDesktop || !expandedMenu) ? 'header' : 'header expanded'}>
+    <header id='app-header' className={(isDesktop || !expandedMenu) ? 'header' : 'header expanded'}>
         <div className='header-content'>
             <Link to='/'>
                 <h1>Seth Mitchell</h1>

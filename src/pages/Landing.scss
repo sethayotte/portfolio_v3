@@ -6,6 +6,9 @@
     position: relative;
     width: 100%;
     height: calc(100vh - 50px);
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    margin-bottom: 100px;
     
     h1 {
         width: 100%;
@@ -69,6 +72,117 @@
 
         &.safari {
             margin-bottom: 70px;
+        }
+    }
+}
+
+.landing-intro-card {
+    width: calc(100% - 50px);
+    height: calc(100vh - 170px);
+    margin-bottom: 150px;
+    border-radius: 30px;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    position: relative;
+    
+    h2 {
+        font-family: 'Inconsolata', monospace;
+        color: var(--text-color-main);
+        font-weight: 400;
+        font-size: 32pt;
+        white-space: pre-wrap;
+        text-align: center;
+        line-height: 40pt;
+        margin: 0;
+    }
+
+    a {
+        font-family: 'Inter', sans-serif;
+        font-weight: 600;
+        font-size: 16pt;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        text-align: center;
+        margin-top: 20px;
+        width: fit-content;
+
+        svg {
+            transform: rotate(-90deg) translateY(0);
+            transition: transform 0.4s ease;
+            font-size: 32pt;
+        }
+
+        body.hasHover &:hover {
+            svg {
+                transform: rotate(-90deg) translateY(7px);
+            }
+        }
+    }
+
+    &#featured-project, &#work-experience {
+        background-color: var(--intro-tile-outer);
+        a {
+            color: var(--link-color);
+        }
+    }
+
+    &#featured-project {
+        
+        .card-text {
+            height: 40%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            z-index: 5;
+            a {
+                color: var(--shoebox-tile);
+                z-index: 5;
+            }
+        }
+        img {
+            position: absolute;
+            display: flex;
+            bottom: 0;
+            align-self: center;
+            max-height: 55%;
+            max-width: 90%;
+        }
+    }
+
+    &#technologies-overview {
+        background-color: var(--intro-tile-inner);
+        a {
+            color: var(--technologies-link);
+        }
+    }
+}
+
+@media only screen and (max-width: 740px) {
+
+    .landing-intro-card {
+        margin-bottom: 100px;
+
+        h2 {
+            font-size: min(6.3vw, 32pt);
+            line-height: normal;
+        }
+
+        &#featured-project {
+        
+        }
+
+        &#work-experience {
+            
+        }
+    
+        &#technologies-overview {
+            
         }
     }
 }
@@ -138,16 +252,19 @@
                     font-family: 'Inconsolata', monospace;
                     color: var(--link-color);
                     transition: all 0.4s ease;
+                    text-decoration: none;
                     cursor: pointer;
 
                     svg {
-                        font-size: 28pt;
+                        font-size: 24pt;
+                        margin: 0;
+                        margin-left: -5px;
                     }
 
                     body.hasHover &:hover {
                         color: var(--text-color-inverted);
                         background-color: var(--link-color);
-                        font-weight: 600;
+                        font-weight: 500;
                     }
                 }
             }
@@ -259,7 +376,7 @@
                         &.open {
                             display: flex;
                             flex-direction: column;
-                            padding: 50px 30px;
+                            padding: 25px 30px;
                             padding-top: 130px;
                             font-size: 18pt;
                             white-space: pre-wrap;
@@ -321,7 +438,7 @@
                             display: flex;
                             flex-direction: column;
                             color: var(--text-color-inverted);
-                            padding: 50px 30px;
+                            padding: 25px 30px;
                             padding-top: 130px;
                             font-size: 18pt;
                             white-space: pre-wrap;
@@ -416,7 +533,7 @@
                         &.open {
                             display: flex;
                             flex-direction: column;
-                            padding: 50px 30px;
+                            padding: 25px 30px;
                             padding-top: 130px;
                             color: var(--review-text);
                             font-size: 18pt;
@@ -484,7 +601,7 @@
                             display: flex;
                             flex-direction: column;
                             color: var(--text-color-main);
-                            padding: 50px 30px;
+                            padding: 25px 30px;
                             padding-top: 130px;
                             font-size: 18pt;
                             white-space: pre-wrap;
@@ -586,7 +703,7 @@
                             display: flex;
                             flex-direction: column;
                             color: var(--text-color-inverted);
-                            padding: 50px 30px;
+                            padding: 25px 30px;
                             padding-top: 130px;
                             font-size: 18pt;
                             white-space: pre-wrap;
@@ -652,7 +769,7 @@
                             display: flex;
                             flex-direction: column;
                             color: var(--text-color-main);
-                            padding: 50px 30px;
+                            padding: 25px 30px;
                             padding-top: 130px;
                             font-size: 18pt;
                             white-space: pre-wrap;
@@ -764,6 +881,7 @@
                             font-weight: 400 !important;
 
                             a {
+                                text-decoration: none;
                                 align-self: center !important;
                             }
 

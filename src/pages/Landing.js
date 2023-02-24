@@ -8,7 +8,6 @@ const Landing = ({defaultDark, isMobileSafari}) => {
 
     const [tileExpand, setTileExpand ] = useState('');
     const [ isDesktop, setIsDesktop ] = useState(false);
-    
 
     const updateWidth = () => {
         if (window.innerWidth < 740) {
@@ -20,8 +19,29 @@ const Landing = ({defaultDark, isMobileSafari}) => {
 
     window.addEventListener("resize", updateWidth);
 
+    const fadeMenuBar = () => {
+        let windowHeight = window.innerHeight;
+        let currScrollPos2 = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+        if (currScrollPos2 > windowHeight / 3) {
+            document.getElementById('app-header').style.opacity = currScrollPos2 / (windowHeight / 3) - 2;
+            document.getElementById('app-header').style.display = 'flex';
+        } else {
+            document.getElementById('app-header').style.display = 'none';
+        }
+    }
+
     useEffect(() => {
         updateWidth();
+        let scrollPoint = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+        if (scrollPoint < 100) {
+            document.getElementById('app-header').style.opacity = 0;
+        }
+        document.addEventListener('scroll', fadeMenuBar, true);
+        return () => {
+            document.removeEventListener('scroll', fadeMenuBar, true);
+            document.getElementById('app-header').style.opacity = 1;
+            document.getElementById('app-header').style.display = 'flex';
+        }
     }, [])
 
     let isOpen = false;
@@ -79,7 +99,6 @@ const Landing = ({defaultDark, isMobileSafari}) => {
         } else {
             document.querySelector(`.row${rowIndex}`).classList.toggle(`expanded-${slug}`);
         }
-        // updateTileStatus(slug);
         if (document.querySelector(`.row${rowIndex}`).classList.contains(`expanded-${slug}`)) {
             isOpen = true;
         } else {
@@ -96,16 +115,6 @@ const Landing = ({defaultDark, isMobileSafari}) => {
         }
     }
 
-    const updateTileStatus = (slug) => {
-        if (tileExpand === '') {
-            setTileExpand(slug);
-        } else if (lastOpened === slug) {
-            setTileExpand('');
-        } else {
-            setTileExpand(slug);
-        }
-    }
-
     const RenderTileRow = ({row, parentIndex}) => {
         return (
             <div className={isDesktop ? 'project-row' + ' ' + "row"+parentIndex : 'project-row' + ' ' + 'row'+parentIndex}>
@@ -116,7 +125,7 @@ const Landing = ({defaultDark, isMobileSafari}) => {
                     </div>
                     <div className={'tile-description open'}>
                         {row[0].content.description}
-                        <Link to={'/projects/' + row[0].content.slug}>Explore {row[0].title} <IoIosArrowRoundForward /></Link>
+                        <Link to={'/projects/' + row[0].content.slug}>Explore {(row[0].title === '') ? 'Sprout' : row[0].title} <IoIosArrowRoundForward /></Link>
                     </div>
                     <BsPlusCircleFill className='tile-toggle' onClick={() => toggleTile(row[0].content.slug, parentIndex, row[1].content.slug)} style={{color: row[0].toggleColor}} />
                 </div>
@@ -136,7 +145,7 @@ const Landing = ({defaultDark, isMobileSafari}) => {
     }
 
     return (
-        <section>
+        <section className='landing-wrapper'>
             <section className='fold'>
                 <h1>Seth Mitchell</h1>
                 <span className='above-the-fold-links'>
@@ -146,17 +155,35 @@ const Landing = ({defaultDark, isMobileSafari}) => {
                 </span>
                 {
                     isMobileSafari ?
-                    <a href='#project-tiles' className='fold-arrow safari'>
+                    <a href='#featured-project' className='fold-arrow safari'>
                         <IoIosArrowRoundDown />
                     </a> :
-                    <a href='#project-tiles' className='fold-arrow' >
+                    <a href='#featured-project' className='fold-arrow' >
                         <IoIosArrowRoundDown />
                     </a>
                 } 
             </section>
+            {
+                    HomeData.landingIntroCards.map((card, index) => {
+                        return (
+                            <section id={card.id} className='landing-intro-card' key={index}>
+                                <div className='card-text'>
+                                    {
+                                        isDesktop ?
+                                        <h2>{card.copy}</h2> :
+                                        <h2>{card.mobileCopy ? card.mobileCopy : card.copy}</h2> 
+                                    }
+                                    <Link>{card.linkText} <IoIosArrowRoundDown /></Link>
+                                </div>
+                                
+                                <img src={card.id.includes('featured') ? defaultDark ? card.imagesDark[0] : card.imagesLight[0] : null} />
+                            </section>
+                        )
+                    })
+                }
             <section id='project-tiles'>
                 {
-                    HomeData.map((row, index) => {
+                    HomeData.landingProjectTiles.map((row, index) => {
                         return (
                             <RenderTileRow row={row} parentIndex={index} key={index} />
                         )

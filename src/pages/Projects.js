@@ -121,7 +121,7 @@ const Projects = ({ defaultDark }) => {
 
   const RenderFullscreenProject = ({ row }) => {
     return (
-      <section>
+      <section className="project-wrapper">
         {row[openIndex].content.slug === openProject ? (
           <div className="fullscreen-project" style={{ backgroundColor: row[openIndex].color }}>
             <div className="tile-header">

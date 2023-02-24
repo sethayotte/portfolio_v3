@@ -6,6 +6,7 @@
     }
 
     #project-tiles {
+        width: 100%;
 
         &.projects-page {
             margin-top: 50px;
@@ -15,16 +16,23 @@
             }
 
             .tile {
-                body.hasHover &:hover {
-                    .tile-header {
+                
+                .tile-header {
+                    
+
+                    body.hasHover &:hover {
                         transform: scale(1.05);
                     }
                 }
             } 
         }
+        
+        .project-wrapper {
+            width: 100%;
+        }
 
         .fullscreen-project {
-            width: calc(100vw - 50px);
+            width: 100%;
             max-width: 1400px;
             height: 1000px;
             border-radius: 25px;
