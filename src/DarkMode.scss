@@ -25,6 +25,8 @@
     --intro-tile-outer: #F9F9F9;
     --intro-tile-inner: #E8EDFF;
     --technologies-link: #5F4DCF;
+    --technologies-icon-highlight: #C2D0FF;
+    --technologies-icon-shadow: #BDC9F3;
 }
 
 [data-theme="dark"] {
@@ -52,6 +54,8 @@
     --intro-tile-outer: #212121;
     --intro-tile-inner: #261D3A;
     --technologies-link: #72609C;
+    --technologies-icon-highlight: #47386A;
+    --technologies-icon-shadow: #362955;
 }
 
 body {

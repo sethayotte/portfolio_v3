@@ -134,7 +134,7 @@
     &#featured-project {
         
         .card-text {
-            height: 40%;
+            height: 43%;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -157,6 +157,27 @@
 
     &#technologies-overview {
         background-color: var(--intro-tile-inner);
+        .card-text {
+            height: 43%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        .tech-imgs {
+            max-height: 55%;
+            width: 90%;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-end;
+            justify-content: space-between;
+
+            img {
+                width: 25%;
+                max-height: 40%;
+                padding: 15px;
+            }
+        }
         a {
             color: var(--technologies-link);
         }
@@ -168,10 +189,20 @@
     .landing-intro-card {
         margin-bottom: 100px;
 
-        h2 {
-            font-size: min(6.3vw, 32pt);
-            line-height: normal;
+        .card-text {
+            h2 {
+                font-size: min(6.3vw, 32pt);
+                line-height: normal;
+            }
+
+            a {
+                font-size: 14pt;
+                svg {
+                    font-size: 28pt;
+                }
+            }
         }
+        
 
         &#featured-project {
         
@@ -182,7 +213,18 @@
         }
     
         &#technologies-overview {
-            
+            .tech-imgs {
+                max-height: 60%;
+                width: 95%;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: space-around;
+
+                img:first-child {
+                    width: 30%;
+                }
+            }
         }
     }
 }
