@@ -1,3 +1,46 @@
+.not-found {
+    margin-top: 100px;
+
+    h2 {
+        font-size: 96pt;
+        margin: 0;
+        font-weight: 900;
+        color: var(--tile-bg-color);
+    }
+    div {
+        font-size: 32pt;
+        font-family: 'Inconsolata', monospace;
+        font-weight: 300;
+        margin-bottom: 25px;
+    }
+
+    a {
+        color: var(--link-color);
+        font-family: 'Inter', sans-serif;
+        font-size: 16pt;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        width: fit-content;
+        transform: scale(1);
+        transition: transform 0.5s ease;
+
+        svg {
+            margin-right: 5px;
+            transform: translate(0);
+            transition: transform 0.5s ease;
+        }
+
+        body.hasHover &:hover {
+            transform: scale(1.05);
+
+            svg {
+                transform: translate(400px, -400px);
+            }
+        }
+    }
+}
+
 .header {
     width: calc(100% - 50px);
     position: fixed;
