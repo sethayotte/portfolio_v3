@@ -62,8 +62,8 @@
     [
         {
             "title": "Compound",
-            "logoLight": "./assets/Compound_Light.png",
-            "logoDark": "./assets/Compound_Dark.png",
+            "logoLight": "./assets/Compound_Light.svg",
+            "logoDark": "./assets/Compound_Dark.svg",
             "color": "#1B94FF",
             "toggleColor": "var(--tile-toggle-light)",
             "fontColor": "var(--text-color-inverted)",

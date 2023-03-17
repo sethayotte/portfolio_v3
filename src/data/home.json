@@ -33,8 +33,13 @@
             "mobileCopy": "Diverse role &\nindustry experience.\nPassion for social +\nenvironmental good.",
             "linkText": "See Experience",
             "linkRoute": "/resume",
-            "images": [
-                ""
+            "imagesLight": [
+                "./assets/experience/Apple_Light.svg", "./assets/experience/VCU_Light.svg", "./assets/experience/Tesla_Light.svg", 
+                "./assets/experience/Blocks_Light.svg", "./assets/experience/Compass_Light.svg", "./assets/experience/GM_Light.svg"
+            ],
+            "imagesDark": [
+                "./assets/experience/Apple_Dark.svg", "./assets/experience/VCU_Light.svg", "./assets/experience/Tesla_Light.svg", 
+                "./assets/experience/Blocks_Dark.svg", "./assets/experience/Compass_Dark.svg", "./assets/experience/GM_Light.svg"
             ]
         }
     ],
@@ -50,7 +55,7 @@
                 "font": "IBM Plex Sans",
                 "weight": "500",
                 "content": {
-                    "description": "This is a blurb of text introducing the specific project",
+                    "description": "Welcome to The Blocks, where you’re provided simple and well-designed tools and resources to help you grow financially. My goal is to help individuals take control of their finances and build a better future. These products and services are designed with you in mind, so you can focus on achieving your financial goals without the complexity.",
                     "slug": "the-blocks"
                 }
             },
@@ -64,7 +69,7 @@
                 "font": "Inter",
                 "weight": "600",
                 "content": {
-                    "description": "Shoebox is a custom-designed personal finance utility that's changing the way individuals manage their Health Savings Account (HSA) expenses and maximize their tax strategy. With Shoebox, HSA users can easily log eligible expenses to gain a comprehensive view of their financial progress. Whether it's tracking expenses, setting financial goals, or managing HSA contributions and limits, Shoebox streamlines the process and provides convenient access at home or on the go. \n \nPaired with detailed reports on HSA contributions and expenses, Shoebox empowers users to optimize their HSA benefits and stay on top of their account balance. The app also sends timely alerts for important HSA deadlines and contribution limits.",
+                    "description": "Shoebox is a custom-designed personal finance utility that's changing the way individuals manage their Health Savings Account (HSA) expenses and maximize their tax strategy. With Shoebox, HSA users can easily log eligible expenses to gain a comprehensive view of their financial progress. Whether it's tracking expenses, setting financial goals, or managing HSA contributions and limits, Shoebox streamlines the process and provides convenient access at home or on the go. \n \nPaired with detailed reports on HSA contributions and expenses, Shoebox empowers users to optimize their HSA benefits and stay on top of their account balance. The app also sends timely alerts for important HSA deadlines and contribution limits. Our comprehensive tool will be launching later this year, with a free tier and premium subscription options to fit your needs.",
                     "slug": "shoebox"
                 }
             }
@@ -80,7 +85,7 @@
                 "font": "Inconsolata",
                 "weight": "400",
                 "content": {
-                    "description": "Shoebox is a custom-designed personal finance utility that's changing the way individuals manage their Health Savings Account (HSA) expenses and maximize their tax strategy. With Shoebox, HSA users can easily log eligible expenses to gain a comprehensive view of their financial progress. Whether it's tracking expenses, setting financial goals, or managing HSA contributions and limits, Shoebox streamlines the process and provides convenient access at home or on the go. \n \nPaired with detailed reports on HSA contributions and expenses, Shoebox empowers users to optimize their HSA benefits and stay on top of their account balance. The app also sends timely alerts for important HSA deadlines and contribution limits.",
+                    "description": "Get a clear picture of your net worth with Year End Review, a simple tool designed to help individuals and couples assess their financial progress at the end of each year. With Year End Review, you can easily enter in your income, costs, windfalls, or surprise expenses to see how your net worth has changed year over year. Although still a work in progress, I’m excited to share this tool as part of The Blocks pipeline of products that aim to simplify personal finance.",
                     "slug": "year-end-review"
                 }
             },
@@ -94,7 +99,7 @@
                 "font": "Bitter",
                 "weight": "300",
                 "content": {
-                    "description": "Shoebox is a custom-designed personal finance utility that's changing the way individuals manage their Health Savings Account (HSA) expenses and maximize their tax strategy. With Shoebox, HSA users can easily log eligible expenses to gain a comprehensive view of their financial progress. Whether it's tracking expenses, setting financial goals, or managing HSA contributions and limits, Shoebox streamlines the process and provides convenient access at home or on the go. \n \nPaired with detailed reports on HSA contributions and expenses, Shoebox empowers users to optimize their HSA benefits and stay on top of their account balance. The app also sends timely alerts for important HSA deadlines and contribution limits.",
+                    "description": "The Mitch Kitch is a private recipe repository designed exclusively for the Mitchell family and close friends. The platform allows us to keep all of our favorite family recipes organized in one central location, so they can easily accessed whenever, wherever. The strong Mitch Kitch branding and playful user interface makes adding and maintaining recipes a breeze, while the technical achievements ensure that your data is secure and your recipes are always easy to find.",
                     "slug": "the-mitch-kitch"
                 }
             }
@@ -102,15 +107,15 @@
         [
             {
                 "title": "Compound",
-                "logoLight": "./assets/Compound_Light.png",
-                "logoDark": "./assets/Compound_Dark.png",
+                "logoLight": "./assets/Compound_Light.svg",
+                "logoDark": "./assets/Compound_Dark.svg",
                 "color": "#1B94FF",
                 "toggleColor": "var(--tile-toggle-light)",
                 "fontColor": "var(--text-color-inverted)",
                 "font": "Inter",
                 "weight": "800",
                 "content": {
-                    "description": "Shoebox is a custom-designed personal finance utility that's changing the way individuals manage their Health Savings Account (HSA) expenses and maximize their tax strategy. With Shoebox, HSA users can easily log eligible expenses to gain a comprehensive view of their financial progress. Whether it's tracking expenses, setting financial goals, or managing HSA contributions and limits, Shoebox streamlines the process and provides convenient access at home or on the go. \n \nPaired with detailed reports on HSA contributions and expenses, Shoebox empowers users to optimize their HSA benefits and stay on top of their account balance. The app also sends timely alerts for important HSA deadlines and contribution limits.",
+                    "description": "Want to quickly calculate compound interest? Meet Compound, the sleek and easy-to-use interest calculator. With Compound, you can quickly calculate your potential growth with a clear and dynamic tool. Whether you're a professional investor or just getting started with your finances, Compound is the perfect tool to help you visualize and plan your investments. Plus, Compound is now available in the App Store as an iOS native app, making it even more convenient to use on the go.",
                     "slug": "compound"
                 }
             },
@@ -124,7 +129,7 @@
                 "font": "Inter",
                 "weight": "400",
                 "content": {
-                    "description": "Shoebox is a custom-designed personal finance utility that's changing the way individuals manage their Health Savings Account (HSA) expenses and maximize their tax strategy. With Shoebox, HSA users can easily log eligible expenses to gain a comprehensive view of their financial progress. Whether it's tracking expenses, setting financial goals, or managing HSA contributions and limits, Shoebox streamlines the process and provides convenient access at home or on the go. \n \nPaired with detailed reports on HSA contributions and expenses, Shoebox empowers users to optimize their HSA benefits and stay on top of their account balance. The app also sends timely alerts for important HSA deadlines and contribution limits.",
+                    "description": "Let’s explore one of my earliest development projects, Everyday Portfolio. Built using the React Native framework, this app allowed users to track their financial progress in a simple, minimalist package. Although it is not a published project for use, Everyday Portfolio laid the groundwork for future financial tools and projects, such as those found in The Blocks.",
                     "slug": "everyday-portfolio"
                 }
             }
@@ -140,7 +145,7 @@
                 "font": "Inter",
                 "weight": "400",
                 "content": {
-                    "description": "Shoebox is a custom-designed personal finance utility that's changing the way individuals manage their Health Savings Account (HSA) expenses and maximize their tax strategy. With Shoebox, HSA users can easily log eligible expenses to gain a comprehensive view of their financial progress. Whether it's tracking expenses, setting financial goals, or managing HSA contributions and limits, Shoebox streamlines the process and provides convenient access at home or on the go. \n \nPaired with detailed reports on HSA contributions and expenses, Shoebox empowers users to optimize their HSA benefits and stay on top of their account balance. The app also sends timely alerts for important HSA deadlines and contribution limits.",
+                    "description": "Sprout was a talent management platform that I prototyped with a group of talent executives to support the labor fallout following the initial US COVID impacts. Although the project didn't result in a final product, it was a pivotal moment in my software development journey. It allowed me to explore and improve my skills in the area of software development, setting the stage for future projects and products.",
                     "slug": "sprout"
                 }
             },
@@ -152,7 +157,7 @@
                 "toggleColor": "var(--tile-toggle-ra)",
                 "font": "Inter",
                 "content": {
-                    "description": "Shoebox is a custom-designed personal finance utility that's changing the way individuals manage their Health Savings Account (HSA) expenses and maximize their tax strategy. With Shoebox, HSA users can easily log eligible expenses to gain a comprehensive view of their financial progress. Whether it's tracking expenses, setting financial goals, or managing HSA contributions and limits, Shoebox streamlines the process and provides convenient access at home or on the go. \n \nPaired with detailed reports on HSA contributions and expenses, Shoebox empowers users to optimize their HSA benefits and stay on top of their account balance. The app also sends timely alerts for important HSA deadlines and contribution limits.",
+                    "description": "Run Away is a past project that demonstrates my expertise in integrating APIs and designing engaging user interfaces. This project utilized a flight data API and a randomized algorithm to provide users with a fun and unique way to explore new travel destinations. By entering a departure point, users were presented with a 'ticket-ui' that displayed the basic details of a randomly selected flight to a destination. Clicking on the 'Book Now' button would direct users to Google Flights to explore additional time and date options. Although this project is no longer active, it serves as a strong example of my ability to create compelling and innovative digital experiences.",
                     "slug": "run-away"
                 }
             }

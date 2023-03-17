@@ -170,12 +170,18 @@ const Landing = ({defaultDark, isMobileSafari}) => {
                                 {
                                     card.id.includes('technologies') ?
                                     <div className='tech-imgs'>
-                                        <img src={defaultDark ? card.imagesDark[0] : card.imagesLight[0]} />
+                                        <img id='css3' className='top-end' src={defaultDark ? card.imagesDark[0] : card.imagesLight[0]} />
                                         <img src={defaultDark ? card.imagesDark[1] : card.imagesLight[1]} />
-                                        <img src={defaultDark ? card.imagesDark[2] : card.imagesLight[2]} />
-                                        <img src={defaultDark ? card.imagesDark[3] : card.imagesLight[3]} />
-                                        <img src={defaultDark ? card.imagesDark[4] : card.imagesLight[4]} />
-                                        <img src={defaultDark ? card.imagesDark[5] : card.imagesLight[5]} />
+                                        <img className='top-end' src={defaultDark ? card.imagesDark[2] : card.imagesLight[2]} />
+                                    </div> :
+                                    null
+                                }
+                                {
+                                    card.id.includes('experience') ?
+                                    <div className='work-imgs'>
+                                        <img className='top-end' src={defaultDark ? card.imagesDark[0] : card.imagesLight[0]} />
+                                        <img id='vcu' src={defaultDark ? card.imagesDark[1] : card.imagesLight[1]} />
+                                        <img className='top-end' src={defaultDark ? card.imagesDark[2] : card.imagesLight[2]} />
                                     </div> :
                                     null
                                 }
@@ -190,6 +196,24 @@ const Landing = ({defaultDark, isMobileSafari}) => {
                                 {
                                     card.id.includes('featured') ?
                                     <img src={defaultDark ? card.imagesDark[0] : card.imagesLight[0]} /> :
+                                    null
+                                }
+                                {
+                                    card.id.includes('experience') ?
+                                    <div className='work-imgs'>
+                                        <img className='bottom-end' src={defaultDark ? card.imagesDark[3] : card.imagesLight[3]} />
+                                        <img id='compass' src={defaultDark ? card.imagesDark[4] : card.imagesLight[4]} />
+                                        <img className='bottom-end' src={defaultDark ? card.imagesDark[5] : card.imagesLight[5]} />
+                                    </div> :
+                                    null
+                                }
+                                {
+                                    card.id.includes('technologies') || card.id.includes('expereince') ?
+                                    <div className='tech-imgs'>
+                                        <img className='bottom-end' src={defaultDark ? card.imagesDark[3] : card.imagesLight[3]} />
+                                        <img src={defaultDark ? card.imagesDark[4] : card.imagesLight[4]} />
+                                        <img className='bottom-end' src={defaultDark ? card.imagesDark[5] : card.imagesLight[5]} />
+                                    </div> :
                                     null
                                 }
                             </section>

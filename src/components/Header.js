@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { IoIosMenu } from 'react-icons/io';
 import { IoCloseOutline } from 'react-icons/io5';
+import { BsFillMoonFill, BsFillSunFill } from 'react-icons/bs';
 import Switch from "react-switch";
 
 const Header = ({handleDarkModeToggle, defaultDark}) => {
@@ -54,15 +55,15 @@ const Header = ({handleDarkModeToggle, defaultDark}) => {
                         <Link to="/resume" className={location.pathname.includes('resume') ? 'active' : ''}>resume</Link>
                         <Link to="/projects" className={location.pathname.includes('projects') ? 'active' : ''}>projects</Link>
                         <Link to="/travel" className={location.pathname.includes('travel') ? 'active' : ''}>travel</Link>
-                        <label>
+                        <label id='color-mode-toggle'>
                             <Switch 
                                 onChange={handleDarkModeToggle} 
                                 checked={defaultDark ? true : false} 
                                 offColor='#D4D4D4'
                                 onColor='#3C3C3C'
                                 onHandleColor='#1B1B1B'
-                                checkedIcon={false}
-                                uncheckedIcon={false}
+                                checkedIcon={<BsFillMoonFill />}
+                                uncheckedIcon={<BsFillSunFill />}
                                 height={35}
                                 width={65}
                                 handleDiameter={25}
@@ -73,15 +74,15 @@ const Header = ({handleDarkModeToggle, defaultDark}) => {
                         <Link to="/resume" onClick={toggleMenu} className={location.pathname.includes('resume') ? 'active' : ''}>resume</Link>
                         <Link to="/projects" onClick={toggleMenu} className={location.pathname.includes('projects') ? 'active' : ''}>projects</Link>
                         <Link to="/travel" onClick={toggleMenu} className={location.pathname.includes('travel') ? 'active' : ''}>travel</Link>
-                        <label>
+                        <label id='color-mode-toggle'>
                             <Switch 
                                 onChange={handleDarkModeToggle} 
                                 checked={defaultDark ? true : false} 
                                 offColor='#D4D4D4'
                                 onColor='#3C3C3C'
                                 onHandleColor='#1B1B1B'
-                                checkedIcon={false}
-                                uncheckedIcon={false}
+                                checkedIcon={<BsFillMoonFill />}
+                                uncheckedIcon={<BsFillSunFill />}
                                 height={35}
                                 width={65}
                                 handleDiameter={25}

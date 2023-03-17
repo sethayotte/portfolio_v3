@@ -26,6 +26,7 @@ body {
   color: var(--text-color-main);
   height: fit-content;
   min-height: calc(100vh - 125px);
+  overflow-x: hidden;
 }
 
 @import './components/Header.scss';
