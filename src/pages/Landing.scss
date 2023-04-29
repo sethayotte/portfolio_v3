@@ -84,7 +84,7 @@
     padding: 25px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     flex-direction: column;
     position: relative;
     
@@ -132,6 +132,8 @@
     }
 
     &#featured-project {
+
+        justify-content: space-between;
         
         .card-text {
             height: 43%;
@@ -506,7 +508,7 @@
                             flex-direction: column;
                             padding: 25px 30px;
                             padding-top: 130px;
-                            font-size: 18pt;
+                            font-size: 24pt;
                             white-space: pre-wrap;
                             font-family: 'IBM Plex Sans', sans-serif;
                             font-weight: 300;
@@ -576,7 +578,7 @@
                             color: var(--text-color-inverted);
                             padding: 25px 30px;
                             padding-top: 130px;
-                            font-size: 18pt;
+                            font-size: 24pt;
                             white-space: pre-wrap;
                             font-weight: 300;
                         }
@@ -685,7 +687,7 @@
                             padding: 25px 30px;
                             padding-top: 130px;
                             color: var(--review-text);
-                            font-size: 18pt;
+                            font-size: 24pt;
                             white-space: pre-wrap;
                             font-family: 'Inconsolata', monospace;
                             font-weight: 300;
@@ -752,7 +754,7 @@
                             color: var(--text-color-main);
                             padding: 25px 30px;
                             padding-top: 130px;
-                            font-size: 18pt;
+                            font-size: 24pt;
                             white-space: pre-wrap;
                             font-weight: 300;
                         }
@@ -854,7 +856,7 @@
                             color: var(--text-color-inverted);
                             padding: 25px 30px;
                             padding-top: 130px;
-                            font-size: 18pt;
+                            font-size: 24pt;
                             white-space: pre-wrap;
                             font-weight: 300;
                         }
@@ -920,7 +922,7 @@
                             color: var(--text-color-main);
                             padding: 25px 30px;
                             padding-top: 130px;
-                            font-size: 18pt;
+                            font-size: 24pt;
                             white-space: pre-wrap;
                             font-weight: 300;
                         }

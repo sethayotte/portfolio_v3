@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import ResumeData from '../data/resume.json';
 import Headshot from '../assets/SethMitchell_Headshot_Scaled.jpg';
-import { HiOutlineArrowDownCircle } from 'react-icons/hi2';
+import { HiOutlineEye, HiOutlineEyeOff } from 'react-icons/hi';
 import { RxCrumpledPaper } from 'react-icons/rx';
 import { IoLogoLinkedin, IoLogoTwitter, IoLogoGithub } from 'react-icons/io';
 import { IoPaperPlane } from 'react-icons/io5';
+import { TbSquareRoundedNumber0, TbSquareRoundedNumber1, TbSquareRoundedNumber2, TbSquareRoundedNumber3, TbArrowUpCircle, TbCertificate } from 'react-icons/tb';
 
 const Resume = () => {
 
@@ -16,6 +17,46 @@ const Resume = () => {
         } else {
             setSectionOpen(section);
         }
+    }
+
+    const renderMultiplePositions = (positions) => {
+        console.log(positions);
+        return (
+            <section>
+                {/* <span>{positions}</span> */}
+                {
+                    positions.map((position, index) => {
+                        
+                        const renderMarker = () => {
+                            switch (index) {
+                                case 0:
+                                    return <TbSquareRoundedNumber0 />;
+                                    break;
+                                case 1:
+                                    return <TbSquareRoundedNumber1 />;
+                                    break;
+                                case 2:
+                                    return <TbSquareRoundedNumber2 />;
+                                    break;
+                                case 3:
+                                    return <TbSquareRoundedNumber3 />;
+                                    break;
+                            }
+                        }
+                        
+                        return (
+                            <div key={index} className='multiple-positions'>
+                                {renderMarker()}
+                                <div>
+                                    <p className='role'>{position.title}</p>
+                                    <p className='sub-dates'>{position.dates}</p>
+                                </div>
+                            </div>
+                        )
+                    })
+                }
+            </section>
+        )
     }
 
   return (
@@ -48,19 +89,40 @@ const Resume = () => {
             <span className='section-heading'>Education</span>
             {
                 ResumeData.education.map((item, index) => {
+
+                    const renderEducationDocs = (docs) => {
+                        let documents = docs
+                        return (
+                            <section>
+                            {
+                                documents.map((doc, index) => {
+                                    return (
+                                        <a className='edu-docs' key={index} href={doc.url} target="_blank"><TbCertificate /> {doc.description.toUpperCase()}</a>
+                                    )
+                                })
+                            }
+                            </section>
+                        )
+                    }
+
                     return (
                         <div className='item' key={index}>
                             <span>{item.dates}</span>
                             <h3>{item.title}</h3>
                             <p>{item.degree}</p>
                             <p>{item.description}</p>
+                            {
+                                item.documents ?
+                                renderEducationDocs(item.documents) :
+                                null
+                            }
                         </div>
                     )
                 })
             }
         </section>
         <section className='experience'>
-            <span className='section-heading'>Work & Other Projects</span>
+            <span className='section-heading'>Work & Other Projects</span><HiOutlineEye /><HiOutlineEyeOff />
             {
                 ResumeData.experience.map((item, index) => {
                     return (
@@ -68,7 +130,12 @@ const Resume = () => {
                             <span>{item.dates}</span>
                             <h3>{item.company}</h3>
                             <p>{item.location}</p>
-                            <p>{item.position}</p>
+                            {
+                                item.position.length > 1 ?
+                                renderMultiplePositions(item.position) :
+                                <p>{item.position[0].title}</p>
+                            }
+                            
                         </div>
                     )
                 })
@@ -80,7 +147,7 @@ const Resume = () => {
                 ResumeData.proficiencies.map((item, index) => {
                     return (
                         <div className='category' key={index}>
-                            <h3 onClick={() => toggleSection(item.section)}>{item.section}<HiOutlineArrowDownCircle className={(sectionOpen === item.section) ? 'up' : ''} /></h3>
+                            <h3 onClick={() => toggleSection(item.section)}>{item.section}<TbArrowUpCircle className={(sectionOpen === item.section) ? 'down' : ''} /></h3>
                             { <SectionList item={item} sectionOpen={sectionOpen} /> }
                         </div>
                     )

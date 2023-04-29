@@ -4,13 +4,25 @@
             "title": "Carnegie Mellon University",
             "degree": "Master of Integrated Innovation of Products & Services",
             "description": "Class of 2026, Integrated Innovation Institute",
-            "dates": "2021 — Present"
+            "dates": "2021 — Present",
+            "documents": [
+                {
+                    "description": "Product Design Innovation Certificate",
+                    "url": "https://google.com"
+                }
+            ]
         },
         {
             "title": "NuCamp Coding Bootcamp",
             "degree": "Certificate in Full Stack Development",
             "description": "Desktop & Mobile Software Engineering",
-            "dates": "2020 — 2020"
+            "dates": "2020 — 2020",
+            "documents": [
+                {
+                    "description": "Honors Graduate",
+                    "url": "https://google.com"
+                }
+            ]
         },
         {
             "title": "Virginia Commonwealth University",
@@ -23,31 +35,55 @@
         {
 			"company": "General Motors",
 			"location": "Atlanta, GA",
-			"position": "Software Engineering, UI Development",
+			"position": [
+                {
+                    "title": "Lead Developer",
+                    "dates": "Mar 2023 — Present"
+                },
+                {
+                    "title": "UI Developer",
+                    "dates": "Jun 2021 — Mar 2023"
+                }
+            ],
 			"dates": "2021 — Present"
 		},
         {
 			"company": "The Blocks",
 			"location": "Atlanta, GA",
-			"position": "Head of Development & Strategy",
+			"position": [
+                { "title": "Head of Development & Strategy" }
+            ],
 			"dates": "2020 — Present"
 		},
         {
 			"company": "Compass Group USA",
 			"location": "Charlotte, NC",
-			"position": "Visual Designer, System Implementation",
+            "position": [
+                { "title": "Visual Designer, System Implementation" }
+            ],
 			"dates": "2019 — 2021"
 		},
         {
 			"company": "Tesla, Inc.",
 			"location": "Richmond, VA",
-			"position": "Tesla Advisor, Sales Marketing",
+            "position": [
+                { "title": "Tesla Advisor, Sales Marketing" }
+            ],
 			"dates": "2018 — 2019"
 		},
         {
 			"company": "Apple, Inc.",
 			"location": "Richmond, VA",
-			"position": "Visual Merchandising Specialist",
+            "position": [
+                {
+                    "title": "Visual Merchandising Specialist",
+                    "dates": "Feb 2017 — Sep 2018"
+                },
+                {
+                    "title": "Product Specialist",
+                    "dates": "Jun 2015 — Feb 2017"
+                }
+            ],
 			"dates": "2015 — 2018"
 		}
     ],

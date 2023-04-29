@@ -163,13 +163,55 @@
             span {
                 font-size: 12pt;
             }
+
             h3 {
                 font-size: 16pt;
                 margin: 0;
             }
+
             p {
                 font-size: 16pt;
                 margin: 0;
+            }
+
+            .edu-docs {
+                font-family: 'Inconsolata', monospace;
+                font-size: 12pt;
+                display: flex;
+                align-items: center;
+                font-weight: 500;
+                color: var(--link-color);
+                text-decoration: none;
+                width: fit-content;
+
+                svg {
+                    font-size: 18pt;
+                    margin-right: 5px;
+                    margin-bottom: 1px;
+                }
+            }
+
+            .multiple-positions {
+                display: flex;
+                flex-direction: column;
+
+                .sub-dates {
+                    font-size: 12pt;
+                    line-height: 12pt;
+                }
+
+                svg {
+                    font-size: 16pt;
+                    margin-top: 10px;
+                    margin-left: -2px;
+                    color: var(--copyright-text-color);
+                }
+            }
+
+            .multiple-positions:first-of-type {
+                svg {
+                    margin-top: 5px;
+                }
             }
         }
     }
@@ -187,11 +229,11 @@
 
             svg {
                 margin-left: 5px;
-                transform: rotate(0);
+                transform: rotate(180deg);
                 transition: transform 0.3s ease;
 
-                &.up {
-                    transform: rotate(180deg);
+                &.down {
+                    transform: rotate(0);
                 }
             }
         }
