@@ -8,7 +8,7 @@
             "documents": [
                 {
                     "description": "Product Design Innovation Certificate",
-                    "url": "https://google.com"
+                    "url": "./assets/documents/PDI_Certificate.pdf"
                 }
             ]
         },
@@ -20,7 +20,7 @@
             "documents": [
                 {
                     "description": "Honors Graduate",
-                    "url": "https://google.com"
+                    "url": "./assets/documents/Nucamp_Honors_Certificate.pdf"
                 }
             ]
         },

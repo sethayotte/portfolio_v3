@@ -10,6 +10,8 @@ import { TbSquareRoundedNumber0, TbSquareRoundedNumber1, TbSquareRoundedNumber2,
 const Resume = () => {
 
     const [ sectionOpen, setSectionOpen ] = useState('');
+    const [ showEducationDetail, setShowEducationDetail ] = useState(false);
+    const [ showExperienceDetail, setShowExperienceDetail ] = useState(false);
 
     const toggleSection = (section) => {
         if (section === sectionOpen) {
@@ -19,11 +21,18 @@ const Resume = () => {
         }
     }
 
+    const toggleDetails = (src) => {
+        if (src === 'edu') {
+            setShowEducationDetail(!showEducationDetail);
+        }
+        if (src === 'exp') {
+            setShowExperienceDetail(!showExperienceDetail);
+        }
+    }
+
     const renderMultiplePositions = (positions) => {
-        console.log(positions);
         return (
             <section>
-                {/* <span>{positions}</span> */}
                 {
                     positions.map((position, index) => {
                         
@@ -86,14 +95,21 @@ const Resume = () => {
             </div>
         </section>
         <section className='education'>
-            <span className='section-heading'>Education</span>
+            <div className='edu-header'>
+                <span className='section-heading'>Education</span>
+                {
+                    showEducationDetail ?
+                    <HiOutlineEyeOff onClick={() => toggleDetails('edu')} /> :
+                    <HiOutlineEye onClick={() => toggleDetails('edu')} />
+                }
+            </div>
             {
                 ResumeData.education.map((item, index) => {
 
                     const renderEducationDocs = (docs) => {
                         let documents = docs
                         return (
-                            <section>
+                            <section className='edu-docs-container'>
                             {
                                 documents.map((doc, index) => {
                                     return (
@@ -112,7 +128,7 @@ const Resume = () => {
                             <p>{item.degree}</p>
                             <p>{item.description}</p>
                             {
-                                item.documents ?
+                                item.documents && showEducationDetail ?
                                 renderEducationDocs(item.documents) :
                                 null
                             }
@@ -122,7 +138,14 @@ const Resume = () => {
             }
         </section>
         <section className='experience'>
-            <span className='section-heading'>Work & Other Projects</span><HiOutlineEye /><HiOutlineEyeOff />
+        <div className='exp-header'>
+                <span className='section-heading'>Work & Other Projects</span>
+                {
+                    showExperienceDetail ?
+                    <HiOutlineEyeOff onClick={() => toggleDetails('exp')} /> :
+                    <HiOutlineEye onClick={() => toggleDetails('exp')} />
+                }
+            </div>
             {
                 ResumeData.experience.map((item, index) => {
                     return (

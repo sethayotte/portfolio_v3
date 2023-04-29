@@ -156,6 +156,17 @@
     .education, .experience {
         margin-bottom: 50px;
 
+        .edu-header, .exp-header {
+            display: flex;
+            align-items: center;
+            
+            svg {
+                font-size: 16pt;
+                margin-left: 15px;
+                cursor: pointer;
+            }
+        }
+
         .item {
             margin-top: 15px;
             line-height: 24pt;
@@ -172,6 +183,20 @@
             p {
                 font-size: 16pt;
                 margin: 0;
+            }
+
+            .edu-docs-container {
+                animation: fade-in-docs 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+                @keyframes fade-in-docs {
+                    0% {
+                        transform: translateY(10px);
+                        opacity: 0;
+                    }
+                    100% {
+                        transform: translateY(0);
+                        opacity: 1;
+                    }
+                }
             }
 
             .edu-docs {
@@ -194,6 +219,7 @@
             .multiple-positions {
                 display: flex;
                 flex-direction: column;
+                margin-left: 15px;
 
                 .sub-dates {
                     font-size: 12pt;
