@@ -2,4 +2,34 @@
     h1 {
         font-size: 32pt;
     }
+
+    .globe {
+        border: 2px solid var(--text-color-main);
+        border-radius: 50%;
+        height: 140px;
+        left: 50%;
+        overflow: hidden;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 140px;
+        
+        svg {
+          animation: rotation 15s linear 0s infinite;
+          
+          path {
+            stroke: var(--text-color-main);
+          }
+        }
+      }
+      
+      @keyframes rotation {
+        from {
+          transform: translateX(0);
+        }
+        
+        from {
+          transform: translateX(-50%);
+        }
+      }
 }
