@@ -150,7 +150,7 @@ const Landing = ({defaultDark, isMobileSafari}) => {
                 <h1>Seth Mitchell</h1>
                 <span className='above-the-fold-links'>
                     <Link to='/resume'>resume</Link>
-                    <Link to='/projects'>projects</Link>
+                    <Link to='/work'>work</Link>
                     <Link to='/travel'>travel</Link>
                 </span>
                 {

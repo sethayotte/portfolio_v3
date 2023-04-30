@@ -10,7 +10,7 @@ import {
 import { Travel } from "./pages/Travel";
 import { Landing } from "./pages/Landing";
 import { Resume } from "./pages/Resume";
-import { Projects } from "./pages/Projects";
+import { Work } from "./pages/Work";
 import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
 import { NotFound } from "./components/NotFound";
@@ -153,10 +153,9 @@ const App = () => {
               }
             />
             <Route
-              path="/projects"
-              element={<Projects defaultDark={defaultDark} />}
+              path="/work"
+              element={<Work defaultDark={defaultDark} />}
             />
-            <Route path="/projects/:project" element={<Projects />} />
             <Route path="/resume" element={<Resume />} />
             <Route path="/travel" element={<Travel />} />
             <Route path="/404" element={<NotFound />} />

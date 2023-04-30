@@ -1,0 +1,122 @@
+.projects {
+    h1 {
+        font-size: 32pt;
+    }
+
+    .project-grid-row {
+        display: grid;
+        align-items: center;
+        column-gap: 25px;
+        margin-bottom: 25px;
+        width: calc(100% - 25px);
+
+        .project-tile {
+            background-color: lightblue;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-radius: 25px;
+            text-align: center;
+            padding: 0 15px;
+            cursor: pointer;
+
+            img {
+                height: 100px;
+                scale: 1;
+                transition: scale 0.4s ease;
+            }
+
+            h2 {
+                font-size: 24pt;
+                margin: 0;
+                scale: 1;
+                transition: scale 0.4s ease;
+            }
+
+            body.hasHover &:hover {
+                img, h2 {
+                    scale: 1.1;
+                }
+            }
+        }
+
+        #sprout {
+            img {
+                width: 90%;
+                max-width: 185px;
+            }
+        }
+
+        #run-away {
+            h2 {
+                font-style: italic;
+            }
+        }
+
+        #run-away, #compound, #everyday-portfolio, #year-end-review, #shoebox {
+            img {
+                height: 75px;
+            }
+        }
+
+        #compound, #year-end-review, #shoebox {
+            img {
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 740px) {
+        .project-grid-row {
+            grid-template-columns: 100% !important;
+            height: fit-content !important;
+            row-gap: 25px;
+            width: 100%;
+
+            .project-tile {
+                height: 350px;
+
+                h2 {
+                    font-size: 22pt;
+                }
+
+                img {
+                    height: 80px;
+                }
+            }
+    
+            #run-away, #compound, #everyday-portfolio, #year-end-review, #shoebox {
+                img {
+                    height: 65px;
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 500px) {
+        .project-grid-row {
+            row-gap: 15px;
+            margin-bottom: 15px;
+
+            .project-tile {
+                height: 350px;
+
+                h2 {
+                    font-size: 22pt;
+                }
+
+                img {
+                    height: 80px;
+                }
+            }
+    
+            #run-away, #compound, #everyday-portfolio, #year-end-review, #shoebox {
+                img {
+                    height: 65px;
+                }
+            }
+        }
+    }
+}

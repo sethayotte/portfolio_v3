@@ -53,7 +53,7 @@ const Header = ({handleDarkModeToggle, defaultDark}) => {
                     isDesktop ?
                     <nav className={isDesktop ? 'desktop' : 'hidden'}>
                         <Link to="/resume" className={location.pathname.includes('resume') ? 'active' : ''}>resume</Link>
-                        <Link to="/projects" className={location.pathname.includes('projects') ? 'active' : ''}>projects</Link>
+                        <Link to="/work" className={location.pathname.includes('work') ? 'active' : ''}>work</Link>
                         <Link to="/travel" className={location.pathname.includes('travel') ? 'active' : ''}>travel</Link>
                         <label id='color-mode-toggle'>
                             <Switch 
@@ -72,7 +72,7 @@ const Header = ({handleDarkModeToggle, defaultDark}) => {
                     </nav> :
                     <nav className={expandedMenu ? 'mobile open' : 'mobile'}>
                         <Link to="/resume" onClick={toggleMenu} className={location.pathname.includes('resume') ? 'active' : ''}>resume</Link>
-                        <Link to="/projects" onClick={toggleMenu} className={location.pathname.includes('projects') ? 'active' : ''}>projects</Link>
+                        <Link to="/work" onClick={toggleMenu} className={location.pathname.includes('work') ? 'active' : ''}>work</Link>
                         <Link to="/travel" onClick={toggleMenu} className={location.pathname.includes('travel') ? 'active' : ''}>travel</Link>
                         <label id='color-mode-toggle'>
                             <Switch 

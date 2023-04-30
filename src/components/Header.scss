@@ -263,6 +263,10 @@ footer {
     }
 }
 
+sl-menu {
+    border-radius: 15px;
+}
+
 sl-menu-item::part(label) {
     display: flex;
     align-items: center;
