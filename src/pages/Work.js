@@ -36,16 +36,20 @@ const Work = ({ defaultDark }) => {
           id={item.row[0].content.slug} 
           onClick={() => expandProject(item, 0)}
           style={{backgroundColor: `${item.row[0].color}`, color: `${item.row[0].fontColor}`}}>
-          <img src={defaultDark ? item.row[0].logoDark : item.row[0].logoLight} />
-          <h2 style={{fontFamily: `${item.row[0].font}, sans-serif`, fontWeight: `${item.row[0].weight}`}}>{item.row[0].title}</h2>
+          <div className="branding-wrapper">
+            <img src={defaultDark ? item.row[0].logoDark : item.row[0].logoLight} />
+            <h2 style={{fontFamily: `${item.row[0].font}, sans-serif`, fontWeight: `${item.row[0].weight}`}}>{item.row[0].title}</h2>
+          </div>
         </div>
         <div 
           className="project-tile" 
           id={item.row[1].content.slug} 
           onClick={() => expandProject(item, 1)}
           style={{backgroundColor: `${item.row[1].color}`, color: `${item.row[1].fontColor}`}}>
-          <img src={defaultDark ? item.row[1].logoDark : item.row[1].logoLight} />
-          <h2 style={{fontFamily: `${item.row[1].font}, sans-serif`, fontWeight: `${item.row[1].weight}`}}>{item.row[1].title}</h2>
+          <div className="branding-wrapper">
+            <img src={defaultDark ? item.row[1].logoDark : item.row[1].logoLight} />
+            <h2 style={{fontFamily: `${item.row[1].font}, sans-serif`, fontWeight: `${item.row[1].weight}`}}>{item.row[1].title}</h2>
+          </div>
         </div>
       </div>
     )
@@ -59,7 +63,7 @@ const Work = ({ defaultDark }) => {
 
   return (
     <div className="projects">
-      <h1>Projects</h1>
+      <h1>Work</h1>
       <section>
         {
           rowDividedData.map((row, index) => {

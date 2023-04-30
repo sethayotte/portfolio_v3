@@ -22,30 +22,32 @@
             padding: 0 15px;
             cursor: pointer;
 
+            .branding-wrapper {
+                body.hasHover &:hover {
+                    img, h2 {
+                        scale: 1.1;
+                    }
+                }
+            }
+
             img {
-                height: 100px;
+                height: 120px;
                 scale: 1;
                 transition: scale 0.4s ease;
             }
 
             h2 {
-                font-size: 24pt;
+                font-size: 34pt;
                 margin: 0;
                 scale: 1;
                 transition: scale 0.4s ease;
-            }
-
-            body.hasHover &:hover {
-                img, h2 {
-                    scale: 1.1;
-                }
             }
         }
 
         #sprout {
             img {
                 width: 90%;
-                max-width: 185px;
+                max-width: 200px;
             }
         }
 
@@ -57,7 +59,7 @@
 
         #run-away, #compound, #everyday-portfolio, #year-end-review, #shoebox {
             img {
-                height: 75px;
+                height: 100px;
             }
         }
 
@@ -79,17 +81,17 @@
                 height: 350px;
 
                 h2 {
-                    font-size: 22pt;
+                    font-size: 28pt;
                 }
 
                 img {
-                    height: 80px;
+                    height: 100px;
                 }
             }
     
             #run-away, #compound, #everyday-portfolio, #year-end-review, #shoebox {
                 img {
-                    height: 65px;
+                    height: 85px;
                 }
             }
         }
@@ -99,24 +101,7 @@
         .project-grid-row {
             row-gap: 15px;
             margin-bottom: 15px;
-
-            .project-tile {
-                height: 350px;
-
-                h2 {
-                    font-size: 22pt;
-                }
-
-                img {
-                    height: 80px;
-                }
-            }
     
-            #run-away, #compound, #everyday-portfolio, #year-end-review, #shoebox {
-                img {
-                    height: 65px;
-                }
-            }
         }
     }
 }
