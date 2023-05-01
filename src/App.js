@@ -14,6 +14,7 @@ import { Work } from "./pages/Work";
 import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
 import { NotFound } from "./components/NotFound";
+import { Project } from "./pages/Project";
 
 const App = () => {
   const [darkMode, setDarkMode] = useState();
@@ -143,19 +144,9 @@ const App = () => {
         </div>
         <ScrollToTop>
           <Routes>
-            <Route
-              path="/"
-              element={
-                <Landing
-                  defaultDark={defaultDark}
-                  isMobileSafari={isMobileSafari}
-                />
-              }
-            />
-            <Route
-              path="/work"
-              element={<Work defaultDark={defaultDark} />}
-            />
+            <Route path="/" element={<Landing defaultDark={defaultDark} isMobileSafari={isMobileSafari} />} />
+            <Route path="/work" element={<Work defaultDark={defaultDark} />} />
+            <Route path="/work/:projSlug" element={<Project defaultDark={defaultDark} />} />
             <Route path="/resume" element={<Resume />} />
             <Route path="/travel" element={<Travel />} />
             <Route path="/404" element={<NotFound />} />

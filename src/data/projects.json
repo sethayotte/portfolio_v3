@@ -6,7 +6,7 @@
         "color": "var(--the-blocks-tile)",
         "toggleColor": "var(--tile-toggle-dark)",
         "fontColor": "var(--text-color-main)",
-        "font": "IBM Plex Sans",
+        "font": "IBM Plex Sans, sans-serif",
         "weight": "500",
         "content": {
             "description": "This is a blurb of text introducing the specific project",
@@ -20,7 +20,7 @@
         "color": "var(--shoebox-tile)",
         "toggleColor": "var(--tile-toggle-light)",
         "fontColor": "var(--text-color-inverted)",
-        "font": "Inter",
+        "font": "Inter, sans-serif",
         "weight": "600",
         "content": {
             "description": "Shoebox is a custom-designed personal finance utility that's changing the way individuals manage their Health Savings Account (HSA) expenses and maximize their tax strategy. With Shoebox, HSA users can easily log eligible expenses to gain a comprehensive view of their financial progress. Whether it's tracking expenses, setting financial goals, or managing HSA contributions and limits, Shoebox streamlines the process and provides convenient access at home or on the go. \n \nPaired with detailed reports on HSA contributions and expenses, Shoebox empowers users to optimize their HSA benefits and stay on top of their account balance. The app also sends timely alerts for important HSA deadlines and contribution limits.",
@@ -34,7 +34,7 @@
         "color": "var(--review-tile)",
         "toggleColor": "var(--tile-toggle-dark)",
         "fontColor": "var(--review-text)",
-        "font": "Inconsolata",
+        "font": "Inconsolata, monospace",
         "weight": "400",
         "content": {
             "description": "Shoebox is a custom-designed personal finance utility that's changing the way individuals manage their Health Savings Account (HSA) expenses and maximize their tax strategy. With Shoebox, HSA users can easily log eligible expenses to gain a comprehensive view of their financial progress. Whether it's tracking expenses, setting financial goals, or managing HSA contributions and limits, Shoebox streamlines the process and provides convenient access at home or on the go. \n \nPaired with detailed reports on HSA contributions and expenses, Shoebox empowers users to optimize their HSA benefits and stay on top of their account balance. The app also sends timely alerts for important HSA deadlines and contribution limits.",
@@ -48,7 +48,7 @@
         "color": "var(--mitch-kitch-tile)",
         "toggleColor": "var(--tile-toggle-dark)",
         "fontColor": "var(--text-color-main)",
-        "font": "Bitter",
+        "font": "Bitter, serif",
         "weight": "300",
         "content": {
             "description": "Shoebox is a custom-designed personal finance utility that's changing the way individuals manage their Health Savings Account (HSA) expenses and maximize their tax strategy. With Shoebox, HSA users can easily log eligible expenses to gain a comprehensive view of their financial progress. Whether it's tracking expenses, setting financial goals, or managing HSA contributions and limits, Shoebox streamlines the process and provides convenient access at home or on the go. \n \nPaired with detailed reports on HSA contributions and expenses, Shoebox empowers users to optimize their HSA benefits and stay on top of their account balance. The app also sends timely alerts for important HSA deadlines and contribution limits.",
@@ -62,7 +62,7 @@
         "color": "#1B94FF",
         "toggleColor": "var(--tile-toggle-light)",
         "fontColor": "var(--text-color-inverted)",
-        "font": "Inter",
+        "font": "Inter, sans-serif",
         "weight": "800",
         "content": {
             "description": "Shoebox is a custom-designed personal finance utility that's changing the way individuals manage their Health Savings Account (HSA) expenses and maximize their tax strategy. With Shoebox, HSA users can easily log eligible expenses to gain a comprehensive view of their financial progress. Whether it's tracking expenses, setting financial goals, or managing HSA contributions and limits, Shoebox streamlines the process and provides convenient access at home or on the go. \n \nPaired with detailed reports on HSA contributions and expenses, Shoebox empowers users to optimize their HSA benefits and stay on top of their account balance. The app also sends timely alerts for important HSA deadlines and contribution limits.",
@@ -76,7 +76,7 @@
         "color": "#1DD000",
         "toggleColor": "var(--tile-toggle-light)",
         "fontColor": "var(--text-color-inverted)",
-        "font": "Inter",
+        "font": "Inter, sans-serif",
         "weight": "400",
         "content": {
             "description": "Shoebox is a custom-designed personal finance utility that's changing the way individuals manage their Health Savings Account (HSA) expenses and maximize their tax strategy. With Shoebox, HSA users can easily log eligible expenses to gain a comprehensive view of their financial progress. Whether it's tracking expenses, setting financial goals, or managing HSA contributions and limits, Shoebox streamlines the process and provides convenient access at home or on the go. \n \nPaired with detailed reports on HSA contributions and expenses, Shoebox empowers users to optimize their HSA benefits and stay on top of their account balance. The app also sends timely alerts for important HSA deadlines and contribution limits.",
@@ -90,7 +90,7 @@
         "color": "var(--sprout-tile)",
         "toggleColor": "var(--tile-toggle-light)",
         "fontColor": "var(--text-color-inverted)",
-        "font": "Inter",
+        "font": "Inter, sans-serif",
         "weight": "400",
         "content": {
             "description": "Shoebox is a custom-designed personal finance utility that's changing the way individuals manage their Health Savings Account (HSA) expenses and maximize their tax strategy. With Shoebox, HSA users can easily log eligible expenses to gain a comprehensive view of their financial progress. Whether it's tracking expenses, setting financial goals, or managing HSA contributions and limits, Shoebox streamlines the process and provides convenient access at home or on the go. \n \nPaired with detailed reports on HSA contributions and expenses, Shoebox empowers users to optimize their HSA benefits and stay on top of their account balance. The app also sends timely alerts for important HSA deadlines and contribution limits.",
@@ -104,7 +104,7 @@
         "color": "var(--run-away-tile)",
         "fontColor": "var(--run-away-text)",
         "toggleColor": "var(--tile-toggle-ra)",
-        "font": "IBM Plex Mono",
+        "font": "IBM Plex Mono, monospace",
         "weight": "500",
         "content": {
             "description": "Shoebox is a custom-designed personal finance utility that's changing the way individuals manage their Health Savings Account (HSA) expenses and maximize their tax strategy. With Shoebox, HSA users can easily log eligible expenses to gain a comprehensive view of their financial progress. Whether it's tracking expenses, setting financial goals, or managing HSA contributions and limits, Shoebox streamlines the process and provides convenient access at home or on the go. \n \nPaired with detailed reports on HSA contributions and expenses, Shoebox empowers users to optimize their HSA benefits and stay on top of their account balance. The app also sends timely alerts for important HSA deadlines and contribution limits.",

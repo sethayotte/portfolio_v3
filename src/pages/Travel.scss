@@ -5,7 +5,7 @@
 
     .travel-hero-text {
         position: absolute;
-        font-size: min(96pt, 14vw);
+        font-size: min(96pt, 13vw);
         font-weight: 900;
         display: flex;
         align-items: center;
@@ -44,7 +44,7 @@
     }
 
     .globe {
-        border: 2px solid var(--text-color-main);
+        border: 1.5px solid var(--text-color-main);
         background-color: var(--background-color);
         border-radius: 50%;
         height: 140px;

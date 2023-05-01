@@ -3,38 +3,24 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import ProjectData from "../data/projects.json";
 
 const Work = ({ defaultDark }) => {
-  const [isDesktop, setIsDesktop] = useState(false);
-  const [ expandedProject, setExpandedProject ] = useState('');
 
-  const updateWidth = () => {
-    if (window.innerWidth < 740) {
-      setIsDesktop(false);
-    } else {
-      setIsDesktop(true);
-    }
-  };
+  const navigate = useNavigate();
 
-  window.addEventListener("resize", updateWidth);
+  const tileStaggerConfig = [ [60, 40], [30, 70], [60, 40], [35, 65] ];
+  const rowStaggerConfig = [ 450, 400, 450, 400 ];
 
-  useEffect(() => {
-    updateWidth();
-  }, []);
-
-  const expandProject = (item, side) => {
-    console.log(item, side);
+  const navigateToProject = (item, side) => {
+    navigate(`${item.row[side].content.slug}`, {state: {project: item.row[side]}});
   }
 
   const RenderTileRow = (item) => {
-
-    const tileStaggerConfig = [ [60, 40], [30, 70], [60, 40], [35, 65] ];
-    const rowStaggerConfig = [ 450, 400, 450, 400 ];
 
     return (
       <div className="project-grid-row" style={{gridTemplateColumns: `${tileStaggerConfig[item.index][0]}% ${tileStaggerConfig[item.index][1]}%`, height: `${rowStaggerConfig[item.index]}px`}}>
         <div 
           className="project-tile" 
           id={item.row[0].content.slug} 
-          onClick={() => expandProject(item, 0)}
+          onClick={() => {navigateToProject(item, 0)}}
           style={{backgroundColor: `${item.row[0].color}`, color: `${item.row[0].fontColor}`}}>
           <div className="branding-wrapper">
             <img src={defaultDark ? item.row[0].logoDark : item.row[0].logoLight} />
@@ -43,8 +29,8 @@ const Work = ({ defaultDark }) => {
         </div>
         <div 
           className="project-tile" 
-          id={item.row[1].content.slug} 
-          onClick={() => expandProject(item, 1)}
+          id={item.row[1].content.slug}
+          onClick={() => {navigateToProject(item, 1)}}
           style={{backgroundColor: `${item.row[1].color}`, color: `${item.row[1].fontColor}`}}>
           <div className="branding-wrapper">
             <img src={defaultDark ? item.row[1].logoDark : item.row[1].logoLight} />
@@ -68,18 +54,10 @@ const Work = ({ defaultDark }) => {
         {
           rowDividedData.map((row, index) => {
             return (
-              <RenderTileRow row={row} index={index} />
+              <RenderTileRow row={row} index={index} key={index} />
             )
           })
         }
-        {
-          expandedProject ?
-          <section>
-            
-          </section> :
-          null
-        }
-        
       </section>
     </div>
   );
