@@ -2,6 +2,8 @@ import React, { useEffect, useState, createElement } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import * as TbIcon from 'react-icons/tb';
 import * as IoIcon from 'react-icons/io5';
+import { FaIdBadge } from 'react-icons/fa';
+import { BsAppIndicator } from 'react-icons/bs';
 
 const Project = ({defaultDark}) => {
 
@@ -47,15 +49,18 @@ const Project = ({defaultDark}) => {
                     <div className='status-info-chips'>
                         <div>
                             <span className='project-info-chip' style={{backgroundColor: `var(${project.content.tileColor})`}}>{project.content.technologies}</span>
-                            <h4>TECH</h4>
+                            {/* <h4>TECH</h4> */}
+                            <TbIcon.TbCode />
                         </div>
                         <div>
                             <span className='project-info-chip' style={{backgroundColor: `var(${project.content.tileColor})`}}>{project.content.role}</span>
-                            <h4>ROLE</h4>
+                            {/* <h4>ROLE</h4> */}
+                            <TbIcon.TbIdBadge />
                         </div>
                         <div>
                             <span className='project-info-chip' style={{backgroundColor: `var(${project.content.tileColor})`}}>{project.content.status}</span>
-                            <h4>STATUS</h4>
+                            {/* <h4>STATUS</h4> */}
+                            <TbIcon.TbCircleDashed />
                         </div>
                     </div>
                 </section>

@@ -123,8 +123,8 @@
     },
     {
         "title": "Everyday Portfolio",
-        "logoLight": "./assets/EP_Light.svg",
-        "logoDark": "./assets/EP_Dark.svg",
+        "logoLight": "./assets/EP_Light_New.svg",
+        "logoDark": "./assets/EP_Dark_New.svg",
         "color": "#1DD000",
         "toggleColor": "var(--tile-toggle-light)",
         "fontColor": "var(--text-color-inverted)",
@@ -151,8 +151,8 @@
     },
     {
         "title": "Run Away",
-        "logoLight": "./assets/RunAway_Light.svg",
-        "logoDark": "./assets/RunAway_Dark.svg",
+        "logoLight": "./assets/RunAway_Light_New.svg",
+        "logoDark": "./assets/RunAway_Dark_New.svg",
         "color": "var(--run-away-tile)",
         "fontColor": "var(--run-away-text)",
         "toggleColor": "var(--tile-toggle-ra)",
