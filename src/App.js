@@ -89,9 +89,15 @@ const App = () => {
         window.scrollTo({ top: 0, left: 0, behavior: "instant" });
         console.log('running');
       }
-      if (lastPosition !== location.pathname) {
+      if (!lastPosition.includes('/work/') && lastPosition !== location.pathname) {
         window.sessionStorage.setItem('lastPosition', location.pathname);
         window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+        console.log('running', !lastPosition.includes('/work/'), lastPosition, location.pathname);
+      }
+      if (lastPosition.includes('/work/') && location.pathname !== '/work') {
+        window.sessionStorage.setItem('lastPosition', location.pathname);
+        window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+        console.log('running', location.pathname);
       }
     }, [location]);
 

@@ -51,8 +51,60 @@
         "font": "Bitter, serif",
         "weight": "300",
         "content": {
+            "technologies": "firebase +",
+            "role": "lead developer",
+            "status": "active",
+            "slug": "the-mitch-kitch",
+            "tagline": "*chef's kiss*",
+            "tileColor": "--mitch-kitch-project-secondary",
+            "headerIconColor": "blue",
+            "highlightsHeader": "project highlights",
+            "highlightsItems": [
+                {
+                    "icon": "IoScale",
+                    "label": "dynamic recipe scaling"
+                },
+                {
+                    "icon": "IoBook",
+                    "iconSource": "tb",
+                    "tileColor": "--mitch-kitch-project-secondary",
+                    "label": "recipe repository"
+                },
+                {
+                    "icon": "IoPeopleCircleOutline",
+                    "iconSource": "io",
+                    "label": "family focused"
+                },
+                {
+                    "icon": "TbInputSearch",
+                    "iconSource": "io",
+                    "label": "rich search results"
+                }
+            ],
+            "descriptionHeader": "overview",
+            "descriptionIcon": "overview",
             "description": "Shoebox is a custom-designed personal finance utility that's changing the way individuals manage their Health Savings Account (HSA) expenses and maximize their tax strategy. With Shoebox, HSA users can easily log eligible expenses to gain a comprehensive view of their financial progress. Whether it's tracking expenses, setting financial goals, or managing HSA contributions and limits, Shoebox streamlines the process and provides convenient access at home or on the go. \n \nPaired with detailed reports on HSA contributions and expenses, Shoebox empowers users to optimize their HSA benefits and stay on top of their account balance. The app also sends timely alerts for important HSA deadlines and contribution limits.",
-            "slug": "the-mitch-kitch"
+            "visualsHeader": "screenshots",
+            "visualsIcon": "screenshot",
+            "visuals": [
+                "https://",
+                "https://",
+                "https://",
+                "https://"
+            ],
+            "hasRoadmap": true,
+            "roadmapHeader": "roadmap",
+            "roadmapIcon": "map",
+            "roadmap": [
+                {
+                    "icon": "bookmark",
+                    "description": "Personalized recipe collections for individual favorites.  Save your go-tos in an easy to access location within your profile."
+                },
+                {
+                    "icon": "scan",
+                    "description": "OCR implementation providing ability to scan a physical recipe to pre-populate form fields for quick entry."
+                }
+            ]
         }
     },
     {

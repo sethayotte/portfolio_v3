@@ -92,6 +92,11 @@ const Header = ({handleDarkModeToggle, defaultDark}) => {
                 }
             </section>
         </div>
+        {
+            expandedMenu && !isDesktop ?
+            <span id='mobile-menu-overlay' onClick={toggleMenu}></span> : 
+            null
+        }
     </header>
   )
 }

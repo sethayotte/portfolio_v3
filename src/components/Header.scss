@@ -205,9 +205,11 @@
 
     &.expanded {
         height: 275px;
+        z-index: 50;
 
         .header-content {
             align-items: flex-start;
+            z-index: 50;
 
             h1 {
                 margin-top: 0px;
@@ -261,6 +263,15 @@ footer {
             margin-right: 5px;
         }
     }
+}
+
+#mobile-menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 49;
 }
 
 sl-menu {
