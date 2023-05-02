@@ -15,11 +15,11 @@
     },
     {
         "title": "Shoebox",
-        "logoLight": "./assets/Shoebox_Light.svg",
+        "logoLight": "./assets/Shoebox_Dark.svg",
         "logoDark": "./assets/Shoebox_Dark.svg",
         "color": "var(--shoebox-tile)",
         "toggleColor": "var(--tile-toggle-light)",
-        "fontColor": "var(--text-color-inverted)",
+        "fontColor": "black",
         "font": "Inter, sans-serif",
         "weight": "600",
         "content": {
