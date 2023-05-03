@@ -309,786 +309,173 @@
     }
 }
 
-#project-tiles {
-    width: 100%;
+body.sl-scroll-lock {
+    --sl-scroll-lock-size: 0px !important;
+}
+
+sl-drawer::part(overlay) {
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+}
+
+sl-drawer::part(panel) {
+    // --tile-popup-color: var(--background-color);
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+    width: calc(100% - 50px);
+    background-color: var(--tile-popup-color);
+    padding: 15px;
+    margin-left: 25px;
+    --size: 90%;
+    --sl-shadow-x-small: 0 1px 2px #0000004e;
+    --sl-shadow-small: 0 1px 2px #0000004e;
+    --sl-shadow-medium: 0 2px 4px #0000004e;
+    --sl-shadow-large: 0 2px 8px #0000004e;
+    --sl-shadow-x-large: 0 4px 16px #0000004e;
+}
+
+sl-drawer::part(label) {
     display: flex;
     align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    margin-top: 100px;
+}
+
+sl-drawer::part(header) {
+    margin-bottom: 15px;
+}
+
+sl-drawer::part(title) {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+sl-drawer::part(close-button) {
+    display: none;
+}
+
+.project-grid-row {
     position: relative;
+    display: grid;
+    align-items: center;
+    // column-gap: 25px;
+    margin-bottom: 25px;
+    width: calc(100% - 25px);
+    max-height: 95%;
+    transition: all 0.5s ease;
 
-    .project-row {
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        max-width: 1400px;
-        margin-bottom: 25px;
+    sl-drawer {
+        color: var(--text-color-main);
 
-
-        .tile {
-            background-color: #f3f3f3;
-            border-radius: 30px;
-            position: relative;
+        h2 {
             display: flex;
             align-items: center;
-            justify-content: center;
+            font-size: 24pt;
+            margin: 0;
+        }
+        img {
+            height: 50px;
+            margin-right: 10px;
 
-            .tile-header {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                flex-direction: column;
-                transition: all 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+        }
+    
+        .close-btn {
+            display: flex;
+            align-items: center;
+            font-size: 28pt;
+            transform: rotate(45deg);
+            cursor: pointer;
+        }
+    }
 
-                img {
-                    height: 175px;
-                }
+    .project-tile {
+        position: relative;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 25px;
+        text-align: center;
+        padding: 0 25px;
 
-                h2 {
-                    font-size: 34pt;
-                    text-align: center;
-                    padding: 0 15px;
-                    margin: 0;
-                }
-            }
+        img {
+            height: 120px;
+        }
 
-            .tile-description {
-                display: none;
-                height: fit-content;
-                margin: 0;
-                padding: 0;
-                transition: all 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+        h2 {
+            font-size: 34pt;
+            margin: 0;
+        }
 
-                a {
-                    background-color: var(--link-bg-color);
-                    width: fit-content;
-                    padding: 5px 25px;
-                    border-radius: 10px;
-                    display: flex;
-                    align-items: center;
-                    margin-top: 44px;
-                    font-size: 16pt;
-                    font-family: 'Inconsolata', monospace;
-                    color: var(--link-color);
-                    transition: all 0.4s ease;
-                    text-decoration: none;
-                    cursor: pointer;
+        .project-info-toggle {
+            font-size: 28pt;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            padding: 25px;
+        }
+    }
 
-                    svg {
-                        font-size: 24pt;
-                        margin: 0;
-                        margin-left: -5px;
-                    }
+    .project-tile:first-of-type {
+        margin-right: 25px;
+    }
 
-                    body.hasHover &:hover {
-                        color: var(--text-color-inverted);
-                        background-color: var(--link-color);
-                        font-weight: 500;
-                    }
-                }
-            }
+    #sprout {
+        img {
+            width: 90%;
+            max-width: 200px;
+        }
+    }
 
-            .tile-toggle {
-                position: absolute;
-                bottom: 0;
-                right: 0;
+    #run-away {
+        h2 {
+            font-style: italic;
+        }
+    }
+
+    #run-away, #compound, #everyday-portfolio, #year-end-review, #shoebox {
+        img {
+            height: 100px;
+        }
+    }
+
+    #compound, #year-end-review, #shoebox {
+        img {
+            margin-bottom: 10px;
+        }
+    }
+}
+
+@media only screen and (max-width: 740px) {
+    .project-grid-row {
+        grid-template-columns: 100% !important;
+        height: fit-content !important;
+        row-gap: 25px;
+        width: 100%;
+
+        .project-tile {
+            height: 350px;
+
+            h2 {
                 font-size: 28pt;
-                transform: rotate(0);
-                padding: 25px;
-                cursor: pointer;
-                transition: transform 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+            }
+
+            img {
+                height: 100px;
             }
         }
 
-        &.row0, &.row2 {
-            --row-height: 500px;
-            width: 100%;
-            max-width: 1400px;
-            height: var(--row-height);
-            transition: all 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940);
-            position: relative;
-
-            #the-blocks, #compound {
-                width: calc(60% - 12.5px);
-                max-width: 827.5px;
-                position: relative;
-                top: 0;
-                left: 0;
-                height: 500px;
-                transform: translateY(0);
-                margin-right: 25px;
-                margin-bottom: 0px;
-                transition: all 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940);
-            }
-
-            #the-blocks {
-                .tile-header {
-                    margin-bottom: 50px;
-                }
-            }
-
-            #compound {
-                .tile-description {
-                    color: var(--text-color-inverted);
-                }
-
-                .tile-header {
-                    img {
-                        height: 125px;
-                        margin-bottom: 15px;
-                    }
-                }
-            }
-
-            #shoebox, #everyday-portfolio {
-                width: calc(40% - 12.5px);
-                max-width: 547.5px;
-                position: relative;
-                top: 0;
-                right: 0;
-                height: 500px;
-                transform: translateY(0);
-                transition: all 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940);
-            }
-
-            #everyday-portfolio {
-                .tile-header {
-                    img {
-                        height: 100px;
-                    }
-                }
-            }
-
-            #shoebox {
-                .tile-header {
-                    margin-bottom: 30px;
-                    img {
-                        margin-bottom: 15px;
-                        height: 125px;
-                    }
-                }
-            }
-
-            &.expanded-the-blocks, &.expanded-compound {
-                height: var(--row-height);
-                align-items: flex-end;
-                justify-content: flex-end;
-
-                #the-blocks, #compound {
-                    width: 100%;
-                    position: absolute;
-                    justify-content: flex-start;
-                    top: 0;
-                    left: 0;
-                    max-width: 1400px;
-                    height: fit-content;
-                    margin-right: 0;
-                    margin-bottom: 25px;
-
-                    .tile-header {
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        padding: 25px;
-                        flex-direction: row;
-                        align-items: center;
-
-                        img {
-                            height: 75px;
-                        }
-                    }
-
-                    .tile-description {
-
-                        &.open {
-                            display: flex;
-                            flex-direction: column;
-                            padding: 25px 30px;
-                            padding-top: 130px;
-                            font-size: 24pt;
-                            white-space: pre-wrap;
-                            font-family: 'IBM Plex Sans', sans-serif;
-                            font-weight: 300;
-                        }
-                    }
-
-                    .tile-toggle {
-                        transform: rotate(45deg);
-                    }
-                }
-
-                #compound {
-                    .tile-header {
-                        h2 {
-                            margin-top: -15px;
-                        }
-                    }
-                }
-    
-                #shoebox, #everyday-portfolio {
-                    width: calc(40% - 12.5px);
-                    height: 500px;
-                    transform: translateY(0);
-                }
-            }
-
-            &.expanded-shoebox, &.expanded-everyday-portfolio {
-                height: var(--row-height);
-                align-items: flex-end;
-                justify-content: flex-start;
-
-                #the-blocks, #compound {
-                    width: calc(60% - 12.5px);
-                    height: 500px;
-                    margin-right: 0;
-                    margin-top: 25px;
-                    transform: translateY(0px);
-                }
-    
-                #shoebox, #everyday-portfolio {
-                    width: 100%;
-                    max-width: 1400px;
-                    justify-content: flex-start;
-                    position: absolute;
-                    top: 0;
-                    right: 0;
-                    height: fit-content;
-                    transform: translateY(0px);
-
-                    .tile-header {
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        padding: 25px;
-                        flex-direction: row;
-                        align-items: center;
-
-                        img {
-                            height: 75px;
-                        }
-                    }
-
-                    .tile-description {
-                        &.open {
-                            display: flex;
-                            flex-direction: column;
-                            color: var(--text-color-inverted);
-                            padding: 25px 30px;
-                            padding-top: 130px;
-                            font-size: 24pt;
-                            white-space: pre-wrap;
-                            font-weight: 300;
-                        }
-                    }
-
-                    .tile-toggle {
-                        transform: rotate(45deg);
-                    }
-                }
-
-                #shoebox {
-                    .tile-header {
-
-                        img {
-                            height: 55px;
-                        }
-
-                        h2 {
-                            margin-top: -15px;
-                        }
-                    }
-                }
-            }
-        }
-
-        &.row1 {
-            --row-height: 400px;
-            width: 100%;
-            max-width: 1400px;
-            height: var(--row-height);
-            transition: all 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940);
-            position: relative;
-
-            #year-end-review {
-                width: calc(30% - 12.5px);
-                max-width: 407.5px;
-                height: 400px;
-                margin-right: 25px;
-                position: relative;
-                top: 0;
-                left: 0;
-                transform: translateY(0);
-                margin-bottom: 0px;
-                transition: all 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940);
-
-                .tile-header {
-                    img {
-                        height: 100px;
-                    }
-                }
-            }
-
-            #the-mitch-kitch {
-                width: calc(70% - 12.5px);
-                max-width: 967.5px;
-                height: 400px;
-                position: relative;
-                top: 0;
-                right: 0;
-                transform: translateY(0);
-                transition: all 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940);
-
-                .tile-header {
-                    flex-direction: row;
-                    h2 {
-                        width: 125px;
-                        text-align: left;
-                    }
-                }
-            }
-
-            &.expanded-year-end-review {
-                height: var(--row-height);
-                align-items: flex-end;
-                justify-content: flex-end;
-
-                #year-end-review {
-                    width: 100%;
-                    position: absolute;
-                    justify-content: flex-start;
-                    top: 0;
-                    left: 0;
-                    max-width: 1400px;
-                    height: fit-content;
-                    margin-right: 0;
-                    margin-bottom: 25px;
-
-                    .tile-header {
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        padding: 25px;
-                        flex-direction: row;
-                        align-items: center;
-
-                        img {
-                            height: 75px;
-                        }
-                    }
-
-                    .tile-description {
-
-                        &.open {
-                            display: flex;
-                            flex-direction: column;
-                            padding: 25px 30px;
-                            padding-top: 130px;
-                            color: var(--review-text);
-                            font-size: 24pt;
-                            white-space: pre-wrap;
-                            font-family: 'Inconsolata', monospace;
-                            font-weight: 300;
-                        }
-                    }
-
-                    .tile-toggle {
-                        transform: rotate(45deg);
-                    }
-                }
-    
-                #the-mitch-kitch {
-                    width: calc(70% - 12.5px);
-                    height: 400px;
-                    transform: translateY(0px);
-                }
-            }
-
-            &.expanded-the-mitch-kitch {
-                height: var(--row-height);
-                align-items: flex-end;
-                justify-content: flex-start;
-
-                #year-end-review {
-                    width: calc(30% - 12.5px);
-                    height: 400px;
-                    margin-right: 0;
-                    margin-top: 25px;
-                    transform: translateY(0px);
-                }
-    
-                #the-mitch-kitch {
-                    width: 100%;
-                    max-width: 1400px;
-                    position: absolute;
-                    justify-content: flex-start;
-                    top: 0;
-                    right: 0;
-                    height: fit-content;
-                    transform: translateY(0px);
-
-                    .tile-header {
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        padding: 25px;
-                        flex-direction: row;
-                        align-items: center;
-
-                        h2 {
-                            width: fit-content;
-                            text-align: left;
-                        }
-
-                        img {
-                            height: 75px;
-                        }
-                    }
-
-                    .tile-description {
-                        &.open {
-                            display: flex;
-                            flex-direction: column;
-                            color: var(--text-color-main);
-                            padding: 25px 30px;
-                            padding-top: 130px;
-                            font-size: 24pt;
-                            white-space: pre-wrap;
-                            font-weight: 300;
-                        }
-                    }
-
-                    .tile-toggle {
-                        transform: rotate(45deg);
-                    }
-                }
-            }
-        }
-
-        &.row3 {
-            --row-height: 400px;
-            width: 100%;
-            max-width: 1400px;
-            height: var(--row-height);
-            transition: all 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940);
-            position: relative;
-
-            #sprout {
-                width: calc(45% - 12.5px);
-                max-width: 617.5px;
-                height: 400px;
-                margin-right: 25px;
-                position: relative;
-                top: 0;
-                left: 0;
-                transform: translateY(0);
-                margin-bottom: 0px;
-                transition: all 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940);
-
-                .tile-header {
-                    img {
-                        height: 80px;
-                    }
-                }
-            }
-
-            #run-away {
-                width: calc(55% - 12.5px);
-                max-width: 757.5px;
-                height: 400px;
-                position: relative;
-                color: var(--run-away-text);
-                top: 0;
-                right: 0;
-                transform: translateY(0);
-                transition: all 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940);
-
-                .tile-header {
-                    h2 {
-                        font-family: 'IBM Plex Mono', monospace !important;
-                        font-style: italic;
-                        font-weight: 600;
-                        font-size: 42pt;
-                    }
-                }
-            }
-
-            &.expanded-sprout {
-                height: var(--row-height);
-                align-items: flex-end;
-                justify-content: flex-end;
-
-                #sprout {
-                    width: 100%;
-                    position: absolute;
-                    justify-content: flex-start;
-                    top: 0;
-                    left: 0;
-                    max-width: 1400px;
-                    height: fit-content;
-                    margin-right: 0;
-                    margin-bottom: 25px;
-
-                    .tile-header {
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        padding: 25px;
-                        flex-direction: row;
-                        align-items: center;
-
-                        h2 {
-                            width: fit-content;
-                            text-align: left;
-                        }
-
-                        img {
-                            height: 75px;
-                        }
-                    }
-
-                    .tile-description {
-                        &.open {
-                            display: flex;
-                            flex-direction: column;
-                            color: var(--text-color-inverted);
-                            padding: 25px 30px;
-                            padding-top: 130px;
-                            font-size: 24pt;
-                            white-space: pre-wrap;
-                            font-weight: 300;
-                        }
-                    }
-
-                    .tile-toggle {
-                        transform: rotate(45deg);
-                    }
-                }
-    
-                #run-away {
-                    width: calc(55% - 12.5px);
-                    height: 400px;
-                    transform: translateY(0px);
-                }
-            }
-
-            &.expanded-run-away {
-                height: var(--row-height);
-                align-items: flex-end;
-                justify-content: flex-start;
-
-                #sprout {
-                    width: calc(45% - 12.5px);
-                    height: 400px;
-                    margin-right: 0;
-                    margin-top: 25px;
-                    transform: translateY(0px);
-                }
-    
-                #run-away {
-                    width: 100%;
-                    max-width: 1400px;
-                    position: absolute;
-                    justify-content: flex-start;
-                    top: 0;
-                    right: 0;
-                    height: fit-content;
-                    transform: translateY(0px);
-
-                    .tile-header {
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        padding: 25px;
-                        flex-direction: row;
-                        align-items: center;
-
-                        h2 {
-                            width: fit-content;
-                            text-align: left;
-                        }
-
-                        img {
-                            height: 75px;
-                        }
-                    }
-
-                    .tile-description {
-                        &.open {
-                            display: flex;
-                            flex-direction: column;
-                            color: var(--text-color-main);
-                            padding: 25px 30px;
-                            padding-top: 130px;
-                            font-size: 24pt;
-                            white-space: pre-wrap;
-                            font-weight: 300;
-                        }
-                    }
-
-                    .tile-toggle {
-                        transform: rotate(45deg);
-                    }
-                }
+        #run-away, #compound, #everyday-portfolio, #year-end-review, #shoebox {
+            img {
+                height: 85px;
             }
         }
     }
 }
 
-@media only screen and (max-width: 750px) {
-    #project-tiles {
+@media only screen and (max-width: 500px) {
+    .project-grid-row {
+        row-gap: 15px;
+        margin-bottom: 15px;
 
-        .project-row {
-            flex-direction: column;
-            height: unset;
-            margin: 0;
-
-            .tile {
-
-                &#shoebox, &#the-blocks, &#year-end-review, &#the-mitch-kitch, &#compound, &#everyday-portfolio, &#sprout, &#run-away {
-                    width: 100%;
-                    max-width: 700px;
-                    margin: 0;
-                    margin-bottom: 25px;
-                    height: fit-content;
-                    padding: 0;
-                    padding: 125px 0;
-
-                    .tile-header {
-                        margin: 0;
-                        margin: 0;
-                        padding: 0;
-                        margin-bottom: 25px;
-                        flex-direction: column;
-
-                        h2 {
-                            text-align: center;
-                            width: fit-content;
-
-                        }
-
-                        img {
-                            height: 100px;
-                        }
-                    }
-
-                    .tile-toggle {
-                        top: 0;
-                        right: 0;
-                    }
-                }
-            }
-
-            &.row0, &.row1, &.row2, &.row3 {
-
-                height: unset;
-
-                #shoebox, #the-blocks, #year-end-review, #the-mitch-kitch, #compound, #everyday-portfolio, #sprout, #run-away {
-                    transition: height 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940);
-                }
-
-                #compound {
-                    .tile-header {
-                        img {
-                            height: 150px;
-                        }
-                    }
-                }
-
-                #sprout {
-                    .tile-header {
-                        img {
-                            height: 75px;
-                        }
-                    }
-                }
-                
-                &.expanded-shoebox, &.expanded-the-blocks, &.expanded-year-end-review, &.expanded-the-mitch-kitch, &.expanded-compound, &.expanded-everyday-portfolio, &.expanded-sprout, &.expanded-run-away {
-                    align-items: center;
-                    justify-content: center;
-                    height: unset;
-                    
-                    #shoebox, #the-blocks, #year-end-review, #the-mitch-kitch, #compound, #everyday-portfolio, #sprout, #run-away {
-                        position: relative;
-                        max-width: 700px;
-                        width: 100%;
-                        margin: 0;
-                        margin-bottom: 25px;
-                        padding: 0;
-                        transition: unset;
-
-                        .tile-header {
-                            padding: 10px 25px;
-
-                            h2 {
-                                text-align: left;
-                            }
-                        }
-
-                        .tile-description {
-                            font-size: 14pt !important;
-                            font-weight: 400 !important;
-
-                            a {
-                                text-decoration: none;
-                                align-self: center !important;
-                            }
-
-                            &.open {
-                                padding: 30px;
-                                padding-top: 110px;
-                            }
-                        }
-                    }
-                }
-
-                &.expanded-the-blocks, &.expanded-year-end-review, &.expanded-compound, &.expanded-sprout {
-                    align-items: flex-end;
-                    justify-content: flex-end;
-
-                    #the-blocks, #year-end-review, #compound, #sprout {
-                        height: fit-content;
-
-                        .tile-header {
-                            h2 {
-                                font-size: 22pt !important;
-                            }
-                        }
-                    }
-
-                    #sprout {
-                        .tile-header {
-                            img {
-                                height: 60px;
-                                margin-top: 5px;
-                            }
-                        }
-                    }
-                    #shoebox, #the-mitch-kitch, #everyday-portfolio, #run-away {
-                        height: 433px;
-                    }
-                }
-
-                &.expanded-shoebox, &.expanded-the-mitch-kitch, &.expanded-everyday-portfolio, &.expanded-run-away {
-                    align-items: flex-end;
-                    justify-content: flex-end;
-
-                    #the-blocks, #year-end-review, #compound, #sprout {
-                        height: 433px;
-                    }
-                    #shoebox, #the-mitch-kitch, #everyday-portfolio, #run-away {
-                        height: fit-content;
-
-                        .tile-header {
-                            h2 {
-                                font-size: 22pt !important;
-                            }
-                        }
-                    }
-                }
-            }
-        }
     }
 }

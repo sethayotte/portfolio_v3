@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="portfolio-index">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
@@ -18,11 +18,13 @@
         window.matchMedia &&
         window.matchMedia("(prefers-color-scheme: light)").matches;
   
-      const setTheme = document.documentElement.getAttribute('theme')
-      if (setTheme && setTheme === 'light') {
-        document.getElementById('shoebox-index').classList.add('sl-theme-shoebox-light');
+      const setTheme = window.localStorage.getItem('theme');
+      if (prefersLight || setTheme && setTheme === 'light') {
+        console.log('set light');
+        document.getElementById('portfolio-index').classList?.add('sl-theme-light');
       } else {
-        document.getElementById('shoebox-index').classList.add('sl-theme-shoebox-dark');
+        console.log('set dark');
+        document.getElementById('portfolio-index').classList?.add('sl-theme-dark');
       }
       console.log(setTheme, prefersDark, prefersLight);
     </script>
@@ -41,6 +43,7 @@
     <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.4.0/dist/components/menu-label/menu-label.js"></script>
     <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.4.0/dist/components/dialog/dialog.js"></script>
     <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.4.0/dist/components/icon-button/icon-button.js"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.4.0/dist/components/drawer/drawer.js"></script>
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.

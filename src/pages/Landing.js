@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom'
 import { IoIosArrowRoundDown, IoIosArrowRoundForward } from 'react-icons/io';
 import { BsPlusCircleFill } from 'react-icons/bs';
 import HomeData from '../data/home.json';
+import ProjectData from '../data/projects.json';
 
 const Landing = ({defaultDark, isMobileSafari}) => {
 
-    const [tileExpand, setTileExpand ] = useState('');
     const [ isDesktop, setIsDesktop ] = useState(false);
 
     const updateWidth = () => {
@@ -17,7 +17,9 @@ const Landing = ({defaultDark, isMobileSafari}) => {
         }
     }
 
-    window.addEventListener("resize", updateWidth);
+    window.addEventListener("resize", () => {
+        updateWidth();
+    });
 
     const fadeMenuBar = () => {
         let windowHeight = window.innerHeight;
@@ -32,6 +34,7 @@ const Landing = ({defaultDark, isMobileSafari}) => {
 
     useEffect(() => {
         updateWidth();
+        
         let scrollPoint = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
         if (scrollPoint < 100) {
             document.getElementById('app-header').style.opacity = 0;
@@ -44,106 +47,91 @@ const Landing = ({defaultDark, isMobileSafari}) => {
         }
     }, [])
 
-    let isOpen = false;
-    let lastOpened;
-    let lastIndex;
-    let mainEl;
-    let passiveEl;
 
-    let mainTileHeight;
-    let passiveTileHeight;
 
-    const mainElement = new ResizeObserver((element) => {
-        mainTileHeight = element[0].contentRect.height;
-        if (!isOpen) {
-            document.querySelector(`.row${0}`).style.setProperty('--row-height', 'initial');
-            document.querySelector(`.row${1}`).style.setProperty('--row-height', 'initial');
-            document.querySelector(`.row${2}`).style.setProperty('--row-height', 'initial');
-            document.querySelector(`.row${3}`).style.setProperty('--row-height', 'initial');
+    const tileStaggerConfig = [ [60, 40], [30, 70], [60, 40], [35, 65] ];
+    const rowStaggerConfig = [ 450, 400, 450, 400 ];
+  
+    const RenderTileRow = (item) => {
 
-            document.querySelector(`.row${lastIndex}`).style.setProperty('--row-height', 'initial');
-        } else {
-            document.querySelector(`.row${lastIndex}`).style.setProperty('--row-height', mainTileHeight + passiveTileHeight + 25 + 'px');
-        }
-    });
+        let leftDrawer = document?.getElementById(`description-drawer-${item.index}-0`);
+        let leftOpenButton = document?.getElementById(`open-drawer-${item.index}-0`);
+        let leftCloseButton = document?.getElementById(`close-drawer-${item.index}-0`);
+        let rightDrawer = document?.getElementById(`description-drawer-${item.index}-1`);
+        let rightOpenButton = document?.getElementById(`open-drawer-${item.index}-1`);
+        let rightCloseButton = document?.getElementById(`close-drawer-${item.index}-1`);
 
-    const passiveElement = new ResizeObserver((element) => {
-        passiveTileHeight = element[0].contentRect.height;
-        if (!isOpen) {
-            document.querySelector(`.row${0}`).style.setProperty('--row-height', 'initial');
-            document.querySelector(`.row${1}`).style.setProperty('--row-height', 'initial');
-            document.querySelector(`.row${2}`).style.setProperty('--row-height', 'initial');
-            document.querySelector(`.row${3}`).style.setProperty('--row-height', 'initial');
+        useEffect(() => {
 
-            document.querySelector(`.row${lastIndex}`).style.setProperty('--row-height', 'initial');
-        } else {
-            document.querySelector(`.row${lastIndex}`).style.setProperty('--row-height', mainTileHeight + passiveTileHeight + 25 + 'px');
-        }
-    });
+            leftDrawer = document?.getElementById(`description-drawer-${item.index}-0`);
+            leftOpenButton = document?.getElementById(`open-drawer-${item.index}-0`);
+            leftCloseButton = document?.getElementById(`close-drawer-${item.index}-0`);
+            rightDrawer = document?.getElementById(`description-drawer-${item.index}-1`);
+            rightOpenButton = document?.getElementById(`open-drawer-${item.index}-1`);
+            rightCloseButton = document?.getElementById(`close-drawer-${item.index}-1`);
 
-    const toggleTile = (slug, rowIndex, passiveTile) => {
-        if (isDesktop && mainEl && passiveEl) {
-            mainElement.unobserve(mainEl);
-            passiveElement.unobserve(passiveEl);
-        }
-        if (!isDesktop && lastIndex) {
-            document.querySelector(`.row${lastIndex}`).style.removeProperty('--row-height');
-        }
-        if (!lastOpened) {  
-            document.querySelector(`.row${rowIndex}`).classList.toggle(`expanded-${slug}`);
-        } else if (lastOpened === slug) {
-            document.querySelector(`.row${rowIndex}`).classList.toggle(`expanded-${slug}`);
-        } else if (isOpen) {
-            document.querySelector(`.row${lastIndex}`).classList.toggle(`expanded-${lastOpened}`);
-            document.querySelector(`.row${rowIndex}`).classList.toggle(`expanded-${slug}`);
-        } else {
-            document.querySelector(`.row${rowIndex}`).classList.toggle(`expanded-${slug}`);
-        }
-        if (document.querySelector(`.row${rowIndex}`).classList.contains(`expanded-${slug}`)) {
-            isOpen = true;
-        } else {
-            isOpen = false;
-        }
-        lastOpened = slug;
-        mainEl = document.getElementById(slug)
-        passiveEl = document.getElementById(passiveTile)
-        lastIndex = rowIndex;
+            if (leftDrawer && rightDrawer) {
+                leftOpenButton.addEventListener('click', () => {
+                    leftDrawer.show();
+                    document.body.style.setProperty("--tile-popup-color", item.row[0].color);
+                });
+                leftCloseButton.addEventListener('click', () => leftDrawer.hide());
+                rightOpenButton.addEventListener('click', () => {
+                    rightDrawer.show();
+                    document.body.style.setProperty("--tile-popup-color", item.row[1].color);
+                });
+                rightCloseButton.addEventListener('click', () => rightDrawer.hide());
+            }
 
-        if (isDesktop) {
-            mainElement.observe(mainEl);
-            passiveElement.observe(passiveEl);
-        }
-    }
-
-    const RenderTileRow = ({row, parentIndex}) => {
-        return (
-            <div className={isDesktop ? 'project-row' + ' ' + "row"+parentIndex : 'project-row' + ' ' + 'row'+parentIndex}>
-                <div className='tile' id={row[0].content.slug} style={{backgroundColor: row[0].color}} >
-                    <div className='tile-header'>
-                    <img src={defaultDark ? row[0].logoDark : row[0].logoLight} />
-                        <h2 style={{color: row[0].fontColor, fontFamily: row[0].font, fontWeight: row[0].weight}}>{row[0].title}</h2>
-                    </div>
-                    <div className={'tile-description open'}>
-                        {row[0].content.description}
-                        <Link to={'/projects/' + row[0].content.slug}>Explore {(row[0].title === '') ? 'Sprout' : row[0].title} <IoIosArrowRoundForward /></Link>
-                    </div>
-                    <BsPlusCircleFill className='tile-toggle' onClick={() => toggleTile(row[0].content.slug, parentIndex, row[1].content.slug)} style={{color: row[0].toggleColor}} />
+        }, [leftDrawer, rightDrawer]);
+  
+      return (
+        <div className="project-grid-row" style={{gridTemplateColumns: `${tileStaggerConfig[item.index][0]}% ${tileStaggerConfig[item.index][1]}%`, height: `${rowStaggerConfig[item.index]}px`}}>
+            <div 
+                className="project-tile" 
+                id={item.row[0].content.slug} 
+                style={{backgroundColor: `${item.row[0].color}`, color: `${item.row[0].fontColor}`}}>
+                <div className="branding-wrapper">
+                <img src={defaultDark ? item.row[0].logoDark : item.row[0].logoLight} />
+                <h2 style={{fontFamily: `${item.row[0].font}, sans-serif`, fontWeight: `${item.row[0].weight}`}}>{item.row[0].title}</h2>
                 </div>
-                <div className='tile' id={row[1].content.slug} style={{backgroundColor: row[1].color}} >
-                    <div className='tile-header'>
-                        <img src={defaultDark ? row[1].logoDark : row[1].logoLight} />
-                        <h2 style={{color: row[1].fontColor, fontFamily: row[1].font, fontWeight: row[1].weight}}>{row[1].title}</h2>
-                    </div>
-                    <div className={'tile-description open'}>
-                        {row[1].content.description}
-                        <Link to={'/projects/' + row[1].content.slug}>Explore {row[1].title} <IoIosArrowRoundForward /></Link>
-                    </div>
-                    <BsPlusCircleFill className='tile-toggle' onClick={() => toggleTile(row[1].content.slug, parentIndex, row[0].content.slug)} style={{color: row[1].toggleColor}} />
-                </div>
+                <BsPlusCircleFill id={"open-drawer-" + item.index + "-0"} className='project-info-toggle' style={{color: `${item.row[0].toggleColor}`}} />
             </div>
-        )
-    }
+            <div 
+                className="project-tile" 
+                id={item.row[1].content.slug}
+                style={{backgroundColor: `${item.row[1].color}`, color: `${item.row[1].fontColor}`}}>
+                <div className="branding-wrapper">
+                <img src={defaultDark ? item.row[1].logoDark : item.row[1].logoLight} />
+                <h2 style={{fontFamily: `${item.row[1].font}, sans-serif`, fontWeight: `${item.row[1].weight}`}}>{item.row[1].title}</h2>
+                </div>
+                <BsPlusCircleFill id={"open-drawer-" + item.index + "-1"} className='project-info-toggle' style={{color: `${item.row[1].toggleColor}`}} />
+            </div>
 
+            <sl-drawer contained label="Drawer" placement="bottom" id={"description-drawer-" + item.index + "-0"}>
+                <h2 slot="label" style={{color: `${item.row[0].fontColor}`, fontFamily: `${item.row[0].font}, sans-serif`, fontWeight: `${item.row[0].weight}`}}><img src={defaultDark ? item.row[0].logoDark : item.row[0].logoLight} /> {item.row[0].title}</h2>
+                <span id={"close-drawer-" + item.index + "-0"} className="close-btn" slot='header-actions'><BsPlusCircleFill style={{color: `${item.row[0].toggleColor}`}} /></span>
+                <span style={{color: `${item.row[0].fontColor}`}}>
+                    {item.row[0].content.description}
+                </span>
+            </sl-drawer>
+            <sl-drawer contained label="Drawer" placement="bottom" id={"description-drawer-" + item.index + "-1"}>
+                <h2 slot="label" style={{color: `${item.row[1].fontColor}`, fontFamily: `${item.row[1].font}, sans-serif`, fontWeight: `${item.row[1].weight}`}}><img src={defaultDark ? item.row[1].logoDark : item.row[1].logoLight} /> {item.row[1].title}</h2>
+                <span id={"close-drawer-" + item.index + "-1"} className="close-btn" slot='header-actions'><BsPlusCircleFill style={{color: `${item.row[1].toggleColor}`}} /></span>
+                <span style={{color: `${item.row[1].fontColor}`}}>
+                    {item.row[1].content.description}
+                </span>
+            </sl-drawer>
+        </div>
+      )
+    }
+  
+    let rowDividedData = ProjectData.reduce(function(result, value, index, array) {
+      if (index % 2 === 0)
+        result.push(array.slice(index, index + 2));
+      return result;
+    }, []);
+  
     return (
         <section className='landing-wrapper'>
             <section className='fold'>
@@ -222,13 +210,14 @@ const Landing = ({defaultDark, isMobileSafari}) => {
                 }
             <section id='project-tiles'>
                 {
-                    HomeData.landingProjectTiles.map((row, index) => {
+                    rowDividedData.map((row, index) => {
                         return (
-                            <RenderTileRow row={row} parentIndex={index} key={index} />
+                        <RenderTileRow row={row} index={index} key={index} />
                         )
                     })
                 }
             </section>
+            
         </section>
     )
 }

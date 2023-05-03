@@ -22,11 +22,19 @@ const App = () => {
   const setDark = () => {
     localStorage.setItem("theme", "dark");
     document.documentElement.setAttribute("data-theme", "dark");
+    if (document.getElementById('portfolio-index').classList.value.includes('sl-theme-light')) {
+      document.getElementById('portfolio-index').classList?.remove('sl-theme-light');
+    }
+    document.getElementById('portfolio-index').classList?.add('sl-theme-dark');
   };
 
   const setLight = () => {
     localStorage.setItem("theme", "light");
     document.documentElement.setAttribute("data-theme", "light");
+    if (document.getElementById('portfolio-index').classList.value.includes('sl-theme-dark')) {
+      document.getElementById('portfolio-index').classList?.remove('sl-theme-dark');
+    }
+    document.getElementById('portfolio-index').classList?.add('sl-theme-light');
   };
 
   function changeThemeColor() {

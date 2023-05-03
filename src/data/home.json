@@ -6,10 +6,10 @@
             "linkText": "Explore Shoebox",
             "linkRoute": "/projects/shoebox",
             "imagesLight": [
-                "./assets/Featured_Light.svg"
+                "./assets/project-brands/Featured_Light.svg"
             ],
             "imagesDark": [
-                "./assets/Featured_Dark.svg"
+                "./assets/project-brands/Featured_Dark.svg"
             ]
         },
         {
@@ -47,8 +47,8 @@
         [
             {
                 "title": "The Blocks",
-                "logoLight": "./assets/TheBlocks_Light.svg",
-                "logoDark": "./assets/TheBlocks_Dark.svg",
+                "logoLight": "./assets/project-brands/TheBlocks_Light.svg",
+                "logoDark": "./assets/project-brands/TheBlocks_Dark.svg",
                 "color": "var(--the-blocks-tile)",
                 "toggleColor": "var(--tile-toggle-dark)",
                 "fontColor": "var(--text-color-main)",
@@ -61,11 +61,11 @@
             },
             {
                 "title": "Shoebox",
-                "logoLight": "./assets/Shoebox_Light.svg",
-                "logoDark": "./assets/Shoebox_Dark.svg",
+                "logoLight": "./assets/project-brands/Shoebox_Dark.svg",
+                "logoDark": "./assets/project-brands/Shoebox_Dark.svg",
                 "color": "var(--shoebox-tile)",
                 "toggleColor": "var(--tile-toggle-light)",
-                "fontColor": "var(--text-color-inverted)",
+                "fontColor": "black",
                 "font": "Inter",
                 "weight": "600",
                 "content": {
@@ -77,8 +77,8 @@
         [
             {
                 "title": "Year End Review",
-                "logoLight": "./assets/Review_Light.svg",
-                "logoDark": "./assets/Review_Dark.svg",
+                "logoLight": "./assets/project-brands/Review_Light.svg",
+                "logoDark": "./assets/project-brands/Review_Dark.svg",
                 "color": "var(--review-tile)",
                 "toggleColor": "var(--tile-toggle-dark)",
                 "fontColor": "var(--review-text)",
@@ -91,8 +91,8 @@
             },
             {
                 "title": "The Mitch Kitch",
-                "logoLight": "./assets/mitchkitch_light.svg",
-                "logoDark": "./assets/mitchkitch_dark.svg",
+                "logoLight": "./assets/project-brands/mitchkitch_light.svg",
+                "logoDark": "./assets/project-brands/mitchkitch_dark.svg",
                 "color": "var(--mitch-kitch-tile)",
                 "toggleColor": "var(--tile-toggle-dark)",
                 "fontColor": "var(--text-color-main)",
@@ -107,8 +107,8 @@
         [
             {
                 "title": "Compound",
-                "logoLight": "./assets/Compound_Light.svg",
-                "logoDark": "./assets/Compound_Dark.svg",
+                "logoLight": "./assets/project-brands/Compound_Light.svg",
+                "logoDark": "./assets/project-brands/Compound_Dark.svg",
                 "color": "#1B94FF",
                 "toggleColor": "var(--tile-toggle-light)",
                 "fontColor": "var(--text-color-inverted)",
@@ -121,8 +121,8 @@
             },
             {
                 "title": "Everyday Portfolio",
-                "logoLight": "./assets/EP_Light.svg",
-                "logoDark": "./assets/EP_Dark.svg",
+                "logoLight": "./assets/project-brands/EP_Light_New.svg",
+                "logoDark": "./assets/project-brands/EP_Dark_New.svg",
                 "color": "#1DD000",
                 "toggleColor": "var(--tile-toggle-light)",
                 "fontColor": "var(--text-color-inverted)",
@@ -137,8 +137,8 @@
         [
             {
                 "title": "",
-                "logoLight": "./assets/Sprout_Light.svg",
-                "logoDark": "./assets/Sprout_Dark.svg",
+                "logoLight": "./assets/project-brands/Sprout_Light.svg",
+                "logoDark": "./assets/project-brands/Sprout_Dark.svg",
                 "color": "var(--sprout-tile)",
                 "toggleColor": "var(--tile-toggle-light)",
                 "fontColor": "var(--text-color-inverted)",
@@ -151,8 +151,8 @@
             },
             {
                 "title": "Run Away",
-                "logoLight": "./assets/RunAway_Light.svg",
-                "logoDark": "./assets/RunAway_Dark.svg",
+                "logoLight": "./assets/project-brands/RunAway_Light_New.svg",
+                "logoDark": "./assets/project-brands/RunAway_Dark_New.svg",
                 "color": "var(--run-away-tile)",
                 "toggleColor": "var(--tile-toggle-ra)",
                 "font": "Inter",
