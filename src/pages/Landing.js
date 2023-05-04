@@ -32,8 +32,12 @@ const Landing = ({defaultDark, isMobileSafari}) => {
         }
     }
 
+    let domain = /:\/\/([^\/]+)/.exec(window.location.href)[1];
+
     useEffect(() => {
         updateWidth();
+
+        console.log(domain);
         
         let scrollPoint = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
         if (scrollPoint < 100) {
@@ -45,7 +49,7 @@ const Landing = ({defaultDark, isMobileSafari}) => {
             document.getElementById('app-header').style.opacity = 1;
             document.getElementById('app-header').style.display = 'flex';
         }
-    }, [])
+    }, [domain])
 
 
 
@@ -88,7 +92,7 @@ const Landing = ({defaultDark, isMobileSafari}) => {
       return (
         <div className="project-grid-row" style={{gridTemplateColumns: `${tileStaggerConfig[item.index][0]}% ${tileStaggerConfig[item.index][1]}%`, height: `${rowStaggerConfig[item.index]}px`}}>
             <div 
-                className="project-tile" 
+                className="project-landing-tile" 
                 id={item.row[0].content.slug} 
                 style={{backgroundColor: `${item.row[0].color}`, color: `${item.row[0].fontColor}`}}>
                 <div className="branding-wrapper">
@@ -98,7 +102,7 @@ const Landing = ({defaultDark, isMobileSafari}) => {
                 <BsPlusCircleFill id={"open-drawer-" + item.index + "-0"} className='project-info-toggle' style={{color: `${item.row[0].toggleColor}`}} />
             </div>
             <div 
-                className="project-tile" 
+                className="project-landing-tile" 
                 id={item.row[1].content.slug}
                 style={{backgroundColor: `${item.row[1].color}`, color: `${item.row[1].fontColor}`}}>
                 <div className="branding-wrapper">

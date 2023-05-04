@@ -386,7 +386,7 @@ sl-drawer::part(close-button) {
         }
     }
 
-    .project-tile {
+    .project-landing-tile {
         position: relative;
         height: 100%;
         display: flex;
@@ -415,7 +415,7 @@ sl-drawer::part(close-button) {
         }
     }
 
-    .project-tile:first-of-type {
+    .project-landing-tile:first-of-type {
         margin-right: 25px;
     }
 
@@ -452,7 +452,7 @@ sl-drawer::part(close-button) {
         row-gap: 25px;
         width: 100%;
 
-        .project-tile {
+        .project-landing-tile {
             height: 350px;
 
             h2 {
@@ -462,6 +462,10 @@ sl-drawer::part(close-button) {
             img {
                 height: 100px;
             }
+        }
+
+        .project-landing-tile:first-of-type {
+            margin-right: 0;
         }
 
         #run-away, #compound, #everyday-portfolio, #year-end-review, #shoebox {
