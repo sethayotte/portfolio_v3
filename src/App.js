@@ -76,9 +76,11 @@ const App = () => {
   var webkit = !!ua.match(/WebKit/i);
   var iOSSafari = iOS && webkit && !ua.match(/CriOS/i);
 
+  let domain = /:\/\/([^\/]+)/.exec(window.location.href)[1];
+
   useEffect(() => {
     setIsMobileSafari(iOSSafari);
-  }, [iOSSafari]);
+  }, [iOSSafari, domain]);
 
   
 
@@ -168,7 +170,7 @@ const App = () => {
           </Routes>
         </ScrollToTop>
         <div>
-          <Footer />
+          <Footer domain={domain} />
         </div>
       </Router>
     </div>

@@ -276,6 +276,10 @@ footer {
 
 sl-menu {
     border-radius: 15px;
+
+    a {
+        text-decoration: none;
+    }
 }
 
 sl-menu-item::part(label) {
@@ -285,11 +289,24 @@ sl-menu-item::part(label) {
 }
 
 sl-menu-item {
+    
     svg {
         margin-right: 5px;
         font-size: 16pt;
         color: orange;
     }
+
+    .activated-version {
+        color: #01d02d;
+    }
+
+    .inactive-version {
+        color: var(--copyright-text-color);
+    }
+}
+
+sl-menu-item .menu-item__check, .menu-item .menu-item__chevron {
+    width: 1rem !important;
 }
 
 @media only screen and (max-width: 500px) {

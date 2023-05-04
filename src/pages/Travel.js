@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 const Travel = () => {
   
@@ -15,9 +15,12 @@ const Travel = () => {
           EXPLORE
         </h2>
       </div>
-      <div className='globe'>
+      <div className='globe' id='globe'>
         {renderGlobe()}
       </div>
+      <section className='below-fold'>
+        <span>coming soon ;)</span>
+      </section>
     </div>
   )
 }

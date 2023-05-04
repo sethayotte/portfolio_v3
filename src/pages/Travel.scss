@@ -4,15 +4,15 @@
     }
 
     .travel-hero-text {
-        position: absolute;
         font-size: min(96pt, 13vw);
         font-weight: 900;
         display: flex;
         align-items: center;
         justify-content: center;
         text-align: center;
-        width: calc(100% - 50px);
+        // width: calc(100% - 50px);
         height: 80vh;
+        margin-bottom: 20vh;
         z-index: 1;
         animation: color-dance 1.5s ease both;
         @keyframes color-dance {
@@ -50,8 +50,8 @@
         height: 140px;
         left: 50%;
         overflow: hidden;
-        position: absolute;
-        top: 50%;
+        position: fixed;
+        top: 50vh;
         width: 140px;
         z-index: 2;
         scale: 1.2;
@@ -108,6 +108,22 @@
     
                 }
             }
+        }
+    }
+
+    .below-fold {
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        span {
+            padding: 10px 15px;
+            background-color: var(--menu-bg-active);
+            color: var(--text-color-inverted);
+            font-family: 'Inter', sans-serif;
+            font-weight: 500;
+            border-radius: 25px;
         }
     }
 }

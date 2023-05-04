@@ -32,12 +32,8 @@ const Landing = ({defaultDark, isMobileSafari}) => {
         }
     }
 
-    let domain = /:\/\/([^\/]+)/.exec(window.location.href)[1];
-
     useEffect(() => {
         updateWidth();
-
-        console.log(domain);
         
         let scrollPoint = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
         if (scrollPoint < 100) {
@@ -49,7 +45,7 @@ const Landing = ({defaultDark, isMobileSafari}) => {
             document.getElementById('app-header').style.opacity = 1;
             document.getElementById('app-header').style.display = 'flex';
         }
-    }, [domain])
+    }, [])
 
 
 
