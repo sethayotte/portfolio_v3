@@ -309,15 +309,6 @@
     }
 }
 
-body.sl-scroll-lock {
-    --sl-scroll-lock-size: 0px !important;
-}
-
-sl-drawer::part(overlay) {
-    border-top-right-radius: 30px;
-    border-top-left-radius: 30px;
-}
-
 sl-drawer::part(panel) {
     // --tile-popup-color: var(--background-color);
     border-top-right-radius: 30px;
@@ -422,7 +413,7 @@ sl-drawer::part(close-button) {
     #sprout {
         img {
             width: 90%;
-            max-width: 200px;
+            max-width: 170px;
         }
     }
 

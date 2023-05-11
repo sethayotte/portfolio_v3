@@ -9,8 +9,56 @@
         "font": "IBM Plex Sans, sans-serif",
         "weight": "500",
         "content": {
-            "description": "This is a blurb of text introducing the specific project",
-            "slug": "the-blocks"
+            "technologies": "LOREM",
+            "role": "LOREM",
+            "status": "LOREM",
+            "slug": "the-blocks",
+            "tagline": "LOREM",
+            "tileColor": "LOREM",
+            "headerIconColor": "LOREM",
+            "highlightsHeader": "LOREM",
+            "highlightsItems": [
+                {
+                    "icon": "LOREM",
+                    "label": "LOREM"
+                },
+                {
+                    "icon": "LOREM",
+                    "label": "LOREM"
+                },
+                {
+                    "icon": "LOREM",
+                    "label": "LOREM"
+                },
+                {
+                    "icon": "LOREM",
+                    "label": "LOREM"
+                }
+            ],
+            "descriptionHeader": "LOREM",
+            "descriptionIcon": "LOREM",
+            "description": "LOREM",
+            "visualsHeader": "LOREM",
+            "visualsIcon": "LOREM",
+            "visuals": [
+                "https://",
+                "https://",
+                "https://",
+                "https://"
+            ],
+            "hasRoadmap": true,
+            "roadmapHeader": "LOREM",
+            "roadmapIcon": "LOREM",
+            "roadmap": [
+                {
+                    "icon": "LOREM",
+                    "description": "LOREM"
+                },
+                {
+                    "icon": "LOREM",
+                    "description": "LOREM"
+                }
+            ]
         }
     },
     {
@@ -23,8 +71,56 @@
         "font": "Inter, sans-serif",
         "weight": "600",
         "content": {
-            "description": "Shoebox is a custom-designed personal finance utility that's changing the way individuals manage their Health Savings Account (HSA) expenses and maximize their tax strategy. With Shoebox, HSA users can easily log eligible expenses to gain a comprehensive view of their financial progress. Whether it's tracking expenses, setting financial goals, or managing HSA contributions and limits, Shoebox streamlines the process and provides convenient access at home or on the go. \n \nPaired with detailed reports on HSA contributions and expenses, Shoebox empowers users to optimize their HSA benefits and stay on top of their account balance. The app also sends timely alerts for important HSA deadlines and contribution limits.",
-            "slug": "shoebox"
+            "technologies": "LOREM",
+            "role": "LOREM",
+            "status": "LOREM",
+            "slug": "shoebox",
+            "tagline": "LOREM",
+            "tileColor": "LOREM",
+            "headerIconColor": "LOREM",
+            "highlightsHeader": "LOREM",
+            "highlightsItems": [
+                {
+                    "icon": "LOREM",
+                    "label": "LOREM"
+                },
+                {
+                    "icon": "LOREM",
+                    "label": "LOREM"
+                },
+                {
+                    "icon": "LOREM",
+                    "label": "LOREM"
+                },
+                {
+                    "icon": "LOREM",
+                    "label": "LOREM"
+                }
+            ],
+            "descriptionHeader": "LOREM",
+            "descriptionIcon": "LOREM",
+            "description": "LOREM",
+            "visualsHeader": "LOREM",
+            "visualsIcon": "LOREM",
+            "visuals": [
+                "https://",
+                "https://",
+                "https://",
+                "https://"
+            ],
+            "hasRoadmap": true,
+            "roadmapHeader": "LOREM",
+            "roadmapIcon": "LOREM",
+            "roadmap": [
+                {
+                    "icon": "LOREM",
+                    "description": "LOREM"
+                },
+                {
+                    "icon": "LOREM",
+                    "description": "LOREM"
+                }
+            ]
         }
     },
     {
@@ -37,8 +133,56 @@
         "font": "Inconsolata, monospace",
         "weight": "400",
         "content": {
-            "description": "Shoebox is a custom-designed personal finance utility that's changing the way individuals manage their Health Savings Account (HSA) expenses and maximize their tax strategy. With Shoebox, HSA users can easily log eligible expenses to gain a comprehensive view of their financial progress. Whether it's tracking expenses, setting financial goals, or managing HSA contributions and limits, Shoebox streamlines the process and provides convenient access at home or on the go. \n \nPaired with detailed reports on HSA contributions and expenses, Shoebox empowers users to optimize their HSA benefits and stay on top of their account balance. The app also sends timely alerts for important HSA deadlines and contribution limits.",
-            "slug": "year-end-review"
+            "technologies": "LOREM",
+            "role": "LOREM",
+            "status": "LOREM",
+            "slug": "year-end-review",
+            "tagline": "LOREM",
+            "tileColor": "LOREM",
+            "headerIconColor": "LOREM",
+            "highlightsHeader": "LOREM",
+            "highlightsItems": [
+                {
+                    "icon": "LOREM",
+                    "label": "LOREM"
+                },
+                {
+                    "icon": "LOREM",
+                    "label": "LOREM"
+                },
+                {
+                    "icon": "LOREM",
+                    "label": "LOREM"
+                },
+                {
+                    "icon": "LOREM",
+                    "label": "LOREM"
+                }
+            ],
+            "descriptionHeader": "LOREM",
+            "descriptionIcon": "LOREM",
+            "description": "LOREM",
+            "visualsHeader": "LOREM",
+            "visualsIcon": "LOREM",
+            "visuals": [
+                "https://",
+                "https://",
+                "https://",
+                "https://"
+            ],
+            "hasRoadmap": true,
+            "roadmapHeader": "LOREM",
+            "roadmapIcon": "LOREM",
+            "roadmap": [
+                {
+                    "icon": "LOREM",
+                    "description": "LOREM"
+                },
+                {
+                    "icon": "LOREM",
+                    "description": "LOREM"
+                }
+            ]
         }
     },
     {
@@ -56,7 +200,7 @@
             "status": "active",
             "slug": "the-mitch-kitch",
             "tagline": "*chef's kiss*",
-            "tileColor": "--mitch-kitch-project-secondary",
+            "tileColor": "var(--mitch-kitch-project-secondary)",
             "headerIconColor": "blue",
             "highlightsHeader": "project highlights",
             "highlightsItems": [
@@ -66,35 +210,34 @@
                 },
                 {
                     "icon": "IoBook",
-                    "iconSource": "tb",
-                    "tileColor": "--mitch-kitch-project-secondary",
                     "label": "recipe repository"
                 },
                 {
                     "icon": "IoPeopleCircleOutline",
-                    "iconSource": "io",
                     "label": "family focused"
                 },
                 {
                     "icon": "TbInputSearch",
-                    "iconSource": "io",
                     "label": "rich search results"
                 }
             ],
             "descriptionHeader": "overview",
-            "descriptionIcon": "overview",
+            "descriptionIcon": "TbFolderFilled",
             "description": "Shoebox is a custom-designed personal finance utility that's changing the way individuals manage their Health Savings Account (HSA) expenses and maximize their tax strategy. With Shoebox, HSA users can easily log eligible expenses to gain a comprehensive view of their financial progress. Whether it's tracking expenses, setting financial goals, or managing HSA contributions and limits, Shoebox streamlines the process and provides convenient access at home or on the go. \n \nPaired with detailed reports on HSA contributions and expenses, Shoebox empowers users to optimize their HSA benefits and stay on top of their account balance. The app also sends timely alerts for important HSA deadlines and contribution limits.",
             "visualsHeader": "screenshots",
-            "visualsIcon": "screenshot",
+            "visualsIcon": "TbBorderCorners",
             "visuals": [
-                "https://",
-                "https://",
-                "https://",
-                "https://"
+                "./assets/project-visuals/mitch-kitch/all-recipes.PNG",
+                "./assets/project-visuals/mitch-kitch/entree-categories.png",
+                "./assets/project-visuals/mitch-kitch/general-info-form.png",
+                "./assets/project-visuals/mitch-kitch/ingredients-form.png",
+                "./assets/project-visuals/mitch-kitch/recipe-page.png",
+                "./assets/project-visuals/mitch-kitch/recipe-page-bottom.png",
+                "./assets/project-visuals/mitch-kitch/substitution-guide.png"
             ],
             "hasRoadmap": true,
             "roadmapHeader": "roadmap",
-            "roadmapIcon": "map",
+            "roadmapIcon": "IoMap",
             "roadmap": [
                 {
                     "icon": "bookmark",
@@ -117,8 +260,56 @@
         "font": "Inter, sans-serif",
         "weight": "800",
         "content": {
-            "description": "Shoebox is a custom-designed personal finance utility that's changing the way individuals manage their Health Savings Account (HSA) expenses and maximize their tax strategy. With Shoebox, HSA users can easily log eligible expenses to gain a comprehensive view of their financial progress. Whether it's tracking expenses, setting financial goals, or managing HSA contributions and limits, Shoebox streamlines the process and provides convenient access at home or on the go. \n \nPaired with detailed reports on HSA contributions and expenses, Shoebox empowers users to optimize their HSA benefits and stay on top of their account balance. The app also sends timely alerts for important HSA deadlines and contribution limits.",
-            "slug": "compound"
+            "technologies": "LOREM",
+            "role": "LOREM",
+            "status": "LOREM",
+            "slug": "compound",
+            "tagline": "LOREM",
+            "tileColor": "LOREM",
+            "headerIconColor": "LOREM",
+            "highlightsHeader": "LOREM",
+            "highlightsItems": [
+                {
+                    "icon": "LOREM",
+                    "label": "LOREM"
+                },
+                {
+                    "icon": "LOREM",
+                    "label": "LOREM"
+                },
+                {
+                    "icon": "LOREM",
+                    "label": "LOREM"
+                },
+                {
+                    "icon": "LOREM",
+                    "label": "LOREM"
+                }
+            ],
+            "descriptionHeader": "LOREM",
+            "descriptionIcon": "LOREM",
+            "description": "LOREM",
+            "visualsHeader": "LOREM",
+            "visualsIcon": "LOREM",
+            "visuals": [
+                "https://",
+                "https://",
+                "https://",
+                "https://"
+            ],
+            "hasRoadmap": true,
+            "roadmapHeader": "LOREM",
+            "roadmapIcon": "LOREM",
+            "roadmap": [
+                {
+                    "icon": "LOREM",
+                    "description": "LOREM"
+                },
+                {
+                    "icon": "LOREM",
+                    "description": "LOREM"
+                }
+            ]
         }
     },
     {
@@ -131,8 +322,56 @@
         "font": "Inter, sans-serif",
         "weight": "400",
         "content": {
-            "description": "Shoebox is a custom-designed personal finance utility that's changing the way individuals manage their Health Savings Account (HSA) expenses and maximize their tax strategy. With Shoebox, HSA users can easily log eligible expenses to gain a comprehensive view of their financial progress. Whether it's tracking expenses, setting financial goals, or managing HSA contributions and limits, Shoebox streamlines the process and provides convenient access at home or on the go. \n \nPaired with detailed reports on HSA contributions and expenses, Shoebox empowers users to optimize their HSA benefits and stay on top of their account balance. The app also sends timely alerts for important HSA deadlines and contribution limits.",
-            "slug": "everyday-portfolio"
+            "technologies": "LOREM",
+            "role": "LOREM",
+            "status": "LOREM",
+            "slug": "everyday-portfolio",
+            "tagline": "LOREM",
+            "tileColor": "LOREM",
+            "headerIconColor": "LOREM",
+            "highlightsHeader": "LOREM",
+            "highlightsItems": [
+                {
+                    "icon": "LOREM",
+                    "label": "LOREM"
+                },
+                {
+                    "icon": "LOREM",
+                    "label": "LOREM"
+                },
+                {
+                    "icon": "LOREM",
+                    "label": "LOREM"
+                },
+                {
+                    "icon": "LOREM",
+                    "label": "LOREM"
+                }
+            ],
+            "descriptionHeader": "LOREM",
+            "descriptionIcon": "LOREM",
+            "description": "LOREM",
+            "visualsHeader": "LOREM",
+            "visualsIcon": "LOREM",
+            "visuals": [
+                "https://",
+                "https://",
+                "https://",
+                "https://"
+            ],
+            "hasRoadmap": true,
+            "roadmapHeader": "LOREM",
+            "roadmapIcon": "LOREM",
+            "roadmap": [
+                {
+                    "icon": "LOREM",
+                    "description": "LOREM"
+                },
+                {
+                    "icon": "LOREM",
+                    "description": "LOREM"
+                }
+            ]
         }
     },
     {
@@ -145,8 +384,56 @@
         "font": "Inter, sans-serif",
         "weight": "400",
         "content": {
-            "description": "Shoebox is a custom-designed personal finance utility that's changing the way individuals manage their Health Savings Account (HSA) expenses and maximize their tax strategy. With Shoebox, HSA users can easily log eligible expenses to gain a comprehensive view of their financial progress. Whether it's tracking expenses, setting financial goals, or managing HSA contributions and limits, Shoebox streamlines the process and provides convenient access at home or on the go. \n \nPaired with detailed reports on HSA contributions and expenses, Shoebox empowers users to optimize their HSA benefits and stay on top of their account balance. The app also sends timely alerts for important HSA deadlines and contribution limits.",
-            "slug": "sprout"
+            "technologies": "LOREM",
+            "role": "LOREM",
+            "status": "LOREM",
+            "slug": "sprout",
+            "tagline": "LOREM",
+            "tileColor": "LOREM",
+            "headerIconColor": "LOREM",
+            "highlightsHeader": "LOREM",
+            "highlightsItems": [
+                {
+                    "icon": "LOREM",
+                    "label": "LOREM"
+                },
+                {
+                    "icon": "LOREM",
+                    "label": "LOREM"
+                },
+                {
+                    "icon": "LOREM",
+                    "label": "LOREM"
+                },
+                {
+                    "icon": "LOREM",
+                    "label": "LOREM"
+                }
+            ],
+            "descriptionHeader": "LOREM",
+            "descriptionIcon": "LOREM",
+            "description": "LOREM",
+            "visualsHeader": "LOREM",
+            "visualsIcon": "LOREM",
+            "visuals": [
+                "https://",
+                "https://",
+                "https://",
+                "https://"
+            ],
+            "hasRoadmap": true,
+            "roadmapHeader": "LOREM",
+            "roadmapIcon": "LOREM",
+            "roadmap": [
+                {
+                    "icon": "LOREM",
+                    "description": "LOREM"
+                },
+                {
+                    "icon": "LOREM",
+                    "description": "LOREM"
+                }
+            ]
         }
     },
     {
@@ -159,8 +446,56 @@
         "font": "IBM Plex Mono, monospace",
         "weight": "500",
         "content": {
-            "description": "Shoebox is a custom-designed personal finance utility that's changing the way individuals manage their Health Savings Account (HSA) expenses and maximize their tax strategy. With Shoebox, HSA users can easily log eligible expenses to gain a comprehensive view of their financial progress. Whether it's tracking expenses, setting financial goals, or managing HSA contributions and limits, Shoebox streamlines the process and provides convenient access at home or on the go. \n \nPaired with detailed reports on HSA contributions and expenses, Shoebox empowers users to optimize their HSA benefits and stay on top of their account balance. The app also sends timely alerts for important HSA deadlines and contribution limits.",
-            "slug": "run-away"
+            "technologies": "LOREM",
+            "role": "LOREM",
+            "status": "LOREM",
+            "slug": "run-away",
+            "tagline": "LOREM",
+            "tileColor": "LOREM",
+            "headerIconColor": "LOREM",
+            "highlightsHeader": "LOREM",
+            "highlightsItems": [
+                {
+                    "icon": "LOREM",
+                    "label": "LOREM"
+                },
+                {
+                    "icon": "LOREM",
+                    "label": "LOREM"
+                },
+                {
+                    "icon": "LOREM",
+                    "label": "LOREM"
+                },
+                {
+                    "icon": "LOREM",
+                    "label": "LOREM"
+                }
+            ],
+            "descriptionHeader": "LOREM",
+            "descriptionIcon": "LOREM",
+            "description": "LOREM",
+            "visualsHeader": "LOREM",
+            "visualsIcon": "LOREM",
+            "visuals": [
+                "https://",
+                "https://",
+                "https://",
+                "https://"
+            ],
+            "hasRoadmap": true,
+            "roadmapHeader": "LOREM",
+            "roadmapIcon": "LOREM",
+            "roadmap": [
+                {
+                    "icon": "LOREM",
+                    "description": "LOREM"
+                },
+                {
+                    "icon": "LOREM",
+                    "description": "LOREM"
+                }
+            ]
         }
     }
 ]

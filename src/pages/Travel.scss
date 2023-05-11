@@ -10,7 +10,6 @@
         align-items: center;
         justify-content: center;
         text-align: center;
-        // width: calc(100% - 50px);
         height: 80vh;
         margin-bottom: 20vh;
         z-index: 1;
@@ -90,7 +89,6 @@
 
     @media only screen and (max-width: 640px) {
         .travel-hero-text {
-            width: calc(100% - 30px);
             height: 85vh;
         }
 
@@ -120,7 +118,7 @@
         span {
             padding: 10px 15px;
             background-color: var(--menu-bg-active);
-            color: var(--text-color-inverted);
+            color: white;
             font-family: 'Inter', sans-serif;
             font-weight: 500;
             border-radius: 25px;
