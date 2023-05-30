@@ -133,7 +133,7 @@
             justify-content: center;
             text-align: center;
             font-size: 32pt;
-            height: 40vh;
+            height: 55vh;
         }
 
         .highlight-tiles {
@@ -179,7 +179,7 @@
 
     .project-content {
         margin-top: 75px;
-        margin-bottom: 50px;
+        margin-bottom: 25px;
 
         .proj-section-header {
             display: flex;
@@ -212,17 +212,57 @@
                 padding: 2px;
             }
             img {
-                border: 1px solid;
+                border: 2px solid var(--background-color);
                 border-radius: 35px;
                 width: calc(100% - 4px)
             }
 
             sl-carousel::part(navigation-button--previous) {
                 font-size: 24pt;
+                padding: 0;
+                padding-right: 10px;
             }
 
             sl-carousel::part(navigation-button--next) {
                 font-size: 24pt;
+                padding: 0;
+                padding-left: 8px;
+            }
+        }
+
+        .roadmap {
+
+            .proj-section-header {
+                margin-bottom: 25px;
+            }
+
+            .roadmap-item {
+                max-width: 800px;
+
+                h4 {
+                    margin: 0;
+                    margin-bottom: 7px;
+                    font-size: 14pt;
+                    font-weight: 500;
+                }
+
+                svg {
+                    font-size: 24pt;
+                    margin-bottom: 5px;
+                    // color: rgb(149, 149, 149);
+                }
+            }
+
+            .roadmap-dots {
+                display: flex;
+                align-items: center;
+
+                svg {
+                    transform: rotate(90deg);
+                    font-size: 48pt;
+                    margin-left: -28px;
+                    margin-top: 5px;
+                }
             }
         }
     }

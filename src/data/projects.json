@@ -201,7 +201,7 @@
             "slug": "the-mitch-kitch",
             "tagline": "*chef's kiss*",
             "tileColor": "var(--mitch-kitch-project-secondary)",
-            "headerIconColor": "blue",
+            "headerIconColor": "var(--mitch-kitch-project-icons)",
             "highlightsHeader": "project highlights",
             "highlightsItems": [
                 {
@@ -223,29 +223,32 @@
             ],
             "descriptionHeader": "overview",
             "descriptionIcon": "TbFolderFilled",
-            "description": "Shoebox is a custom-designed personal finance utility that's changing the way individuals manage their Health Savings Account (HSA) expenses and maximize their tax strategy. With Shoebox, HSA users can easily log eligible expenses to gain a comprehensive view of their financial progress. Whether it's tracking expenses, setting financial goals, or managing HSA contributions and limits, Shoebox streamlines the process and provides convenient access at home or on the go. \n \nPaired with detailed reports on HSA contributions and expenses, Shoebox empowers users to optimize their HSA benefits and stay on top of their account balance. The app also sends timely alerts for important HSA deadlines and contribution limits.",
+            "description": "The Mitch Kitch is a private recipe repository designed exclusively for the Mitchell family and close friends. The platform allows us to keep all of our favorite family recipes organized in one central location, so they can easily accessed whenever, wherever. The strong Mitch Kitch branding and playful user interface makes adding and maintaining recipes a breeze, while the technical achievements ensure that your data is secure and your recipes are always easy to find.",
             "visualsHeader": "screenshots",
             "visualsIcon": "TbBorderCorners",
+            "visualsHaveDarkAssets": false,
             "visuals": [
-                "./assets/project-visuals/mitch-kitch/all-recipes.PNG",
-                "./assets/project-visuals/mitch-kitch/entree-categories.png",
-                "./assets/project-visuals/mitch-kitch/general-info-form.png",
-                "./assets/project-visuals/mitch-kitch/ingredients-form.png",
-                "./assets/project-visuals/mitch-kitch/recipe-page.png",
-                "./assets/project-visuals/mitch-kitch/recipe-page-bottom.png",
-                "./assets/project-visuals/mitch-kitch/substitution-guide.png"
+                "../assets/project-visuals/mitch-kitch/all-recipes.PNG",
+                "../assets/project-visuals/mitch-kitch/entree-categories.png",
+                "../assets/project-visuals/mitch-kitch/general-info-form.png",
+                "../assets/project-visuals/mitch-kitch/ingredients-form.png",
+                "../assets/project-visuals/mitch-kitch/recipe-page.png",
+                "../assets/project-visuals/mitch-kitch/recipe-page-bottom.png",
+                "../assets/project-visuals/mitch-kitch/substitution-guide.png"
             ],
             "hasRoadmap": true,
             "roadmapHeader": "roadmap",
             "roadmapIcon": "IoMap",
             "roadmap": [
                 {
-                    "icon": "bookmark",
+                    "icon": "BsFillBookmarkStarFill",
+                    "title": "User Bookmarks",
                     "description": "Personalized recipe collections for individual favorites.  Save your go-tos in an easy to access location within your profile."
                 },
                 {
-                    "icon": "scan",
-                    "description": "OCR implementation providing ability to scan a physical recipe to pre-populate form fields for quick entry."
+                    "icon": "TbScan",
+                    "title": "Recipe Scanning",
+                    "description": "OCR implementation to provide ability to scan a physical recipe and pre-populate form fields for quick entry."
                 }
             ]
         }

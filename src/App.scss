@@ -29,6 +29,17 @@ body {
   overflow-x: hidden;
 }
 
+@media only screen and (max-width: 740px) {
+  body.sl-scroll-lock {
+    --sl-scroll-lock-size: 25px !important;
+  }
+}
+
+.sl-scroll-lock {
+  padding-right: var(--sl-scroll-lock-size) !important;
+  overflow: hidden !important;
+}
+
 @import './components/Header.scss';
 @import './pages/Landing.scss';
 @import './pages/Work.scss';

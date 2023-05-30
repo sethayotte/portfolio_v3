@@ -107,18 +107,18 @@
 
             @keyframes intro-animation {
                 0% {opacity: 1; content: "designer.";}
-                30% {opacity: 1; filter: blur(0px); content: "designer.";}
-                33% {opacity: 0; filter: blur(12px); content: "designer.";}
-                36% {opacity: 0; filter: blur(12px); content: "developer.";}
-                39% {opacity: 1; filter: blur(0px); content: "developer.";}
-                60% {opacity: 1; filter: blur(0px); content: "developer.";}
-                63% {opacity: 0; filter: blur(12px); content: "developer.";}
-                66% {opacity: 0; filter: blur(12px); content: "traveler.";}
-                69% {opacity: 1; filter: blur(0px); content: "traveler.";}
-                90% {opacity: 1; filter: blur(0px); content: "traveler.";}
-                93% {opacity: 0; filter: blur(12px); content: "traveler.";}
-                96% {opacity: 0; filter: blur(12px); content: "designer.";}
-                99% {opacity: 1; filter: blur(0px); content: "designer.";}
+                20% {opacity: 1; filter: blur(0px); content: "designer.";}
+                23% {opacity: 0; filter: blur(12px); content: "designer.";}
+                26% {opacity: 0; filter: blur(12px); content: "developer.";}
+                29% {opacity: 1; filter: blur(0px); content: "developer.";}
+                50% {opacity: 1; filter: blur(0px); content: "developer.";}
+                53% {opacity: 0; filter: blur(12px); content: "developer.";}
+                56% {opacity: 0; filter: blur(12px); content: "traveler.";}
+                59% {opacity: 1; filter: blur(0px); content: "traveler.";}
+                86% {opacity: 1; filter: blur(0px); content: "traveler.";}
+                89% {opacity: 0; filter: blur(12px); content: "traveler.";}
+                93% {opacity: 0; filter: blur(12px); content: "designer.";}
+                96% {opacity: 1; filter: blur(0px); content: "designer.";}
             }
         }
     }
@@ -219,7 +219,6 @@
             .multiple-positions {
                 display: flex;
                 flex-direction: column;
-                margin-left: 15px;
 
                 .sub-dates {
                     font-size: 12pt;

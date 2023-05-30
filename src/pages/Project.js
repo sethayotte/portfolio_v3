@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import * as TbIcon from 'react-icons/tb';
 import * as IoIcon from 'react-icons/io5';
 import * as FaIcon from 'react-icons/fa';
+import * as BsIcon from 'react-icons/bs';
 import { FaIdBadge } from 'react-icons/fa';
 import { BsAppIndicator } from 'react-icons/bs';
 
@@ -29,6 +30,8 @@ const Project = ({defaultDark}) => {
             icon = React.createElement(TbIcon[iconName]);
         } else if (iconName.slice(0, 2) === 'Fa') {
             icon = React.createElement(FaIcon[iconName]);
+        } else if (iconName.slice(0, 2) === 'Bs') {
+            icon = React.createElement(BsIcon[iconName]);
         }
         
         return (
@@ -89,14 +92,14 @@ const Project = ({defaultDark}) => {
                 </section>
                 <section className='project-content'>
                     <div className='description'>
-                        <div style={{color: `${project.content.tileColor}`}} class='proj-section-header'>
+                        <div style={{color: `${project.content.headerIconColor}`}} class='proj-section-header'>
                             <Icon iconName={project.content.descriptionIcon} />
                             <label style={{color: `${project.fontColor}`}}>{project.content.descriptionHeader}</label>
                         </div>
                         {project.content.description}
                     </div>
                     <div className='visuals'>
-                        <div style={{color: `${project.content.tileColor}`}} class='proj-section-header'>
+                        <div style={{color: `${project.content.headerIconColor}`}} class='proj-section-header'>
                             <Icon iconName={project.content.visualsIcon} />
                             <label style={{color: `${project.fontColor}`}}>{project.content.visualsHeader}</label>
                         </div>
@@ -108,7 +111,7 @@ const Project = ({defaultDark}) => {
                                 project.content.visuals.map((item, index) => {
                                     return (
                                         <sl-carousel-item>
-                                            <img src={'.' + item} key={index} style={{borderColor: `${project.content.tileColor}`}} />
+                                            <img src={item} key={index} />
                                         </sl-carousel-item>
                                     )
                                 })
@@ -122,10 +125,32 @@ const Project = ({defaultDark}) => {
                     {
                         project.content.hasRoadmap ?
                         <div className='roadmap'>
-                            <div style={{color: `${project.content.tileColor}`}} class='proj-section-header'>
+                            <div style={{color: `${project.content.headerIconColor}`}} class='proj-section-header'>
                                 <Icon iconName={project.content.roadmapIcon} />
                                 <label style={{color: `${project.fontColor}`}}>{project.content.roadmapHeader}</label>
                             </div>
+                            {
+                                project.content.roadmap.map((item, index) => {
+                                    return (
+                                        <div className='roadmap-item'>
+                                            <div>
+                                                <Icon iconName={item.icon} />
+                                                <h4>{item.title}</h4>
+                                                <span>
+                                                    {item.description}
+                                                </span>
+                                            </div>
+                                            {
+                                                (index + 1) !== project.content.roadmap.length ?
+                                                <span className='roadmap-dots'>
+                                                    <TbIcon.TbLineDotted style={{color: project.content.tileColor}} />
+                                                </span> :
+                                                null
+                                            }
+                                        </div>
+                                    )
+                                })
+                            }
                         </div> :
                         null
                     }

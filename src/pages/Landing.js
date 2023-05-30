@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { IoIosArrowRoundDown, IoIosArrowRoundForward } from 'react-icons/io';
+import { IoIosArrowRoundDown } from 'react-icons/io';
 import { BsPlusCircleFill } from 'react-icons/bs';
 import HomeData from '../data/home.json';
 import ProjectData from '../data/projects.json';
@@ -54,12 +54,21 @@ const Landing = ({defaultDark, isMobileSafari}) => {
   
     const RenderTileRow = (item) => {
 
+        // Desktop Drawer Elements
         let leftDrawer = document?.getElementById(`description-drawer-${item.index}-0`);
         let leftOpenButton = document?.getElementById(`open-drawer-${item.index}-0`);
         let leftCloseButton = document?.getElementById(`close-drawer-${item.index}-0`);
         let rightDrawer = document?.getElementById(`description-drawer-${item.index}-1`);
         let rightOpenButton = document?.getElementById(`open-drawer-${item.index}-1`);
         let rightCloseButton = document?.getElementById(`close-drawer-${item.index}-1`);
+
+        // Mobile Dialog Elements
+        let leftDialog = document?.getElementById(`description-dialog-${item.index}-0`);
+        let leftDialogOpenButton = document?.getElementById(`open-dialog-${item.index}-0`);
+        let leftDialogCloseButton = document?.getElementById(`close-dialog-${item.index}-0`);
+        let rightDialog = document?.getElementById(`description-dialog-${item.index}-1`);
+        let rightDialogOpenButton = document?.getElementById(`open-dialog-${item.index}-1`);
+        let rightDialogCloseButton = document?.getElementById(`close-dialog-${item.index}-1`);
 
         useEffect(() => {
 
@@ -70,7 +79,14 @@ const Landing = ({defaultDark, isMobileSafari}) => {
             rightOpenButton = document?.getElementById(`open-drawer-${item.index}-1`);
             rightCloseButton = document?.getElementById(`close-drawer-${item.index}-1`);
 
-            if (leftDrawer && rightDrawer) {
+            leftDialog = document?.getElementById(`description-dialog-${item.index}-0`);
+            leftDialogOpenButton = document?.getElementById(`open-dialog-${item.index}-0`);
+            leftDialogCloseButton = document?.getElementById(`close-dialog-${item.index}-0`);
+            rightDialog = document?.getElementById(`description-dialog-${item.index}-1`);
+            rightDialogOpenButton = document?.getElementById(`open-dialog-${item.index}-1`);
+            rightDialogCloseButton = document?.getElementById(`close-dialog-${item.index}-1`);
+
+            if (leftDrawer && rightDrawer && isDesktop) {
                 leftOpenButton.addEventListener('click', () => {
                     leftDrawer.show();
                     document.body.style.setProperty("--tile-popup-color", item.row[0].color);
@@ -83,7 +99,20 @@ const Landing = ({defaultDark, isMobileSafari}) => {
                 rightCloseButton.addEventListener('click', () => rightDrawer.hide());
             }
 
-        }, [leftDrawer, rightDrawer]);
+            if (leftDialog && rightDialog && !isDesktop) {
+                leftDialogOpenButton.addEventListener('click', () => {
+                    leftDialog.show();
+                    document.body.style.setProperty("--tile-popup-color", item.row[0].color);
+                });
+                leftDialogCloseButton.addEventListener('click', () => leftDialog.hide());
+                rightDialogOpenButton.addEventListener('click', () => {
+                    rightDialog.show();
+                    document.body.style.setProperty("--tile-popup-color", item.row[1].color);
+                });
+                rightDialogCloseButton.addEventListener('click', () => rightDialog.hide());
+            }
+
+        }, [leftDrawer, rightDrawer, leftDialog, rightDialog]);
   
       return (
         <div className="project-grid-row" style={{gridTemplateColumns: `${tileStaggerConfig[item.index][0]}% ${tileStaggerConfig[item.index][1]}%`, height: `${rowStaggerConfig[item.index]}px`}}>
@@ -95,7 +124,7 @@ const Landing = ({defaultDark, isMobileSafari}) => {
                 <img src={defaultDark ? item.row[0].logoDark : item.row[0].logoLight} />
                 <h2 style={{fontFamily: `${item.row[0].font}, sans-serif`, fontWeight: `${item.row[0].weight}`}}>{item.row[0].title}</h2>
                 </div>
-                <BsPlusCircleFill id={"open-drawer-" + item.index + "-0"} className='project-info-toggle' style={{color: `${item.row[0].toggleColor}`}} />
+                <BsPlusCircleFill id={isDesktop ? "open-drawer-" + item.index + "-0" : "open-dialog-" + item.index + "-0"} className='project-info-toggle' style={{color: `${item.row[0].toggleColor}`}} />
             </div>
             <div 
                 className="project-landing-tile" 
@@ -105,7 +134,7 @@ const Landing = ({defaultDark, isMobileSafari}) => {
                 <img src={defaultDark ? item.row[1].logoDark : item.row[1].logoLight} />
                 <h2 style={{fontFamily: `${item.row[1].font}, sans-serif`, fontWeight: `${item.row[1].weight}`}}>{item.row[1].title}</h2>
                 </div>
-                <BsPlusCircleFill id={"open-drawer-" + item.index + "-1"} className='project-info-toggle' style={{color: `${item.row[1].toggleColor}`}} />
+                <BsPlusCircleFill id={isDesktop ? "open-drawer-" + item.index + "-1" : "open-dialog-" + item.index + "-1"} className='project-info-toggle' style={{color: `${item.row[1].toggleColor}`}} />
             </div>
 
             <sl-drawer contained label="Drawer" placement="bottom" id={"description-drawer-" + item.index + "-0"}>
@@ -115,13 +144,27 @@ const Landing = ({defaultDark, isMobileSafari}) => {
                     {item.row[0].content.description}
                 </span>
             </sl-drawer>
-            <sl-drawer contained label="Drawer" placement="bottom" id={"description-drawer-" + item.index + "-1"}>
+            <sl-drawer contained placement="bottom" id={"description-drawer-" + item.index + "-1"}>
                 <h2 slot="label" style={{color: `${item.row[1].fontColor}`, fontFamily: `${item.row[1].font}, sans-serif`, fontWeight: `${item.row[1].weight}`}}><img src={defaultDark ? item.row[1].logoDark : item.row[1].logoLight} /> {item.row[1].title}</h2>
                 <span id={"close-drawer-" + item.index + "-1"} className="close-btn" slot='header-actions'><BsPlusCircleFill style={{color: `${item.row[1].toggleColor}`}} /></span>
                 <span style={{color: `${item.row[1].fontColor}`}}>
                     {item.row[1].content.description}
                 </span>
             </sl-drawer>
+            <sl-dialog id={"description-dialog-" + item.index + "-0"}>
+                <h2 slot="label" style={{color: `${item.row[0].fontColor}`, fontFamily: `${item.row[0].font}, sans-serif`, fontWeight: `${item.row[0].weight}`}}><img src={defaultDark ? item.row[0].logoDark : item.row[0].logoLight} /> {item.row[0].title}</h2>
+                <span id={"close-dialog-" + item.index + "-0"} className="close-btn" slot='header-actions'><BsPlusCircleFill style={{color: `${item.row[0].toggleColor}`}} /></span>
+                <span style={{color: `${item.row[0].fontColor}`}}>
+                    {item.row[1].content.description}
+                </span>
+            </sl-dialog>
+            <sl-dialog id={"description-dialog-" + item.index + "-1"}>
+                <h2 slot="label" style={{color: `${item.row[1].fontColor}`, fontFamily: `${item.row[1].font}, sans-serif`, fontWeight: `${item.row[1].weight}`}}><img src={defaultDark ? item.row[1].logoDark : item.row[1].logoLight} /> {item.row[1].title}</h2>
+                <span id={"close-dialog-" + item.index + "-1"} className="close-btn" slot='header-actions'><BsPlusCircleFill style={{color: `${item.row[1].toggleColor}`}} /></span>
+                <span style={{color: `${item.row[1].fontColor}`}}>
+                    {item.row[1].content.description}
+                </span>
+            </sl-dialog>
         </div>
       )
     }
