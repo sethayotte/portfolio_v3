@@ -119,7 +119,7 @@
     "proficiencies": [
         {
             "section": "Technologies",
-            "items": ["Javascript", "Angular", "React", "HTML", "Boostrap", "CSS/SCSS"]
+            "items": ["Javascript", "Angular", "React", "HTML", "Python", "NodeJS", "CSS/SCSS"]
         },
         {
             "section": "Design",
@@ -127,7 +127,11 @@
         },
         {
             "section": "Workflow",
-            "items": ["VS Code", "JetBrains IntelliJ", "Design Thinking", "Agile", "Azure DevOps", "Jira", "Confluence", "GitHub", "Notion"]
+            "items": ["VS Code", "JetBrains IntelliJ", "Design Thinking", "Agile", "Jira", "Confluence", "GitHub (& GitHub Enterprise)", "Notion"]
+        },
+        {
+            "section": "Infrastructure",
+            "items": ["Azure DevOps", "Firebase", "Google Cloud Platform", "Netlify"]
         }
     ],
     "footer": {
