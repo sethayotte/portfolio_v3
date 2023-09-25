@@ -155,6 +155,7 @@
 
     .education, .experience {
         margin-bottom: 50px;
+        max-width: 625px;
 
         .edu-header, .exp-header {
             display: flex;
@@ -185,40 +186,10 @@
                 margin: 0;
             }
 
-            .edu-docs-container {
-                animation: fade-in-docs 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-                @keyframes fade-in-docs {
-                    0% {
-                        transform: translateY(10px);
-                        opacity: 0;
-                    }
-                    100% {
-                        transform: translateY(0);
-                        opacity: 1;
-                    }
-                }
-            }
-
-            .edu-docs {
-                font-family: 'Inconsolata', monospace;
-                font-size: 12pt;
-                display: flex;
-                align-items: center;
-                font-weight: 500;
-                color: var(--link-color);
-                text-decoration: none;
-                width: fit-content;
-
-                svg {
-                    font-size: 18pt;
-                    margin-right: 7px;
-                    margin-bottom: 1px;
-                }
-            }
-
             .multiple-positions {
                 display: flex;
                 flex-direction: column;
+                padding-left: 15px;
 
                 .sub-dates {
                     font-size: 12pt;
@@ -236,6 +207,64 @@
             .multiple-positions:first-of-type {
                 svg {
                     margin-top: 5px;
+                }
+            }
+
+            .experience-detail-wrapper {
+                display: grid;
+                grid-template-rows: 0fr;
+                overflow: hidden;
+                padding: 0;
+                opacity: 0;
+                transition: grid-template-rows 0.3s ease, padding 0.3s ease, opacity 0.3s ease;
+
+                &.expanded {
+                    grid-template-rows: 1fr;
+                    padding-top: 10px;
+                    padding-bottom: 15px;
+                    opacity: 1;
+
+                    &.docs {
+                        padding: 0;
+                    }
+
+                    &.multiple {
+                        padding-bottom: 5px;
+                    }
+                }
+
+                .edu-docs-container {
+                    min-height: 0;
+
+                    .edu-docs {
+                        font-family: 'Inconsolata', monospace;
+                        font-size: 12pt;
+                        display: flex;
+                        align-items: center;
+                        font-weight: 500;
+                        color: var(--link-color);
+                        text-decoration: none;
+                        width: fit-content;
+        
+                        svg {
+                            font-size: 18pt;
+                            margin-right: 7px;
+                            margin-bottom: 1px;
+                        }
+                    }
+                }
+
+                ul {
+                    min-height: 0;
+                    margin: 0;
+                    padding: 0;
+                    line-height: 14pt;
+                    stroke-linecap: round;
+                    color: var(--text-color-secondary);
+
+                    li:not(:last-child) {
+                        margin-bottom: 10px;
+                    }
                 }
             }
         }

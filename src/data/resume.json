@@ -38,11 +38,21 @@
 			"position": [
                 {
                     "title": "Lead Developer",
-                    "dates": "Apr 2023 — Present"
+                    "dates": "Apr 2023 — Present",
+                    "details": [
+                        "Leads team through expansion into new regions across North & South America.",
+                        "Holds a deep understanding of our application and maintains responsibility for team capacity and velocity to deliver bi-weekly releases.",
+                        "Provides architectural recommendations and works closely with business stakeholders to develop and refine requirements for our product roadmap."
+                    ]
                 },
                 {
                     "title": "UI Developer",
-                    "dates": "Jun 2021 — Mar 2023"
+                    "dates": "Jun 2021 — Mar 2023",
+                    "details": [
+                        "Worked within a small UI development team to build, test, and deploy production-level code to all GM dealerships within the United States.",
+                        "Led team in design implementation while working closely with UX team in solving design problems to alleviate impacts to usability.",
+                        "Conducted research for future projects and developed proof of concepts (POCs) to determine feasibility of modular and mobile-first technologies."
+                    ]
                 }
             ],
 			"dates": "2021 — Present"
@@ -53,7 +63,12 @@
 			"position": [
                 { "title": "Head of Development & Strategy" }
             ],
-			"dates": "2020 — Present"
+			"dates": "2020 — Present",
+            "details": [
+                "Operates a lean startup organization architected to support a rich pipeline of digital platforms and financial resources.",
+                "Actively developing the inaugural full-scale financial utility – Shoebox.",
+                "Expanding The Blocks’ products & services roadmap to provide a horizontally- integrated solution across an individual’s financial growth journey."
+            ]
 		},
         {
 			"company": "Compass Group USA",
@@ -61,7 +76,11 @@
             "position": [
                 { "title": "Visual Designer, System Implementation" }
             ],
-			"dates": "2019 — 2021"
+			"dates": "2019 — 2021",
+            "details": [
+                "Developed a new design system for the implementation of a new technology stack and learning management system (LMS), built on Drupal.",
+                "Executed LMS layout, UI, and branding to support the company’s training goals."
+            ]
 		},
         {
 			"company": "Tesla, Inc.",
@@ -69,7 +88,11 @@
             "position": [
                 { "title": "Tesla Advisor, Sales Marketing" }
             ],
-			"dates": "2018 — 2019"
+			"dates": "2018 — 2019",
+            "details": [
+                "Developed marketing collateral to share with customers and prospective buyers.",
+                "Held up-to-date, in-depth understanding of software & hardware features and nuances to be an educational resource for customers."
+            ]
 		},
         {
 			"company": "Apple, Inc.",
@@ -77,11 +100,17 @@
             "position": [
                 {
                     "title": "Visual Merchandising Specialist",
-                    "dates": "Feb 2017 — Sep 2018"
+                    "dates": "Feb 2017 — Sep 2018",
+                    "details": [
+                        "Executed retail visual merchandising resets during product launches to ensure retail demo content was correctly configured and displayed."
+                    ]
                 },
                 {
                     "title": "Product Specialist",
-                    "dates": "Jun 2015 — Feb 2017"
+                    "dates": "Jun 2015 — Feb 2017",
+                    "details": [
+                        "Maintained expert understanding of new product and iOS/MacOS software to serve as a resource for customers and the rest of my team."
+                    ]
                 }
             ],
 			"dates": "2015 — 2018"
@@ -94,7 +123,7 @@
         },
         {
             "section": "Design",
-            "items": ["Adobe Creative Suite", "(for OCR & indexing purposes: Illustrator, InDesign, Photoshop, After Effects, Xd, Premiere)", "Sketch", "Figma"]
+            "items": ["Adobe Creative Suite", "(for indexing purposes: Illustrator, InDesign, Photoshop, After Effects, Xd, Premiere)", "Sketch", "Figma"]
         },
         {
             "section": "Workflow",
