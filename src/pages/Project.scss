@@ -26,10 +26,72 @@
         }
     }
 
+    .project-not-found {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 30vh;
+        font-family: 'Inconsolata', monospace;
+        animation: blur-in-not-found 0.4s ease;
+
+            @keyframes blur-in-not-found {
+                0% {
+                    filter: blur(10px);
+                    transform: translateY(20px);
+                }
+                100% {
+                    filter: blur(0px);
+                    transform: translateX(0px);
+                }
+            }
+
+        a {
+            color: var(--link-color);
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        svg {
+            font-size: 24pt;
+            margin-bottom: 12px;
+        }
+    }
+
+    .project-loader {
+        width: 100%;
+        height: 30vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        sl-spinner.spinner {
+            font-size: 48pt;
+            --track-width: 10px;
+            --track-color: var(--tile-bg-color);
+            --indicator-color: var(--text-color-main);
+        }
+    }
+
     .project-card {
-        padding: 25px;
+        padding: 50px;
         border-radius: 25px;
         padding-bottom: 35px;
+        animation: fade-in-proj-card 0.4s ease;
+
+            @keyframes fade-in-proj-card {
+                0% {
+                    opacity: 0;
+                    filter: blur(10px);
+                    transform: translateY(200px);
+                }
+                100% {
+                    opacity: 1;
+                    filter: blur(0px);
+                    transform: translateX(0px);
+                }
+            }
     }
 
     @media only screen and (max-width: 500px) {
@@ -43,6 +105,15 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+
+        .project-brand {
+            display: flex;
+            align-items: center;
+            
+            img {
+                margin-right: 15px;
+            }
+        }
 
 
         .status-info-chips {
@@ -206,15 +277,24 @@
         .visuals {
             sl-carousel::part(base) {
                 gap: unset;
+                height: 500px;
+            }
+
+            sl-carousel-item {
+                height: 500px;
             }
 
             sl-carousel::part(scroll-container) {
                 padding: 2px;
+                --slide-gap: 12px;
             }
             img {
                 border: 2px solid var(--background-color);
-                border-radius: 35px;
-                width: calc(100% - 4px)
+                border-radius: 25px;
+                // width: calc(100% - 4px)
+                height: 100%;
+                width: fit-content;
+                max-width: 400px;
             }
 
             sl-carousel::part(navigation-button--previous) {
@@ -229,49 +309,5 @@
                 padding-left: 8px;
             }
         }
-
-        .roadmap {
-
-            .proj-section-header {
-                margin-bottom: 25px;
-            }
-
-            .roadmap-item {
-                max-width: 800px;
-
-                h4 {
-                    margin: 0;
-                    margin-bottom: 7px;
-                    font-size: 14pt;
-                    font-weight: 500;
-                }
-
-                svg {
-                    font-size: 24pt;
-                    margin-bottom: 5px;
-                    // color: rgb(149, 149, 149);
-                }
-            }
-
-            .roadmap-dots {
-                display: flex;
-                align-items: center;
-
-                svg {
-                    transform: rotate(90deg);
-                    font-size: 48pt;
-                    margin-left: -28px;
-                    margin-top: 5px;
-                }
-            }
-        }
     }
-
-    sl-carousel {
-        --aspect-ratio: unset;
-        max-width: 450px;
-    }
-
-
-
 }

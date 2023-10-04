@@ -1,6 +1,7 @@
 [
     {
         "title": "The Blocks",
+        "slug": "the-blocks",
         "logoLight": "./assets/project-brands/TheBlocks_Light.svg",
         "logoDark": "./assets/project-brands/TheBlocks_Dark.svg",
         "color": "var(--the-blocks-tile)",
@@ -63,6 +64,7 @@
     },
     {
         "title": "Shoebox",
+        "slug": "shoebox",
         "logoLight": "./assets/project-brands/Shoebox_Dark.svg",
         "logoDark": "./assets/project-brands/Shoebox_Dark.svg",
         "color": "var(--shoebox-tile)",
@@ -125,6 +127,7 @@
     },
     {
         "title": "Year End Review",
+        "slug": "year-end-review",
         "logoLight": "./assets/project-brands/Review_Light.svg",
         "logoDark": "./assets/project-brands/Review_Dark.svg",
         "color": "var(--review-tile)",
@@ -187,6 +190,7 @@
     },
     {
         "title": "The Mitch Kitch",
+        "slug": "the-mitch-kitch",
         "logoLight": "./assets/project-brands/mitchkitch_light.svg",
         "logoDark": "./assets/project-brands/mitchkitch_dark.svg",
         "color": "var(--mitch-kitch-tile)",
@@ -228,13 +232,17 @@
             "visualsIcon": "TbBorderCorners",
             "visualsHaveDarkAssets": false,
             "visuals": [
-                "../assets/project-visuals/mitch-kitch/all-recipes.PNG",
-                "../assets/project-visuals/mitch-kitch/entree-categories.png",
-                "../assets/project-visuals/mitch-kitch/general-info-form.png",
-                "../assets/project-visuals/mitch-kitch/ingredients-form.png",
-                "../assets/project-visuals/mitch-kitch/recipe-page.png",
-                "../assets/project-visuals/mitch-kitch/recipe-page-bottom.png",
-                "../assets/project-visuals/mitch-kitch/substitution-guide.png"
+                "../assets/project-visuals/mitch-kitch/home-screen.webp",
+                "../assets/project-visuals/mitch-kitch/cuisines.webp",
+                "../assets/project-visuals/mitch-kitch/categories.webp",
+                "../assets/project-visuals/mitch-kitch/category-recipes.webp",
+                "../assets/project-visuals/mitch-kitch/top-of-recipe.webp",
+                "../assets/project-visuals/mitch-kitch/bottom-of-recipe.webp",
+                "../assets/project-visuals/mitch-kitch/substitution-guide.webp",
+                "../assets/project-visuals/mitch-kitch/recipe-scaler.webp",
+                "../assets/project-visuals/mitch-kitch/search.webp",
+                "../assets/project-visuals/mitch-kitch/add-new-general-info.webp",
+                "../assets/project-visuals/mitch-kitch/add-new-ingredients.webp"
             ],
             "hasRoadmap": true,
             "roadmapHeader": "roadmap",
@@ -255,6 +263,7 @@
     },
     {
         "title": "Compound",
+        "slug": "compound",
         "logoLight": "./assets/project-brands/Compound_Light.svg",
         "logoDark": "./assets/project-brands/Compound_Dark.svg",
         "color": "#1B94FF",
@@ -317,6 +326,7 @@
     },
     {
         "title": "Everyday Portfolio",
+        "slug": "everyday-portfolio",
         "logoLight": "./assets/project-brands/EP_Light_New.svg",
         "logoDark": "./assets/project-brands/EP_Dark_New.svg",
         "color": "#1DD000",
@@ -379,6 +389,7 @@
     },
     {
         "title": "",
+        "slug": "sprout",
         "logoLight": "./assets/project-brands/Sprout_Light.svg",
         "logoDark": "./assets/project-brands/Sprout_Dark.svg",
         "color": "var(--sprout-tile)",
@@ -441,6 +452,7 @@
     },
     {
         "title": "Run Away",
+        "slug": "run-away",
         "logoLight": "./assets/project-brands/RunAway_Light_New.svg",
         "logoDark": "./assets/project-brands/RunAway_Dark_New.svg",
         "color": "var(--run-away-tile)",
