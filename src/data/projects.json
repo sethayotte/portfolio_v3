@@ -7,58 +7,51 @@
         "color": "var(--the-blocks-tile)",
         "toggleColor": "var(--tile-toggle-dark)",
         "fontColor": "var(--text-color-main)",
-        "font": "IBM Plex Sans, sans-serif",
+        "font": "Inter, sans-serif",
         "weight": "500",
+        "leftAlignedTagline": true,
         "content": {
-            "technologies": "LOREM",
-            "role": "LOREM",
-            "status": "LOREM",
-            "slug": "the-blocks",
-            "tagline": "LOREM",
-            "tileColor": "LOREM",
-            "headerIconColor": "LOREM",
-            "highlightsHeader": "LOREM",
+            "tags": ["Firebase", "React", "Netlify", "SCSS", "Figma"],
+            "tagline": "We help build a solid<br />foundation for your<br />financial future",
+            "tileColor": "var(--the-blocks-project-secondary)",
+            "headerIconColor": "var(--mitch-kitch-project-icons)",
+            "highlightsHeader": "project highlights",
             "highlightsItems": [
                 {
-                    "icon": "LOREM",
-                    "label": "LOREM"
+                    "icon": "IoScale",
+                    "label": "dynamic recipe scaling"
                 },
                 {
-                    "icon": "LOREM",
-                    "label": "LOREM"
+                    "icon": "IoBook",
+                    "label": "recipe repository"
                 },
                 {
-                    "icon": "LOREM",
-                    "label": "LOREM"
+                    "icon": "IoPeopleCircleOutline",
+                    "label": "family focused"
                 },
                 {
-                    "icon": "LOREM",
-                    "label": "LOREM"
+                    "icon": "TbInputSearch",
+                    "label": "rich search results"
                 }
             ],
-            "descriptionHeader": "LOREM",
-            "descriptionIcon": "LOREM",
-            "description": "LOREM",
-            "visualsHeader": "LOREM",
-            "visualsIcon": "LOREM",
+            "descriptionHeader": "overview",
+            "descriptionIcon": "TbFolderFilled",
+            "description": "The Mitch Kitch is a private recipe repository designed exclusively for the Mitchell family and close friends. The platform allows us to keep all of our favorite family recipes organized in one central location, so they can easily accessed whenever, wherever. <br /> <br />The strong Mitch Kitch branding and playful user interface makes adding and maintaining recipes a breeze, while the technical achievements ensure that your data is secure and your recipes are always easy to find.",
+            "visualsHeader": "screenshots",
+            "visualsIcon": "TbBorderCorners",
+            "visualsHaveDarkAssets": false,
             "visuals": [
-                "https://",
-                "https://",
-                "https://",
-                "https://"
-            ],
-            "hasRoadmap": true,
-            "roadmapHeader": "LOREM",
-            "roadmapIcon": "LOREM",
-            "roadmap": [
-                {
-                    "icon": "LOREM",
-                    "description": "LOREM"
-                },
-                {
-                    "icon": "LOREM",
-                    "description": "LOREM"
-                }
+                "../assets/project-visuals/mitch-kitch/home-screen.webp",
+                "../assets/project-visuals/mitch-kitch/cuisines.webp",
+                "../assets/project-visuals/mitch-kitch/categories.webp",
+                "../assets/project-visuals/mitch-kitch/category-recipes.webp",
+                "../assets/project-visuals/mitch-kitch/top-of-recipe.webp",
+                "../assets/project-visuals/mitch-kitch/bottom-of-recipe.webp",
+                "../assets/project-visuals/mitch-kitch/substitution-guide.webp",
+                "../assets/project-visuals/mitch-kitch/recipe-scaler.webp",
+                "../assets/project-visuals/mitch-kitch/search.webp",
+                "../assets/project-visuals/mitch-kitch/add-new-general-info.webp",
+                "../assets/project-visuals/mitch-kitch/add-new-ingredients.webp"
             ]
         }
     },
@@ -69,59 +62,64 @@
         "logoDark": "./assets/project-brands/Shoebox_Dark.svg",
         "color": "var(--shoebox-tile)",
         "toggleColor": "var(--tile-toggle-light)",
-        "fontColor": "black",
+        "fontColor": "var(--consistent-main)",
         "font": "Inter, sans-serif",
         "weight": "600",
+        "leftAlignedTagline": true,
         "content": {
-            "technologies": "LOREM",
-            "role": "LOREM",
-            "status": "LOREM",
-            "slug": "shoebox",
-            "tagline": "LOREM",
-            "tileColor": "LOREM",
-            "headerIconColor": "LOREM",
-            "highlightsHeader": "LOREM",
+            "tags": ["Firebase", "React", "Netlify", "SCSS", "Figma"],
+            "tagline": "Track, Manage, and<br />Maximize Your HSA<br />Contributions.",
+            "tileColor": "var(--shoebox-tile-tile)",
+            "headerIconColor": "var(--shoebox-project-icons)",
+            "highlightsHeader": "project highlights",
             "highlightsItems": [
                 {
-                    "icon": "LOREM",
-                    "label": "LOREM"
+                    "icon": "HiArchiveBox",
+                    "label": "detailed expense tracking"
                 },
                 {
-                    "icon": "LOREM",
-                    "label": "LOREM"
+                    "icon": "HiBriefcase",
+                    "label": "contribution automation"
                 },
                 {
-                    "icon": "LOREM",
-                    "label": "LOREM"
+                    "icon": "TbChartCandleFilled",
+                    "label": "dynamic portfolio weighting"
                 },
                 {
-                    "icon": "LOREM",
-                    "label": "LOREM"
+                    "icon": "FaTag",
+                    "label": "integrated Stripe payments"
                 }
             ],
-            "descriptionHeader": "LOREM",
-            "descriptionIcon": "LOREM",
-            "description": "LOREM",
-            "visualsHeader": "LOREM",
-            "visualsIcon": "LOREM",
+            "descriptionHeader": "overview",
+            "descriptionIcon": "TbFolderFilled",
+            "descriptionFontWeight": "400",
+            "description": "Shoebox provides a comprehensive toolset that simplifies the management of HSA expenses. Users can easily capture and upload receipts, categorize expenses, and track their HSA balance within the app. It offers a user-friendly interface and a range of features to facilitate expense organization and analysis. <br /> <br />Shoebox represents a valuable tool for individuals seeking to make the most of their HSA accounts while maintaining a well-organized and streamlined approach to managing their healthcare-related expenses.",
+            "visualsHeader": "screenshots",
+            "visualsIcon": "TbBorderCorners",
+            "visualsHaveDarkAssets": true,
             "visuals": [
-                "https://",
-                "https://",
-                "https://",
-                "https://"
+                "../assets/project-visuals/shoebox/portfolio-view-top.webp",
+                "../assets/project-visuals/shoebox/portfolio-view-bottom.webp",
+                "../assets/project-visuals/shoebox/configuration-view-contribution-table.webp",
+                "../assets/project-visuals/shoebox/contribution-table-expanded.webp",
+                "../assets/project-visuals/shoebox/investment-selection-view.webp",
+                "../assets/project-visuals/shoebox/add-expense-view.webp",
+                "../assets/project-visuals/shoebox/account-profile-top.webp",
+                "../assets/project-visuals/shoebox/account-profile-bottom.webp",
+                "../assets/project-visuals/shoebox/weight-of-return-popup.webp"
             ],
-            "hasRoadmap": true,
-            "roadmapHeader": "LOREM",
-            "roadmapIcon": "LOREM",
-            "roadmap": [
-                {
-                    "icon": "LOREM",
-                    "description": "LOREM"
-                },
-                {
-                    "icon": "LOREM",
-                    "description": "LOREM"
-                }
+            "darkVisuals": [
+                "../assets/project-visuals/shoebox/home-screen.webp",
+                "../assets/project-visuals/shoebox/cuisines.webp",
+                "../assets/project-visuals/shoebox/categories.webp",
+                "../assets/project-visuals/shoebox/category-recipes.webp",
+                "../assets/project-visuals/shoebox/top-of-recipe.webp",
+                "../assets/project-visuals/shoebox/bottom-of-recipe.webp",
+                "../assets/project-visuals/shoebox/substitution-guide.webp",
+                "../assets/project-visuals/shoebox/recipe-scaler.webp",
+                "../assets/project-visuals/shoebox/search.webp",
+                "../assets/project-visuals/shoebox/add-new-general-info.webp",
+                "../assets/project-visuals/shoebox/add-new-ingredients.webp"
             ]
         }
     },
@@ -199,9 +197,7 @@
         "font": "Bitter, serif",
         "weight": "300",
         "content": {
-            "technologies": "firebase +",
-            "role": "lead developer",
-            "status": "active",
+            "tags": ["Firebase", "React", "Netlify", "SCSS", "Figma"],
             "slug": "the-mitch-kitch",
             "tagline": "*chef's kiss*",
             "tileColor": "var(--mitch-kitch-project-secondary)",
@@ -227,7 +223,8 @@
             ],
             "descriptionHeader": "overview",
             "descriptionIcon": "TbFolderFilled",
-            "description": "The Mitch Kitch is a private recipe repository designed exclusively for the Mitchell family and close friends. The platform allows us to keep all of our favorite family recipes organized in one central location, so they can easily accessed whenever, wherever. The strong Mitch Kitch branding and playful user interface makes adding and maintaining recipes a breeze, while the technical achievements ensure that your data is secure and your recipes are always easy to find.",
+            "descriptionFontWeight": "300",
+            "description": "The Mitch Kitch is a private recipe repository designed exclusively for the Mitchell family and close friends. The platform allows us to keep all of our favorite family recipes organized in one central location, so they can easily accessed whenever, wherever. <br /> <br />The strong Mitch Kitch branding and playful user interface makes adding and maintaining recipes a breeze, while the technical achievements ensure that your data is secure and your recipes are always easy to find. <br /><br /><sl-button > View Project</sl-button>",
             "visualsHeader": "screenshots",
             "visualsIcon": "TbBorderCorners",
             "visualsHaveDarkAssets": false,
@@ -243,21 +240,6 @@
                 "../assets/project-visuals/mitch-kitch/search.webp",
                 "../assets/project-visuals/mitch-kitch/add-new-general-info.webp",
                 "../assets/project-visuals/mitch-kitch/add-new-ingredients.webp"
-            ],
-            "hasRoadmap": true,
-            "roadmapHeader": "roadmap",
-            "roadmapIcon": "IoMap",
-            "roadmap": [
-                {
-                    "icon": "BsFillBookmarkStarFill",
-                    "title": "User Bookmarks",
-                    "description": "Personalized recipe collections for individual favorites.  Save your go-tos in an easy to access location within your profile."
-                },
-                {
-                    "icon": "TbScan",
-                    "title": "Recipe Scanning",
-                    "description": "OCR implementation to provide ability to scan a physical recipe and pre-populate form fields for quick entry."
-                }
             ]
         }
     },

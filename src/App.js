@@ -20,27 +20,40 @@ const App = () => {
   const [darkMode, setDarkMode] = useState();
 
   const setDark = () => {
+    setDarkMode(true);
     localStorage.setItem("theme", "dark");
     document.documentElement.setAttribute("data-theme", "dark");
-    if (document.getElementById('portfolio-index').classList.value.includes('sl-theme-light')) {
-      document.getElementById('portfolio-index').classList?.remove('sl-theme-light');
+    var metaThemeColor = document.querySelector("meta[name=theme-color]");
+    metaThemeColor.setAttribute("content", darkMode ? "#131313" : "#ffffff");
+    if (
+      document
+        .getElementById("portfolio-index")
+        .classList.value.includes("sl-theme-light")
+    ) {
+      document
+        .getElementById("portfolio-index")
+        .classList?.remove("sl-theme-light");
     }
-    document.getElementById('portfolio-index').classList?.add('sl-theme-dark');
+    document.getElementById("portfolio-index").classList?.add("sl-theme-dark");
   };
 
   const setLight = () => {
+    setDarkMode(false);
     localStorage.setItem("theme", "light");
     document.documentElement.setAttribute("data-theme", "light");
-    if (document.getElementById('portfolio-index').classList.value.includes('sl-theme-dark')) {
-      document.getElementById('portfolio-index').classList?.remove('sl-theme-dark');
-    }
-    document.getElementById('portfolio-index').classList?.add('sl-theme-light');
-  };
-
-  function changeThemeColor() {
     var metaThemeColor = document.querySelector("meta[name=theme-color]");
-    metaThemeColor.setAttribute("content", defaultDark ? "#131313" : "#ffffff");
-  }
+    metaThemeColor.setAttribute("content", darkMode ? "#131313" : "#ffffff");
+    if (
+      document
+        .getElementById("portfolio-index")
+        .classList.value.includes("sl-theme-dark")
+    ) {
+      document
+        .getElementById("portfolio-index")
+        .classList?.remove("sl-theme-dark");
+    }
+    document.getElementById("portfolio-index").classList?.add("sl-theme-light");
+  };
 
   const storedTheme = localStorage.getItem("theme");
 
@@ -48,24 +61,18 @@ const App = () => {
     window.matchMedia &&
     window.matchMedia("(prefers-color-scheme: dark)").matches;
 
-  const defaultDark =
-    storedTheme === "dark" || (storedTheme === null && prefersDark);
-
-  if (defaultDark) {
-    setDark();
-    changeThemeColor();
-  } else {
-    setLight();
-    changeThemeColor();
-  }
+  useEffect(() => {
+    setDarkMode(
+      storedTheme === "dark" || (storedTheme === null && prefersDark)
+    );
+  }, []);
 
   const handleDarkModeToggle = () => {
-    if (darkMode) {
-      setLight();
-      setDarkMode(!darkMode);
-    } else {
+    console.log("click");
+    if (!darkMode) {
       setDark();
-      setDarkMode(!darkMode);
+    } else {
+      setLight();
     }
   };
 
@@ -82,32 +89,37 @@ const App = () => {
     setIsMobileSafari(iOSSafari);
   }, [iOSSafari, domain]);
 
-  
-
   const ScrollToTop = (props) => {
     const location = useLocation();
-    
 
     useEffect(() => {
-      if (!window.sessionStorage.getItem('lastPosition')) {
-        window.sessionStorage.setItem('lastPosition', '');
+      if (!window.sessionStorage.getItem("lastPosition")) {
+        window.sessionStorage.setItem("lastPosition", "");
       }
-      let lastPosition = window.sessionStorage.getItem('lastPosition');
+      let lastPosition = window.sessionStorage.getItem("lastPosition");
       console.log(lastPosition);
-      if (lastPosition === '') {
-        window.sessionStorage.setItem('lastPosition', location.pathname);
+      if (lastPosition === "") {
+        window.sessionStorage.setItem("lastPosition", location.pathname);
         window.scrollTo({ top: 0, left: 0, behavior: "instant" });
-        console.log('running');
+        console.log("running");
       }
-      if (!lastPosition.includes('/work/') && lastPosition !== location.pathname) {
-        window.sessionStorage.setItem('lastPosition', location.pathname);
+      if (
+        !lastPosition.includes("/work/") &&
+        lastPosition !== location.pathname
+      ) {
+        window.sessionStorage.setItem("lastPosition", location.pathname);
         window.scrollTo({ top: 0, left: 0, behavior: "instant" });
-        console.log('running', !lastPosition.includes('/work/'), lastPosition, location.pathname);
+        console.log(
+          "running",
+          !lastPosition.includes("/work/"),
+          lastPosition,
+          location.pathname
+        );
       }
-      if (lastPosition.includes('/work/') && location.pathname !== '/work') {
-        window.sessionStorage.setItem('lastPosition', location.pathname);
+      if (lastPosition.includes("/work/") && location.pathname !== "/work") {
+        window.sessionStorage.setItem("lastPosition", location.pathname);
         window.scrollTo({ top: 0, left: 0, behavior: "instant" });
-        console.log('running', location.pathname);
+        console.log("running", location.pathname);
       }
     }, [location]);
 
@@ -154,15 +166,23 @@ const App = () => {
       <Router>
         <div>
           <Header
+            darkMode={darkMode}
             handleDarkModeToggle={handleDarkModeToggle}
-            defaultDark={defaultDark}
           />
         </div>
         <ScrollToTop>
           <Routes>
-            <Route path="/" element={<Landing defaultDark={defaultDark} isMobileSafari={isMobileSafari} />} />
-            <Route path="/work" element={<Work defaultDark={defaultDark} />} />
-            <Route path="/work/:projSlug" element={<Project defaultDark={defaultDark} />} />
+            <Route
+              path="/"
+              element={
+                <Landing darkMode={darkMode} isMobileSafari={isMobileSafari} />
+              }
+            />
+            <Route path="/work" element={<Work darkMode={darkMode} />} />
+            <Route
+              path="/work/:projSlug"
+              element={<Project darkMode={darkMode} />}
+            />
             <Route path="/resume" element={<Resume />} />
             <Route path="/travel" element={<Travel />} />
             <Route path="/404" element={<NotFound />} />

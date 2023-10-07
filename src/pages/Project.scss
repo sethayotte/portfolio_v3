@@ -75,10 +75,12 @@
     }
 
     .project-card {
-        padding: 50px;
+        padding: 25px 50px;
         border-radius: 25px;
         padding-bottom: 35px;
-        animation: fade-in-proj-card 0.4s ease;
+    
+        &.animated {
+            animation: fade-in-proj-card 0.4s ease;
 
             @keyframes fade-in-proj-card {
                 0% {
@@ -92,6 +94,7 @@
                     transform: translateX(0px);
                 }
             }
+        }
     }
 
     @media only screen and (max-width: 500px) {
@@ -116,33 +119,32 @@
         }
 
 
-        .status-info-chips {
+        .project-chips {
             display: flex;
-            align-items: flex-end;
-            flex-direction: column;
+            align-items: center;
+            flex-wrap: wrap;
 
-            div {
+            .tag {
+                padding: 5px 15px;
+
+                border-radius: 25px;
+                margin: 6px 6px 6px 0;
                 display: flex;
                 align-items: center;
+                justify-content: center;
 
-                svg {
-                    font-size: 16pt;
-                    margin-left: 10px;
+                &.more {
+                    height: 29px;
+                    width: 29px;
+                    padding: 0;
+                    cursor: pointer;
+                    transition: background-color 0.3s ease;
                 }
-            }
-
-            
-
-            .project-info-chip {
-                background-color: #4d5676;
-                padding: 5px 15px;
-                border-radius: 25px;
-                margin: 5px 0;
             }
         }
 
         img {
-            height: 100px;
+            height: 75px;
         }
     
         h1 {
@@ -198,13 +200,19 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+
         .tagline {
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
             font-size: 32pt;
-            height: 55vh;
+            height: 75vh;
+
+            &.left-aligned {
+                text-align: left;
+                margin: auto;
+            }
         }
 
         .highlight-tiles {
@@ -270,8 +278,8 @@
         }
 
         .description {
-            font-size: 16pt;
-            max-width: 800px;
+            font-size: 22pt;
+            max-width: 1260px;
         }
 
         .visuals {
