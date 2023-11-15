@@ -4,7 +4,7 @@
             "id": "featured-project",
             "copy": "Driven by good design,\nI build easy-to-use tools\nthat deliver an impact.",
             "linkText": "Explore Shoebox",
-            "linkRoute": "/projects/shoebox",
+            "linkRoute": "/work/shoebox",
             "imagesLight": [
                 "./assets/project-brands/Featured_Light.svg"
             ],
@@ -17,7 +17,7 @@
             "copy": "Skilled with modern front-end\nframeworks & continually\nlearning new technologies.",
             "mobileCopy": "Skilled with modern\nfront-end frameworks\n& continually learning\nnew technologies.",
             "linkText": "View All Projects",
-            "linkRoute": "/projects",
+            "linkRoute": "/work",
             "imagesLight": [
                 "./assets/technologies/CSS3_Light.svg", "./assets/technologies/React_Light.svg", "./assets/technologies/HTML5_Light.svg",
                 "./assets/technologies/JS_Light.svg", "./assets/technologies/Angular_Light.svg", "./assets/technologies/TS_Light.svg"

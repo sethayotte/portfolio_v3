@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import ResumeData from "../data/resume.json";
 import Headshot from "../assets/SethMitchell_Headshot_Scaled.webp";
+import ResumePDF from "../assets/Resume_2023.pdf";
 import { HiOutlineEye, HiOutlineEyeOff } from "react-icons/hi";
 import { RxCrumpledPaper } from "react-icons/rx";
 import { IoLogoLinkedin, IoLogoTwitter, IoLogoGithub } from "react-icons/io";
@@ -232,7 +233,10 @@ const Resume = () => {
       <div className="digital-copy-text">
         <RxCrumpledPaper />
         <p>
-          Need a digital copy?&nbsp;<a>Download it here</a>
+          Need a digital copy?&nbsp;
+          <a href={ResumePDF} target="_blank">
+            Download it here
+          </a>
         </p>
       </div>
     </div>
