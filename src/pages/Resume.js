@@ -102,13 +102,22 @@ const Resume = () => {
             <a
               className="link"
               href="https://www.linkedin.com/in/sethayottemitchell/"
+              target="_blank"
             >
               <IoLogoLinkedin />
             </a>
-            <a className="link" href="https://twitter.com/sethmitchelldev">
+            <a
+              className="link"
+              href="https://twitter.com/sethmitchelldev"
+              target="_blank"
+            >
               <IoLogoTwitter />
             </a>
-            <a className="link" href="https://github.com/sethayotte">
+            <a
+              className="link"
+              href="https://github.com/sethayotte"
+              target="_blank"
+            >
               <IoLogoGithub />
             </a>
             <a
