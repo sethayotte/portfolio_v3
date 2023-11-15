@@ -109,17 +109,15 @@
                 "../assets/project-visuals/shoebox/weight-of-return-popup.webp"
             ],
             "darkVisuals": [
-                "../assets/project-visuals/shoebox/home-screen.webp",
-                "../assets/project-visuals/shoebox/cuisines.webp",
-                "../assets/project-visuals/shoebox/categories.webp",
-                "../assets/project-visuals/shoebox/category-recipes.webp",
-                "../assets/project-visuals/shoebox/top-of-recipe.webp",
-                "../assets/project-visuals/shoebox/bottom-of-recipe.webp",
-                "../assets/project-visuals/shoebox/substitution-guide.webp",
-                "../assets/project-visuals/shoebox/recipe-scaler.webp",
-                "../assets/project-visuals/shoebox/search.webp",
-                "../assets/project-visuals/shoebox/add-new-general-info.webp",
-                "../assets/project-visuals/shoebox/add-new-ingredients.webp"
+                "../assets/project-visuals/shoebox/portfolio-view-top.webp",
+                "../assets/project-visuals/shoebox/portfolio-view-bottom.webp",
+                "../assets/project-visuals/shoebox/configuration-view-contribution-table.webp",
+                "../assets/project-visuals/shoebox/contribution-table-expanded.webp",
+                "../assets/project-visuals/shoebox/investment-selection-view.webp",
+                "../assets/project-visuals/shoebox/add-expense-view.webp",
+                "../assets/project-visuals/shoebox/account-profile-top.webp",
+                "../assets/project-visuals/shoebox/account-profile-bottom.webp",
+                "../assets/project-visuals/shoebox/weight-of-return-popup.webp"
             ]
         }
     },
