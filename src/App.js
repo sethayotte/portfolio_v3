@@ -17,7 +17,7 @@ import { NotFound } from "./components/NotFound";
 import { Project } from "./pages/Project";
 
 const App = () => {
-  const [darkMode, setDarkMode] = useState();
+  const [darkMode, setDarkMode] = useState(false);
 
   const setDark = () => {
     setDarkMode(true);
@@ -55,16 +55,16 @@ const App = () => {
     document.getElementById("portfolio-index").classList?.add("sl-theme-light");
   };
 
-  const storedTheme = localStorage.getItem("theme");
-
-  const prefersDark =
-    window.matchMedia &&
-    window.matchMedia("(prefers-color-scheme: dark)").matches;
-
   useEffect(() => {
-    setDarkMode(
-      storedTheme === "dark" || (storedTheme === null && prefersDark)
-    );
+    console.log(darkMode);
+    let storedTheme = localStorage.getItem("theme");
+    console.log(storedTheme);
+    setDarkMode(storedTheme === "dark");
+    if (storedTheme === "dark") {
+      setDark();
+    } else {
+      setLight();
+    }
   }, []);
 
   const handleDarkModeToggle = () => {
@@ -97,11 +97,9 @@ const App = () => {
         window.sessionStorage.setItem("lastPosition", "");
       }
       let lastPosition = window.sessionStorage.getItem("lastPosition");
-      console.log(lastPosition);
       if (lastPosition === "") {
         window.sessionStorage.setItem("lastPosition", location.pathname);
         window.scrollTo({ top: 0, left: 0, behavior: "instant" });
-        console.log("running");
       }
       if (
         !lastPosition.includes("/work/") &&
@@ -109,17 +107,10 @@ const App = () => {
       ) {
         window.sessionStorage.setItem("lastPosition", location.pathname);
         window.scrollTo({ top: 0, left: 0, behavior: "instant" });
-        console.log(
-          "running",
-          !lastPosition.includes("/work/"),
-          lastPosition,
-          location.pathname
-        );
       }
       if (lastPosition.includes("/work/") && location.pathname !== "/work") {
         window.sessionStorage.setItem("lastPosition", location.pathname);
         window.scrollTo({ top: 0, left: 0, behavior: "instant" });
-        console.log("running", location.pathname);
       }
     }, [location]);
 

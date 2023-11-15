@@ -9,25 +9,6 @@
       name="description"
       content="Web site created using create-react-app"
     />
-    <script>
-      const prefersDark =
-        window.matchMedia &&
-        window.matchMedia("(prefers-color-scheme: dark)").matches;
-  
-      const prefersLight =
-        window.matchMedia &&
-        window.matchMedia("(prefers-color-scheme: light)").matches;
-  
-      const setTheme = window.localStorage.getItem('theme');
-      if (prefersLight || setTheme && setTheme === 'light') {
-        console.log('set light');
-        document.getElementById('portfolio-index').classList?.add('sl-theme-light');
-      } else {
-        console.log('set dark');
-        document.getElementById('portfolio-index').classList?.add('sl-theme-dark');
-      }
-      console.log(setTheme, prefersDark, prefersLight);
-    </script>
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <!--
       manifest.json provides metadata used when your web app is installed on a
