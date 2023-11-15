@@ -290,19 +290,22 @@
 
             sl-carousel-item {
                 height: 500px;
+                
             }
 
             sl-carousel::part(scroll-container) {
                 padding: 2px;
                 --slide-gap: 12px;
             }
+
             img {
                 border: 2px solid var(--background-color);
                 border-radius: 25px;
-                // width: calc(100% - 4px)
                 height: 100%;
-                width: fit-content;
+                min-height: 100%;
+                width: auto;
                 max-width: 400px;
+                object-fit: cover;
             }
 
             sl-carousel::part(navigation-button--previous) {
