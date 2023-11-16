@@ -280,6 +280,17 @@
         .description {
             font-size: 22pt;
             max-width: 1260px;
+
+            p {
+                margin-bottom: 15px;
+                margin-top: 0;
+                font-size: 18pt;
+            }
+
+            h4 {
+                margin-bottom: 10px;
+                font-weight: 600;
+            }
         }
 
         .visuals {

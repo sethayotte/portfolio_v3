@@ -129,7 +129,9 @@ const Resume = () => {
           </div>
         </div>
         <div>
-          <img src={Headshot} />
+          <a href="https://nickdavisphotography.com/about/" target="_blank">
+            <img src={Headshot} />
+          </a>
         </div>
       </section>
       <section className="education">

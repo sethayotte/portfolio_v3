@@ -15,26 +15,26 @@
             "tagline": "We help build a solid<br />foundation for your<br />financial future",
             "tileColor": "var(--the-blocks-project-secondary)",
             "headerIconColor": "var(--mitch-kitch-project-icons)",
-            "highlightsHeader": "project highlights",
+            "highlightsHeader": "company highlights",
             "highlightsItems": [
                 {
-                    "icon": "IoScale",
-                    "label": "dynamic recipe scaling"
+                    "icon": "TbFileCode",
+                    "label": "financial software tools"
                 },
                 {
-                    "icon": "IoBook",
-                    "label": "recipe repository"
+                    "icon": "TbBrandCitymapper",
+                    "label": "simple & well-designed"
                 },
                 {
-                    "icon": "IoPeopleCircleOutline",
-                    "label": "family focused"
+                    "icon": "TbRectangularPrismPlus",
+                    "label": "foundation-focused"
                 },
                 {
-                    "icon": "TbInputSearch",
-                    "label": "rich search results"
+                    "icon": "TbSchool",
+                    "label": "free educational resources"
                 }
             ],
-            "descriptionHeader": "overview",
+            "descriptionHeader": "what's The Blocks?",
             "descriptionIcon": "TbFolderFilled",
             "description": "The Mitch Kitch is a private recipe repository designed exclusively for the Mitchell family and close friends. The platform allows us to keep all of our favorite family recipes organized in one central location, so they can easily accessed whenever, wherever. <br /> <br />The strong Mitch Kitch branding and playful user interface makes adding and maintaining recipes a breeze, while the technical achievements ensure that your data is secure and your recipes are always easy to find.",
             "visualsHeader": "screenshots",
@@ -246,7 +246,7 @@
         "slug": "compound",
         "logoLight": "./assets/project-brands/Compound_Light.svg",
         "logoDark": "./assets/project-brands/Compound_Dark.svg",
-        "color": "#1B94FF",
+        "color": "var(--compound-tile)",
         "toggleColor": "var(--tile-toggle-light)",
         "fontColor": "var(--text-color-inverted)",
         "font": "Inter, sans-serif",
@@ -256,30 +256,30 @@
             "role": "LOREM",
             "status": "LOREM",
             "slug": "compound",
-            "tagline": "LOREM",
-            "tileColor": "LOREM",
-            "headerIconColor": "LOREM",
-            "highlightsHeader": "LOREM",
+            "tagline": "A simple start; focused on the power of compound interest.",
+            "tileColor": "var(--compound-tile-tile)",
+            "headerIconColor": "var(--text-color-inverted)",
+            "highlightsHeader": "app features",
             "highlightsItems": [
                 {
-                    "icon": "LOREM",
-                    "label": "LOREM"
+                    "icon": "TbEaseInControlPoint",
+                    "label": "visualize compound growth"
                 },
                 {
-                    "icon": "LOREM",
-                    "label": "LOREM"
+                    "icon": "TbMathSymbols",
+                    "label": "simple calculator interface"
                 },
                 {
-                    "icon": "LOREM",
-                    "label": "LOREM"
+                    "icon": "TbGrain",
+                    "label": "calculation details for nerds"
                 },
                 {
-                    "icon": "LOREM",
-                    "label": "LOREM"
+                    "icon": "TbBrandAppstore",
+                    "label": "built for web & iOS"
                 }
             ],
-            "descriptionHeader": "LOREM",
-            "descriptionIcon": "LOREM",
+            "descriptionHeader": "app description",
+            "descriptionIcon": "TbAppWindowFilled",
             "description": "LOREM",
             "visualsHeader": "LOREM",
             "visualsIcon": "LOREM",
@@ -309,7 +309,7 @@
         "slug": "everyday-portfolio",
         "logoLight": "./assets/project-brands/EP_Light_New.svg",
         "logoDark": "./assets/project-brands/EP_Dark_New.svg",
-        "color": "#1DD000",
+        "color": "var(--everyday-portfolio-tile)",
         "toggleColor": "var(--tile-toggle-light)",
         "fontColor": "var(--text-color-inverted)",
         "font": "Inter, sans-serif",
@@ -319,10 +319,10 @@
             "role": "LOREM",
             "status": "LOREM",
             "slug": "everyday-portfolio",
-            "tagline": "LOREM",
-            "tileColor": "LOREM",
+            "tagline": "A custom-designed financial utility.",
+            "tileColor": "var(--everyday-portfolio-tile-tile)",
             "headerIconColor": "LOREM",
-            "highlightsHeader": "LOREM",
+            "highlightsHeader": "project features",
             "highlightsItems": [
                 {
                     "icon": "LOREM",
@@ -376,16 +376,16 @@
         "toggleColor": "var(--tile-toggle-light)",
         "fontColor": "var(--text-color-inverted)",
         "font": "Inter, sans-serif",
-        "weight": "400",
+        "weight": "600",
         "content": {
             "technologies": "LOREM",
             "role": "LOREM",
             "status": "LOREM",
             "slug": "sprout",
-            "tagline": "LOREM",
-            "tileColor": "LOREM",
-            "headerIconColor": "LOREM",
-            "highlightsHeader": "LOREM",
+            "tagline": "Reimagining talent in<br/> the wake of COVID-19.",
+            "tileColor": "var(--sprout-tile-tile)",
+            "headerIconColor": "var(--text-color-inverted)",
+            "highlightsHeader": "project highlights",
             "highlightsItems": [
                 {
                     "icon": "LOREM",
@@ -404,9 +404,9 @@
                     "label": "LOREM"
                 }
             ],
-            "descriptionHeader": "LOREM",
-            "descriptionIcon": "LOREM",
-            "description": "LOREM",
+            "descriptionHeader": "the story of Sprout",
+            "descriptionIcon": "TbNotebook",
+            "description": "<p>When COVID began to make an impact in the United States in early March, stores and restaurants closed with uncertainty of when things would return to normal. At that time, we could never have imagined how the rest of the year would turn out.</p> <p>However, a small team of project management, talent & recruitment specialists came together to try to come up with a solution to help. Sprout would ultimately be a platform that allowed restaurant talent to be easily found and hired to take the search and interview burden off of local restaurants that already had their hands full.</p> <p>While the platform never came to fruition due to the waves of rising COVID cases throughout the year, this project provided an important problem to solve and allowed me to explore how code could make a positive impact.</p> <h4>Cultivating my development interest.</h4> <p>Joining this team, I only came in with my graphic design knowledge. Digging into the problem with the other members, features and functionality began to take shape. This was an exciting design problem that required an easy-to-use, approachable interface. Once the initial mockups were finished, we had an MVP framework to work from.</p> <p>Myself, the novice “front-end” developer, and a working back-end professional began working through the rough structure of the platform. Having not written a line of react before, I began working through tutorials and creating sample elements through CodePen. Largely HTML and CSS, these elements would ultimately be converted to JSX and implemented in their respective react components. While these examples are elementary, they are representative of the project that began my interest in development.</p> <p>A tough problem to solve that required me to learn on the fly and create something meaningful starting from nothing was an exciting opportunity.</p> <h4>A turning point for design & code.</h4> <p>This project was also the moment in which I discovered how my design skillset could complement and be very useful in my journey into software development. It all clicked and from this point forward. As my technical ability grew, each project I’ve worked on has also poised tough interface design problems.</p> <p>This work that I generated for this project is not technically complex, but what it represents for the rest of my growth in 2020, it’s absolutely worth noting.</p>",
             "visualsHeader": "LOREM",
             "visualsIcon": "LOREM",
             "visuals": [
