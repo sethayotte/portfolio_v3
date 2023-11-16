@@ -71,7 +71,7 @@
             "tagline": "Track, Manage, and<br />Maximize Your HSA<br />Contributions.",
             "tileColor": "var(--shoebox-tile-tile)",
             "headerIconColor": "var(--shoebox-project-icons)",
-            "highlightsHeader": "project highlights",
+            "highlightsHeader": "app highlights",
             "highlightsItems": [
                 {
                     "icon": "HiArchiveBox",

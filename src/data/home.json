@@ -6,10 +6,10 @@
             "linkText": "Explore Shoebox",
             "linkRoute": "/work/shoebox",
             "imagesLight": [
-                "./assets/project-brands/Featured_Light.svg"
+                "./assets/project-brands/Featured_Light.png"
             ],
             "imagesDark": [
-                "./assets/project-brands/Featured_Dark.svg"
+                "./assets/project-brands/Featured_Dark.png"
             ]
         },
         {
