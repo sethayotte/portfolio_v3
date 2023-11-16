@@ -11,7 +11,7 @@ import {
   TbSquareRoundedNumber1,
   TbSquareRoundedNumber2,
   TbSquareRoundedNumber3,
-  TbArrowUpCircle,
+  TbCircleArrowUp,
   TbCertificate,
 } from "react-icons/tb";
 
@@ -225,7 +225,7 @@ const Resume = () => {
             <div className="category" key={index}>
               <h3 onClick={() => toggleSection(item.section)}>
                 {item.section}
-                <TbArrowUpCircle
+                <TbCircleArrowUp
                   className={sectionOpen === item.section ? "down" : ""}
                 />
               </h3>
