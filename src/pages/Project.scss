@@ -161,6 +161,11 @@
                     display: flex;
                     align-items: center;
                     justify-content: center;
+
+                    &.large-icon {
+                        font-size: 18pt;
+                        margin: 0 2.665px;
+                    }
                 }
 
                 &.count {
@@ -261,19 +266,19 @@
         }
     }
 
-    #compound, #shoebox {
-        .project-header {
-            img {
-                margin-bottom: 10px;
-            }
-        }
-    }
-
     @media only screen and (max-width: 800px) {
-        #run-away, #compound, #everyday-portfolio, #year-end-review, #shoebox {
+        #run-away, #compound, #everyday-portfolio, #year-end-review {
             .project-header {
                 img {
-                    height: 60px;
+                    height: 55px;
+                }
+            }
+        }
+
+        #shoebox {
+            .project-header {
+                img {
+                    height: 50px;
                 }
             }
         }
@@ -281,12 +286,12 @@
         .project-header {
 
             img {
-                height: 65px;
+                height: 60px;
             }
 
             h1 {
                 margin: 0;
-                font-size: 24pt;
+                font-size: 20pt;
             }
         }
     }

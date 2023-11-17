@@ -35,7 +35,7 @@
                 {
                     "type": "diploma",
                     "description": "BFA Diploma in Graphic Design",
-                    "url": "./assets/documents/Nucamp_Honors_Certificate.pdf"
+                    "url": "./assets/documents/VCU_Diploma.pdf"
                 }
             ]
         }
@@ -140,7 +140,7 @@
         },
         {
             "section": "Infrastructure",
-            "items": ["Azure DevOps", "Firebase", "Google Cloud Platform", "Netlify"]
+            "items": ["Azure DevOps", "Firebase", "Google Cloud Platform", "Netlify", "Stripe"]
         }
     ],
     "footer": {

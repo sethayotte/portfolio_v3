@@ -127,13 +127,13 @@
         "font": "Inconsolata, monospace",
         "weight": "400",
         "content": {
-            "tags": [{"title": "Development & Ideation", "icon": "TbTransformFilled"}, {"title": "Figma", "icon": "TbBrandFigma"}],
+            "tags": [{"title": "Ideation & Iteration", "icon": "TbTransformFilled"}, {"title": "Figma", "icon": "TbBrandFigma"}],
             "technologies": "LOREM",
             "role": "LOREM",
             "status": "LOREM",
             "slug": "year-end-review",
             "tagline": "LOREM",
-            "tileColor": "LOREM",
+            "tileColor": "var(--review-tile-tile)",
             "headerIconColor": "LOREM",
             "highlightsHeader": "LOREM",
             "highlightsItems": [
@@ -364,6 +364,7 @@
         "font": "Inter, sans-serif",
         "weight": "600",
         "content": {
+            "tags": [{"title": "Codepen Sandboxing", "icon": "TbBrandCodepen"}, {"title": "Foundational", "icon": "TbBuildingBridge2"}, {"title": "Collaboration Project", "icon": "FaSlideshare"}, {"title": "Sketch", "icon": "SiSketch"}],
             "technologies": "LOREM",
             "role": "LOREM",
             "status": "LOREM",
@@ -427,12 +428,13 @@
         "font": "IBM Plex Mono, monospace",
         "weight": "500",
         "content": {
+            "tags": [{"title": "Skyscanner API", "icon": "TbApi"}, {"title": "Collaboration Project", "icon": "FaSlideshare"}, {"title": "Sketch", "icon": "SiSketch"}],
             "technologies": "LOREM",
             "role": "LOREM",
             "status": "LOREM",
             "slug": "run-away",
             "tagline": "LOREM",
-            "tileColor": "LOREM",
+            "tileColor": "var(--run-away-tile-tile)",
             "headerIconColor": "LOREM",
             "highlightsHeader": "LOREM",
             "highlightsItems": [

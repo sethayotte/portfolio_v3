@@ -77,7 +77,19 @@ const Project = ({ darkMode }) => {
       icon = React.createElement(SiIcon[iconName]);
     }
 
-    return <div>{icon}</div>;
+    return (
+      <div
+        className={
+          (iconName.toLowerCase().includes("stripe") ||
+            iconName.toLowerCase().includes("capacitor") ||
+            iconName.toLowerCase().includes("expo") ||
+            iconName.toLowerCase().includes("sketch")) &&
+          "large-icon"
+        }
+      >
+        {icon}
+      </div>
+    );
   };
 
   const handleScreenshotWidth = () => {
@@ -125,7 +137,7 @@ const Project = ({ darkMode }) => {
       ) : (
         <div
           className={"project-card animated"}
-          id={project.content.slug}
+          id={project.slug}
           style={{ backgroundColor: `${project.color}` }}
         >
           <section className="project-header">
