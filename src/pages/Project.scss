@@ -97,9 +97,16 @@
         }
     }
 
-    @media only screen and (max-width: 500px) {
+    @media only screen and (max-width: 850px) {
         .project-card {
-            padding: 15px;
+            padding: 25px;
+            padding-bottom: 25px;
+        }
+    }
+
+    @media only screen and (max-width: 740px) {
+        .project-card {
+            padding: 15px 25px;
             padding-bottom: 25px;
         }
     }
@@ -238,7 +245,7 @@
         }
     }
 
-    #run-away, #compound, #everyday-portfolio, #year-end-review, #shoebox {
+    #run-away, #compound, #everyday-portfolio, #year-end-review {
         .project-header {
             img {
                 height: 70px;
@@ -246,10 +253,40 @@
         }
     }
 
-    #compound, #year-end-review, #shoebox {
+    #shoebox {
+        .project-header {
+            img {
+                height: 65px;
+            }
+        }
+    }
+
+    #compound, #shoebox {
         .project-header {
             img {
                 margin-bottom: 10px;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 800px) {
+        #run-away, #compound, #everyday-portfolio, #year-end-review, #shoebox {
+            .project-header {
+                img {
+                    height: 60px;
+                }
+            }
+        }
+
+        .project-header {
+
+            img {
+                height: 65px;
+            }
+
+            h1 {
+                margin: 0;
+                font-size: 24pt;
             }
         }
     }
@@ -311,11 +348,6 @@
     @media only screen and (max-width: 500px) {
         .project-header {
             align-items: center;
-            
-            img {
-                height: 75px;
-                margin-top: 10px;
-            }
 
             h1 {
                 font-size: 24pt;

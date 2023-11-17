@@ -180,21 +180,22 @@ const Project = ({ darkMode }) => {
                   +{project?.content?.tags?.length - 2}
                 </span>
               )}
-
-              <span
-                onClick={() => toggleTags(project?.content?.tags?.length)}
-                className={
-                  project?.content?.tags?.length > 2 && showingTagCount !== 2
-                    ? "more expanded"
-                    : "more"
-                }
-                style={{
-                  color: `${project.fontColor}`,
-                  backgroundColor: `${project.content.tileColor}`,
-                }}
-              >
-                <TbChevronRight />
-              </span>
+              {project?.content?.tags?.length > 2 && (
+                <span
+                  onClick={() => toggleTags(project?.content?.tags?.length)}
+                  className={
+                    project?.content?.tags?.length > 2 && showingTagCount !== 2
+                      ? "more expanded"
+                      : "more"
+                  }
+                  style={{
+                    color: `${project.fontColor}`,
+                    backgroundColor: `${project.content.tileColor}`,
+                  }}
+                >
+                  <TbChevronRight />
+                </span>
+              )}
             </div>
           </section>
           <section className="project-hero-items">
