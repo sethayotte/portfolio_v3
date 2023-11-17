@@ -5,9 +5,10 @@ import * as IoIcon from "react-icons/io5";
 import * as FaIcon from "react-icons/fa";
 import * as BsIcon from "react-icons/bs";
 import * as HiIcon from "react-icons/hi2";
+import * as SiIcon from "react-icons/si";
 import { FaIdBadge } from "react-icons/fa";
 import { BsAppIndicator } from "react-icons/bs";
-import { MdOutlineMoreHoriz } from "react-icons/md";
+import { TbChevronRight } from "react-icons/tb";
 import ProjectData from "../data/projects.json";
 
 const Project = ({ darkMode }) => {
@@ -16,6 +17,8 @@ const Project = ({ darkMode }) => {
   const [project, setProject] = useState();
   const [invalidProject, setInvalidProject] = useState(false);
   const [iconList, setIconList] = useState();
+
+  const [showingTagCount, setShowingTagCount] = useState(2);
 
   const [previousModeState, setPreviousModeState] = useState();
 
@@ -47,6 +50,16 @@ const Project = ({ darkMode }) => {
     }
   }, [location]);
 
+  const toggleTags = (length) => {
+    if (length > 2) {
+      if (showingTagCount === 2) {
+        setShowingTagCount(length);
+      } else {
+        setShowingTagCount(2);
+      }
+    }
+  };
+
   const Icon = ({ iconName }) => {
     let icon;
 
@@ -60,6 +73,8 @@ const Project = ({ darkMode }) => {
       icon = React.createElement(BsIcon[iconName]);
     } else if (iconName.slice(0, 2) === "Hi") {
       icon = React.createElement(HiIcon[iconName]);
+    } else if (iconName.slice(0, 2) === "Si") {
+      icon = React.createElement(SiIcon[iconName]);
     }
 
     return <div>{icon}</div>;
@@ -131,28 +146,54 @@ const Project = ({ darkMode }) => {
               </h1>
             </div>
             <div className="project-chips">
-              {project?.content?.tags?.slice(0, 3).map((tag) => {
-                console.log(project);
-                return (
-                  <span
-                    className="tag"
-                    style={{
-                      color: `${project.fontColor}`,
-                      backgroundColor: `${project.content.tileColor}`,
-                    }}
-                  >
-                    {tag}
-                  </span>
-                );
-              })}
+              {project?.content?.tags
+                ?.slice(0, showingTagCount)
+                .map((tag, index) => {
+                  console.log(project);
+                  return (
+                    <span
+                      className="tag"
+                      style={{
+                        color: `${project.fontColor}`,
+                        backgroundColor: `${project.content.tileColor}`,
+                        animationDelay: index / 20 + "s",
+                      }}
+                    >
+                      <Icon
+                        iconName={tag?.icon}
+                        style={{ color: `${project.fontColor}` }}
+                      />
+                      <span className="tag-name-wrapper">
+                        <div className="tag-name">{tag?.title}</div>
+                      </span>
+                    </span>
+                  );
+                })}
+              {project?.content?.tags?.length > 2 && showingTagCount === 2 && (
+                <span
+                  className="tag count"
+                  style={{
+                    color: `${project.fontColor}`,
+                    backgroundColor: `${project.content.tileColor}`,
+                  }}
+                >
+                  +{project?.content?.tags?.length - 2}
+                </span>
+              )}
+
               <span
-                className="tag more"
+                onClick={() => toggleTags(project?.content?.tags?.length)}
+                className={
+                  project?.content?.tags?.length > 2 && showingTagCount !== 2
+                    ? "more expanded"
+                    : "more"
+                }
                 style={{
                   color: `${project.fontColor}`,
                   backgroundColor: `${project.content.tileColor}`,
                 }}
               >
-                <MdOutlineMoreHoriz />
+                <TbChevronRight />
               </span>
             </div>
           </section>

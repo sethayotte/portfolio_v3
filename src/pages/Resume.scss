@@ -249,7 +249,10 @@
                         svg {
                             font-size: 18pt;
                             margin-right: 7px;
-                            margin-bottom: 1px;
+                        }
+
+                        svg.narrow-cert {
+                            margin-right: 4px;
                         }
                     }
                 }

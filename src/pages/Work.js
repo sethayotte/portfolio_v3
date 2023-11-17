@@ -30,7 +30,7 @@ const Work = ({ darkMode }) => {
       >
         <div
           className="project-tile"
-          id={item.row[0].content.slug}
+          id={item.row[0].slug}
           onClick={() => {
             navigateToProject(item, 0);
           }}
@@ -55,7 +55,7 @@ const Work = ({ darkMode }) => {
         </div>
         <div
           className="project-tile"
-          id={item.row[1].content.slug}
+          id={item.row[1].slug}
           onClick={() => {
             navigateToProject(item, 1);
           }}

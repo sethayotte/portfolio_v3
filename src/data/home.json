@@ -35,11 +35,11 @@
             "linkRoute": "/resume",
             "imagesLight": [
                 "./assets/experience/Apple_Light.svg", "./assets/experience/VCU_Light.svg", "./assets/experience/Tesla_Light.svg", 
-                "./assets/experience/Blocks_Light.svg", "./assets/experience/Compass_Light.svg", "./assets/experience/GM_Light.svg"
+                "./assets/experience/GM_Light.svg", "./assets/experience/Compass_Light.svg", "./assets/experience/Blocks_Light.svg"
             ],
             "imagesDark": [
                 "./assets/experience/Apple_Dark.svg", "./assets/experience/VCU_Light.svg", "./assets/experience/Tesla_Light.svg", 
-                "./assets/experience/Blocks_Dark.svg", "./assets/experience/Compass_Dark.svg", "./assets/experience/GM_Light.svg"
+                "./assets/experience/GM_Light.svg", "./assets/experience/Compass_Dark.svg", "./assets/experience/Blocks_Dark.svg"
             ]
         }
     ],

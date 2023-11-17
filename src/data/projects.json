@@ -11,7 +11,7 @@
         "weight": "500",
         "leftAlignedTagline": true,
         "content": {
-            "tags": ["Firebase", "React", "Netlify", "SCSS", "Figma"],
+            "tags": [{"title": "Wordpress CMS", "icon": "TbBrandWordpress"}, {"title": "Firebase", "icon": "TbBrandFirebase"}, {"title": "React", "icon": "TbBrandReact"}, {"title": "Netlify", "icon": "SiNetlify"}, {"title": "SCSS", "icon": "TbBrandSass"}, {"title": "Figma", "icon": "TbBrandFigma"}],
             "tagline": "We help build a solid<br />foundation for your<br />financial future",
             "tileColor": "var(--the-blocks-project-secondary)",
             "headerIconColor": "var(--mitch-kitch-project-icons)",
@@ -36,22 +36,17 @@
             ],
             "descriptionHeader": "what's The Blocks?",
             "descriptionIcon": "TbFolderFilled",
-            "description": "The Mitch Kitch is a private recipe repository designed exclusively for the Mitchell family and close friends. The platform allows us to keep all of our favorite family recipes organized in one central location, so they can easily accessed whenever, wherever. <br /> <br />The strong Mitch Kitch branding and playful user interface makes adding and maintaining recipes a breeze, while the technical achievements ensure that your data is secure and your recipes are always easy to find.",
+            "description": "The Blocks is a forward-thinking financial development and growth company dedicated to simplifying and enhancing an individual's financial journey. Our mission is to provide a suite of easy-to-use tools and resources that seamlessly adapt to every step of your financial life. <br /><br />From budgeting and saving to investing and retirement planning, The Blocks offers a comprehensive portfolio of software products focused around simple design. We believe in building solid financial foundations, and this user-centric approach ensures that our products not only meet but exceed the diverse needs of our users. With a commitment to simplicity, accessibility, and continuous improvement, I invite you to explore The Blocks and let us help you build a stronger financial future.",
             "visualsHeader": "screenshots",
             "visualsIcon": "TbBorderCorners",
             "visualsHaveDarkAssets": false,
             "visuals": [
-                "../assets/project-visuals/mitch-kitch/home-screen.webp",
-                "../assets/project-visuals/mitch-kitch/cuisines.webp",
-                "../assets/project-visuals/mitch-kitch/categories.webp",
-                "../assets/project-visuals/mitch-kitch/category-recipes.webp",
-                "../assets/project-visuals/mitch-kitch/top-of-recipe.webp",
-                "../assets/project-visuals/mitch-kitch/bottom-of-recipe.webp",
-                "../assets/project-visuals/mitch-kitch/substitution-guide.webp",
-                "../assets/project-visuals/mitch-kitch/recipe-scaler.webp",
-                "../assets/project-visuals/mitch-kitch/search.webp",
-                "../assets/project-visuals/mitch-kitch/add-new-general-info.webp",
-                "../assets/project-visuals/mitch-kitch/add-new-ingredients.webp"
+                "../assets/project-visuals/the-blocks/landing-page.webp",
+                "../assets/project-visuals/the-blocks/all-resources-view.webp",
+                "../assets/project-visuals/the-blocks/articles-section-view.webp",
+                "../assets/project-visuals/the-blocks/article-body.webp",
+                "../assets/project-visuals/the-blocks/our-why.webp",
+                "../assets/project-visuals/the-blocks/roadmap.webp"
             ]
         }
     },
@@ -67,7 +62,7 @@
         "weight": "600",
         "leftAlignedTagline": true,
         "content": {
-            "tags": ["Firebase", "React", "Netlify", "SCSS", "Figma"],
+            "tags": [{"title": "Firebase", "icon": "TbBrandFirebase"}, {"title": "Stripe", "icon": "SiStripe"}, {"title": "GCP", "icon": "SiGooglecloud"}, {"title": "React", "icon": "TbBrandReact"}, {"title": "Netlify", "icon": "SiNetlify"}, {"title": "SCSS", "icon": "TbBrandSass"}, {"title": "Figma", "icon": "TbBrandFigma"}],
             "tagline": "Track, Manage, and<br />Maximize Your HSA<br />Contributions.",
             "tileColor": "var(--shoebox-tile-tile)",
             "headerIconColor": "var(--shoebox-project-icons)",
@@ -195,7 +190,7 @@
         "font": "Bitter, serif",
         "weight": "300",
         "content": {
-            "tags": ["Firebase", "React", "Netlify", "SCSS", "Figma"],
+            "tags": [{"title": "Firebase", "icon": "TbBrandFirebase"}, {"title": "React", "icon": "TbBrandReact"}, {"title": "Netlify", "icon": "SiNetlify"}, {"title": "SCSS", "icon": "TbBrandSass"}, {"title": "Figma", "icon": "TbBrandFigma"}],
             "slug": "the-mitch-kitch",
             "tagline": "*chef's kiss*",
             "tileColor": "var(--mitch-kitch-project-secondary)",
@@ -252,6 +247,7 @@
         "font": "Inter, sans-serif",
         "weight": "800",
         "content": {
+            "tags": [{"title": "Capacitor", "icon": "SiCapacitor"}, {"title": "Progressive Web App", "icon": "SiPwa"}, {"title": "React", "icon": "TbBrandReact"}, {"title": "Netlify", "icon": "SiNetlify"}, {"title": "SCSS", "icon": "TbBrandSass"}, {"title": "Figma", "icon": "TbBrandFigma"}],
             "technologies": "LOREM",
             "role": "LOREM",
             "status": "LOREM",
@@ -289,19 +285,7 @@
                 "https://",
                 "https://"
             ],
-            "hasRoadmap": true,
-            "roadmapHeader": "LOREM",
-            "roadmapIcon": "LOREM",
-            "roadmap": [
-                {
-                    "icon": "LOREM",
-                    "description": "LOREM"
-                },
-                {
-                    "icon": "LOREM",
-                    "description": "LOREM"
-                }
-            ]
+            "hasRoadmap": false
         }
     },
     {

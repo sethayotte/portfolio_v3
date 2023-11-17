@@ -76,6 +76,19 @@
     }
 }
 
+.landing-project-tiles {
+    h2 {
+        font-family: 'Inconsolata', monospace;
+        color: var(--text-color-main);
+        font-weight: 400;
+        font-size: 32pt;
+        white-space: pre-wrap;
+        text-align: center;
+        line-height: 40pt;
+        margin: 0;
+    }
+}
+
 .landing-intro-card {
     width: calc(100% - 50px);
     height: calc(100vh - 170px);
@@ -87,7 +100,7 @@
     justify-content: center;
     flex-direction: column;
     position: relative;
-    
+
     h2 {
         font-family: 'Inconsolata', monospace;
         color: var(--text-color-main);
@@ -110,17 +123,16 @@
         text-align: center;
         margin-top: 20px;
         width: fit-content;
+        margin-left: 0;
+        transition: margin-left 0.4s ease;
 
         svg {
-            transform: rotate(-90deg) translateY(0);
-            transition: transform 0.4s ease;
+            transform: rotate(-90deg);
             font-size: 32pt;
         }
 
         body.hasHover &:hover {
-            svg {
-                transform: rotate(-90deg) translateY(7px);
-            }
+            margin-left: 10px;
         }
     }
 

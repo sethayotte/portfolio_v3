@@ -13,6 +13,7 @@ import {
   TbSquareRoundedNumber3,
   TbCircleArrowUp,
   TbCertificate,
+  TbCertificate2,
 } from "react-icons/tb";
 
 const Resume = () => {
@@ -156,7 +157,12 @@ const Resume = () => {
                       href={doc.url}
                       target="_blank"
                     >
-                      <TbCertificate /> {doc.description.toUpperCase()}
+                      {doc.type === "diploma" ? (
+                        <TbCertificate />
+                      ) : (
+                        <TbCertificate2 className="narrow-cert" />
+                      )}
+                      {doc.description.toUpperCase()}
                     </a>
                   );
                 })}
