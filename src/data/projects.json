@@ -248,7 +248,7 @@
             "role": "LOREM",
             "status": "LOREM",
             "slug": "compound",
-            "tagline": "A simple start; focused on the power of compound interest.",
+            "tagline": "A simple start; <br /> focused on the power of compound interest.",
             "tileColor": "var(--compound-tile-tile)",
             "headerIconColor": "var(--text-color-inverted)",
             "highlightsHeader": "app features",

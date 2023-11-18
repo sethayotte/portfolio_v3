@@ -56,9 +56,7 @@ const App = () => {
   };
 
   useEffect(() => {
-    console.log(darkMode);
     let storedTheme = localStorage.getItem("theme");
-    console.log(storedTheme);
     setDarkMode(storedTheme === "dark");
     if (storedTheme === "dark") {
       setDark();
@@ -68,7 +66,6 @@ const App = () => {
   }, []);
 
   const handleDarkModeToggle = () => {
-    console.log("click");
     if (!darkMode) {
       setDark();
     } else {

@@ -25,6 +25,16 @@ const Project = ({ darkMode }) => {
 
   const [screenshotNumber, setScreenshotNumber] = useState();
 
+  const updateWidth = () => {
+    if (window.innerWidth < 740) {
+      setShowingTagCount(project?.content?.tags?.length);
+    } else {
+      setShowingTagCount(2);
+    }
+  };
+
+  window.addEventListener("resize", updateWidth);
+
   useEffect(() => {
     if (previousModeState === undefined) {
       setPreviousModeState(darkMode);
@@ -50,6 +60,12 @@ const Project = ({ darkMode }) => {
       }
     }
   }, [location]);
+
+  useEffect(() => {
+    if (project) {
+      updateWidth();
+    }
+  }, [project]);
 
   const toggleTags = (length) => {
     if (length > 2) {
@@ -176,10 +192,13 @@ const Project = ({ darkMode }) => {
               {project?.content?.tags
                 ?.slice(0, showingTagCount)
                 .map((tag, index) => {
-                  console.log(project);
                   return (
                     <span
-                      className="tag"
+                      className={
+                        index === project?.content?.tags.length - 1
+                          ? "tag last-expanded"
+                          : "tag"
+                      }
                       style={{
                         color: `${project.fontColor}`,
                         backgroundColor: `${project.content.tileColor}`,

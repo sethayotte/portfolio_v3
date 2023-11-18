@@ -29,6 +29,10 @@ body {
   overflow-x: hidden;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-size: unset;
+}
+
 @media only screen and (max-width: 740px) {
   body.sl-scroll-lock {
     --sl-scroll-lock-size: 25px !important;
