@@ -36,7 +36,7 @@
             ],
             "descriptionHeader": "what's The Blocks?",
             "descriptionIcon": "TbFolderFilled",
-            "description": "The Blocks is a forward-thinking financial development and growth company dedicated to simplifying and enhancing an individual's financial journey. Our mission is to provide a suite of easy-to-use tools and resources that seamlessly adapt to every step of your financial life. <br /><br />From budgeting and saving to investing and retirement planning, The Blocks offers a comprehensive portfolio of software products focused around simple design. We believe in building solid financial foundations, and this user-centric approach ensures that our products not only meet but exceed the diverse needs of our users. With a commitment to simplicity, accessibility, and continuous improvement, I invite you to explore The Blocks and let us help you build a stronger financial future.",
+            "description": "The Blocks is a forward-thinking financial development and educational company dedicated to simplifying and enhancing an individual's financial journey. Our mission is to provide a suite of easy-to-use tools and resources that seamlessly adapt to every step of your financial life. <br /><br />From budgeting and saving to investing and retirement planning, The Blocks offers a comprehensive portfolio of software products focused around simple design. We believe in building solid financial foundations, and this user-centric approach ensures that our products not only meet but exceed the diverse needs of our users. With a commitment to simplicity, accessibility, and continuous improvement, I invite you to explore The Blocks and let us help you build a stronger financial future.",
             "visualsHeader": "screenshots",
             "visualsIcon": "TbBorderCorners",
             "visualsHaveDarkAssets": false,
@@ -132,39 +132,34 @@
             "role": "LOREM",
             "status": "LOREM",
             "slug": "year-end-review",
-            "tagline": "LOREM",
+            "tagline": "An annual look at your <br /> financial progress... <br />Coming soon.",
             "tileColor": "var(--review-tile-tile)",
             "headerIconColor": "LOREM",
-            "highlightsHeader": "LOREM",
+            "highlightsHeader": "a sneak peek",
             "highlightsItems": [
                 {
-                    "icon": "LOREM",
-                    "label": "LOREM"
+                    "icon": "TbAnalyze",
+                    "label": "annual analysis"
                 },
                 {
-                    "icon": "LOREM",
-                    "label": "LOREM"
+                    "icon": "6FaPersonCirclePlus",
+                    "label": "for individuals & families"
                 },
                 {
-                    "icon": "LOREM",
-                    "label": "LOREM"
+                    "icon": "6FaPersonWalkingDashedLineArrowRight",
+                    "label": "builds a path forward"
                 },
                 {
-                    "icon": "LOREM",
-                    "label": "LOREM"
+                    "icon": "TbReportAnalytics",
+                    "label": "report generation"
                 }
             ],
-            "descriptionHeader": "LOREM",
+            "descriptionHeader": "product introduction",
             "descriptionIcon": "LOREM",
             "description": "LOREM",
             "visualsHeader": "LOREM",
             "visualsIcon": "LOREM",
-            "visuals": [
-                "https://",
-                "https://",
-                "https://",
-                "https://"
-            ],
+            "visuals": [],
             "hasRoadmap": true,
             "roadmapHeader": "LOREM",
             "roadmapIcon": "LOREM",
@@ -218,7 +213,7 @@
             "descriptionHeader": "overview",
             "descriptionIcon": "TbFolderFilled",
             "descriptionFontWeight": "300",
-            "description": "The Mitch Kitch is a private recipe repository designed exclusively for the Mitchell family and close friends. The platform allows us to keep all of our favorite family recipes organized in one central location, so they can easily accessed whenever, wherever. <br /> <br />The strong Mitch Kitch branding and playful user interface makes adding and maintaining recipes a breeze, while the technical achievements ensure that your data is secure and your recipes are always easy to find. <br /><br /><sl-button > View Project</sl-button>",
+            "description": "The Mitch Kitch is a private recipe repository designed exclusively for the Mitchell family and close friends. The platform allows us to keep all of our favorite family recipes organized in one central location, so they can easily accessed whenever, wherever. <br /> <br />The strong Mitch Kitch branding and playful user interface makes adding and maintaining recipes a breeze, while the technical achievements ensure that your data is secure and your recipes are always easy to find.",
             "visualsHeader": "screenshots",
             "visualsIcon": "TbBorderCorners",
             "visualsHaveDarkAssets": false,
@@ -305,7 +300,7 @@
             "role": "LOREM",
             "status": "LOREM",
             "slug": "everyday-portfolio",
-            "tagline": "A custom-designed financial utility.",
+            "tagline": "A custom-designed <br /> financial utility.",
             "tileColor": "var(--everyday-portfolio-tile-tile)",
             "headerIconColor": "LOREM",
             "highlightsHeader": "project features",
@@ -433,7 +428,7 @@
             "role": "LOREM",
             "status": "LOREM",
             "slug": "run-away",
-            "tagline": "LOREM",
+            "tagline": "Ready to get <br /> out of town?",
             "tileColor": "var(--run-away-tile-tile)",
             "headerIconColor": "LOREM",
             "highlightsHeader": "LOREM",

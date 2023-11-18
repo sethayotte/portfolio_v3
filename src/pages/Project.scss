@@ -97,17 +97,9 @@
         }
     }
 
-    @media only screen and (max-width: 850px) {
+    @media only screen and (max-width: 1000px) {
         .project-card {
             padding: 25px;
-            padding-bottom: 25px;
-        }
-    }
-
-    @media only screen and (max-width: 740px) {
-        .project-card {
-            padding: 15px 25px;
-            padding-bottom: 25px;
         }
     }
 
@@ -115,13 +107,27 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        position: relative;
+
+        // @media only screen and (max-width: 875px) {
+
+        //     &.stacked {
+        //         flex-direction: column;
+
+        //         .project-brand {
+        //             margin-bottom: 20px;
+        //         }
+        //     }
+        // }
+
+        
 
         .project-brand {
             display: flex;
             align-items: center;
             
             img {
-                margin-right: 15px;
+                margin-right: 10px;
             }
         }
 
@@ -129,7 +135,12 @@
         .project-chips {
             display: flex;
             align-items: center;
+            justify-content: flex-end;
             flex-wrap: wrap;
+            position: absolute;
+            right: 0;
+            width: 100%;
+            padding: 10px 0 10px 10px;
 
             .tag {
                 height: 50px;
@@ -266,7 +277,34 @@
         }
     }
 
-    @media only screen and (max-width: 800px) {
+    @media only screen and (max-width: 900px) {
+
+        .project-header {
+
+            .project-chips {
+                backdrop-filter: blur(0px);
+                transition: backdrop-filter 0.3s ease;
+
+                &.expanded {
+                    backdrop-filter: blur(5px);
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 740px) {
+        .project-header {
+
+            img {
+                height: 60px;
+            }
+
+            h1 {
+                margin: 0;
+                font-size: 22pt;
+            }
+        }
+
         #run-away, #compound, #everyday-portfolio, #year-end-review {
             .project-header {
                 img {
@@ -283,17 +321,7 @@
             }
         }
 
-        .project-header {
-
-            img {
-                height: 60px;
-            }
-
-            h1 {
-                margin: 0;
-                font-size: 20pt;
-            }
-        }
+        
     }
 
     label {

@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import * as TbIcon from "react-icons/tb";
 import * as IoIcon from "react-icons/io5";
 import * as FaIcon from "react-icons/fa";
+import * as FaSixIcon from "react-icons/fa6";
 import * as BsIcon from "react-icons/bs";
 import * as HiIcon from "react-icons/hi2";
 import * as SiIcon from "react-icons/si";
@@ -69,6 +70,8 @@ const Project = ({ darkMode }) => {
       icon = React.createElement(TbIcon[iconName]);
     } else if (iconName.slice(0, 2) === "Fa") {
       icon = React.createElement(FaIcon[iconName]);
+    } else if (iconName.slice(0, 3) === "6Fa") {
+      icon = React.createElement(FaSixIcon[iconName.slice(1)]);
     } else if (iconName.slice(0, 2) === "Bs") {
       icon = React.createElement(BsIcon[iconName]);
     } else if (iconName.slice(0, 2) === "Hi") {
@@ -140,7 +143,13 @@ const Project = ({ darkMode }) => {
           id={project.slug}
           style={{ backgroundColor: `${project.color}` }}
         >
-          <section className="project-header">
+          <section
+            className={
+              project?.content?.tags?.length > 2 && showingTagCount !== 2
+                ? "project-header stacked"
+                : "project-header"
+            }
+          >
             <div className="project-brand">
               <img
                 src={
@@ -157,7 +166,13 @@ const Project = ({ darkMode }) => {
                 {project.title}
               </h1>
             </div>
-            <div className="project-chips">
+            <div
+              className={
+                project?.content?.tags?.length > 2 && showingTagCount !== 2
+                  ? "project-chips expanded"
+                  : "project-chips"
+              }
+            >
               {project?.content?.tags
                 ?.slice(0, showingTagCount)
                 .map((tag, index) => {
@@ -276,54 +291,56 @@ const Project = ({ darkMode }) => {
                 }}
               ></div>
             </div>
-            <div className="visuals">
-              <div
-                style={{ color: `${project.content.headerIconColor}` }}
-                class="proj-section-header"
-              >
-                <Icon iconName={project.content.visualsIcon} />
-                <label style={{ color: `${project.fontColor}` }}>
-                  {project.content.visualsHeader}
-                </label>
+            {project?.content.visuals.length > 0 && (
+              <div className="visuals">
+                <div
+                  style={{ color: `${project.content.headerIconColor}` }}
+                  class="proj-section-header"
+                >
+                  <Icon iconName={project.content.visualsIcon} />
+                  <label style={{ color: `${project.fontColor}` }}>
+                    {project.content.visualsHeader}
+                  </label>
+                </div>
+                <sl-carousel
+                  slides-per-move="1"
+                  slides-per-page={screenshotNumber}
+                  navigation
+                  loop
+                >
+                  <span
+                    style={{ color: `${project.fontColor}` }}
+                    slot="previous-icon"
+                  >
+                    <TbIcon.TbSquareRoundedArrowLeftFilled />
+                  </span>
+                  {(!darkMode ||
+                    (darkMode && !project.content.visualsHaveDarkAssets)) &&
+                    project.content.visuals.map((item, index) => {
+                      return (
+                        <sl-carousel-item>
+                          <img src={item} key={index} />
+                        </sl-carousel-item>
+                      );
+                    })}
+                  {darkMode &&
+                    project.content.visualsHaveDarkAssets &&
+                    project.content?.darkVisuals?.map((item, index) => {
+                      return (
+                        <sl-carousel-item>
+                          <img src={item} key={index} />
+                        </sl-carousel-item>
+                      );
+                    })}
+                  <span
+                    style={{ color: `${project.fontColor}` }}
+                    slot="next-icon"
+                  >
+                    <TbIcon.TbSquareRoundedArrowRightFilled />
+                  </span>
+                </sl-carousel>
               </div>
-              <sl-carousel
-                slides-per-move="1"
-                slides-per-page={screenshotNumber}
-                navigation
-                loop
-              >
-                <span
-                  style={{ color: `${project.fontColor}` }}
-                  slot="previous-icon"
-                >
-                  <TbIcon.TbSquareRoundedArrowLeftFilled />
-                </span>
-                {(!darkMode ||
-                  (darkMode && !project.content.visualsHaveDarkAssets)) &&
-                  project.content.visuals.map((item, index) => {
-                    return (
-                      <sl-carousel-item>
-                        <img src={item} key={index} />
-                      </sl-carousel-item>
-                    );
-                  })}
-                {darkMode &&
-                  project.content.visualsHaveDarkAssets &&
-                  project.content?.darkVisuals?.map((item, index) => {
-                    return (
-                      <sl-carousel-item>
-                        <img src={item} key={index} />
-                      </sl-carousel-item>
-                    );
-                  })}
-                <span
-                  style={{ color: `${project.fontColor}` }}
-                  slot="next-icon"
-                >
-                  <TbIcon.TbSquareRoundedArrowRightFilled />
-                </span>
-              </sl-carousel>
-            </div>
+            )}
           </section>
         </div>
       )}
