@@ -37,6 +37,14 @@
             "descriptionHeader": "what's The Blocks?",
             "descriptionIcon": "TbFolderFilled",
             "description": "The Blocks is a forward-thinking financial development and educational company dedicated to simplifying and enhancing an individual's financial journey. Our mission is to provide a suite of easy-to-use tools and resources that seamlessly adapt to every step of your financial life. <br /><br />From budgeting and saving to investing and retirement planning, The Blocks offers a comprehensive portfolio of software products focused around simple design. We believe in building solid financial foundations, and this user-centric approach ensures that our products not only meet but exceed the diverse needs of our users. With a commitment to simplicity, accessibility, and continuous improvement, I invite you to explore The Blocks and let us help you build a stronger financial future.",
+            "hasLinks": true,
+            "linksHeader": "see it live",
+            "linksIcon": "6FaLink",
+            "links": [
+                { "title": "Visit The Blocks", "url": "https://theblocks.finance"},
+                { "title": "Explore Our 'Why'", "url": "https://theblocks.finance/about"}
+                
+            ],
             "visualsHeader": "screenshots",
             "visualsIcon": "TbBorderCorners",
             "visualsHaveDarkAssets": false,
@@ -89,6 +97,12 @@
             "descriptionIcon": "TbFolderFilled",
             "descriptionFontWeight": "400",
             "description": "Shoebox provides a comprehensive toolset that simplifies the management of HSA expenses. Users can easily capture and upload receipts, categorize expenses, and track their HSA balance within the app. It offers a user-friendly interface and a range of features to facilitate expense organization and analysis. <br /> <br />Shoebox represents a valuable tool for individuals seeking to make the most of their HSA accounts while maintaining a well-organized and streamlined approach to managing their healthcare-related expenses.",
+            "hasLinks": true,
+            "linksHeader": "see it live",
+            "linksIcon": "6FaLink",
+            "links": [
+                { "title": "Get In Line", "url": "https://shoebox.finance/#notify-me"}                
+            ],
             "visualsHeader": "screenshots",
             "visualsIcon": "TbBorderCorners",
             "visualsHaveDarkAssets": true,
@@ -269,7 +283,15 @@
             ],
             "descriptionHeader": "app description",
             "descriptionIcon": "TbAppWindowFilled",
-            "description": "Whether you're planning for savings, investments, or loans, this calculator offers a seamless experience for determining the future value of your financial assets and gaining an understanding of the power of compound interest. With a minimalist and clean design, users can input a principal amount, additional contributions by the year or month, rate of annual gain, and a number of years to the calculation to visualize the growth of their investments over time. <br /> <br />Available as an iOS app or on the web, this calculator offers a convenient and efficient solution for anyone seeking to understand and optimize the power of compound interest in their financial planning. <br /> <br />Compound is the first app developed by The Blocks and embodies what the company hopes to achieve in bringing a design-forward vision to the world of finance.",
+            "description": "While you’re mapping out your savings, investments, or loans, this calculator smoothly guides you in discovering the future worth of your financial assets and comprehending the impact of compounding growth. With a minimalist and clean design, users can input a principal amount, additional contributions by the year or month, rate of annual gain, and a number of years to the calculation to visualize the growth of their dollars over time. <br /> <br />Available as an iOS app or on the web, this calculator offers convenient utility for anyone trying to explore and understand the power of compound interest. Compound is the first app developed by The Blocks and embodies what the company hopes to achieve in bringing a design-forward vision to the world of finance.",
+            "hasLinks": true,
+            "linksHeader": "see it live",
+            "linksIcon": "6FaLink",
+            "links": [
+                { "title": "Open on Web", "url": "https://theblocks.finance/compound"},
+                { "title": "Download for iOS", "url": "https://apps.apple.com/us/app/compound-by-the-blocks/id6445939061"}
+                
+            ],
             "visualsHeader": "screenshots",
             "visualsIcon": "TbBorderCorners",
             "visualsHaveDarkAssets": false,

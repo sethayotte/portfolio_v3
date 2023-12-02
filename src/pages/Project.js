@@ -310,6 +310,37 @@ const Project = ({ darkMode }) => {
                 }}
               ></div>
             </div>
+            {project?.content.hasLinks && (
+              <div className="links">
+                <div
+                  style={{ color: `${project.content.headerIconColor}` }}
+                  class="proj-section-header"
+                >
+                  <Icon iconName={project.content.linksIcon} />
+                  <label style={{ color: `${project.fontColor}` }}>
+                    {project.content.linksHeader}
+                  </label>
+                </div>
+                <div className="link-tiles">
+                  {project.content.links.map((link, index) => {
+                    return (
+                      <a
+                        key={index}
+                        href={link.url}
+                        target="_blank"
+                        style={{
+                          color: `${project.fontColor}`,
+                          backgroundColor: `${project.content.tileColor}`,
+                        }}
+                      >
+                        {link.title}
+                        <Icon iconName="TbExternalLink" />
+                      </a>
+                    );
+                  })}
+                </div>
+              </div>
+            )}
             {project?.content.visuals.length > 0 && (
               <div className="visuals">
                 <div
