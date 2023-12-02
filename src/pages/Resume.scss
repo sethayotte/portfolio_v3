@@ -107,18 +107,18 @@
 
             @keyframes intro-animation {
                 0% {opacity: 1; content: "designer.";}
-                20% {opacity: 1; filter: blur(0px); content: "designer.";}
-                23% {opacity: 0; filter: blur(12px); content: "designer.";}
-                26% {opacity: 0; filter: blur(12px); content: "developer.";}
-                29% {opacity: 1; filter: blur(0px); content: "developer.";}
-                50% {opacity: 1; filter: blur(0px); content: "developer.";}
-                53% {opacity: 0; filter: blur(12px); content: "developer.";}
-                56% {opacity: 0; filter: blur(12px); content: "traveler.";}
-                59% {opacity: 1; filter: blur(0px); content: "traveler.";}
-                86% {opacity: 1; filter: blur(0px); content: "traveler.";}
-                89% {opacity: 0; filter: blur(12px); content: "traveler.";}
-                93% {opacity: 0; filter: blur(12px); content: "designer.";}
-                96% {opacity: 1; filter: blur(0px); content: "designer.";}
+                20% {opacity: 1; will-change: filter; filter: blur(0px); content: "designer.";}
+                23% {opacity: 0; will-change: filter; filter: blur(12px); content: "designer.";}
+                26% {opacity: 0; will-change: filter; filter: blur(12px); content: "developer.";}
+                29% {opacity: 1; will-change: filter; filter: blur(0px); content: "developer.";}
+                50% {opacity: 1; will-change: filter; filter: blur(0px); content: "developer.";}
+                53% {opacity: 0; will-change: filter; filter: blur(12px); content: "developer.";}
+                56% {opacity: 0; will-change: filter; filter: blur(12px); content: "traveler.";}
+                59% {opacity: 1; will-change: filter; filter: blur(0px); content: "traveler.";}
+                86% {opacity: 1; will-change: filter; filter: blur(0px); content: "traveler.";}
+                89% {opacity: 0; will-change: filter; filter: blur(12px); content: "traveler.";}
+                93% {opacity: 0; will-change: filter; filter: blur(12px); content: "designer.";}
+                96% {opacity: 1; will-change: filter; filter: blur(0px); content: "designer.";}
             }
         }
     }
