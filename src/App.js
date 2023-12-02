@@ -23,8 +23,8 @@ const App = () => {
     setDarkMode(true);
     localStorage.setItem("theme", "dark");
     document.documentElement.setAttribute("data-theme", "dark");
-    var metaThemeColor = document.querySelector("meta[name=theme-color]");
-    metaThemeColor.setAttribute("content", darkMode ? "#131313" : "#ffffff");
+    let metaThemeColor = document.querySelector("meta[name=theme-color]");
+    metaThemeColor.setAttribute("content", "#131313");
     if (
       document
         .getElementById("portfolio-index")
@@ -41,8 +41,8 @@ const App = () => {
     setDarkMode(false);
     localStorage.setItem("theme", "light");
     document.documentElement.setAttribute("data-theme", "light");
-    var metaThemeColor = document.querySelector("meta[name=theme-color]");
-    metaThemeColor.setAttribute("content", darkMode ? "#131313" : "#ffffff");
+    let metaThemeColor = document.querySelector("meta[name=theme-color]");
+    metaThemeColor.setAttribute("content", "#ffffff");
     if (
       document
         .getElementById("portfolio-index")
