@@ -321,43 +321,61 @@ const Project = ({ darkMode }) => {
                     {project.content.visualsHeader}
                   </label>
                 </div>
-                <sl-carousel
-                  slides-per-move="1"
-                  slides-per-page={screenshotNumber}
-                  navigation
-                  loop
-                >
-                  <span
-                    style={{ color: `${project.fontColor}` }}
-                    slot="previous-icon"
-                  >
-                    <TbIcon.TbSquareRoundedArrowLeftFilled />
-                  </span>
-                  {(!darkMode ||
-                    (darkMode && !project.content.visualsHaveDarkAssets)) &&
-                    project.content.visuals.map((item, index) => {
+                {project.content.notMobileVisuals ? (
+                  <div>
+                    {project.content.visuals.map((item, index) => {
                       return (
-                        <sl-carousel-item>
-                          <img src={item} key={index} />
-                        </sl-carousel-item>
+                        <img
+                          className={
+                            index === 0
+                              ? "not-mobile-screenshot phone"
+                              : "not-mobile-screenshot"
+                          }
+                          src={item}
+                          key={index}
+                        />
                       );
                     })}
-                  {darkMode &&
-                    project.content.visualsHaveDarkAssets &&
-                    project.content?.darkVisuals?.map((item, index) => {
-                      return (
-                        <sl-carousel-item>
-                          <img src={item} key={index} />
-                        </sl-carousel-item>
-                      );
-                    })}
-                  <span
-                    style={{ color: `${project.fontColor}` }}
-                    slot="next-icon"
+                  </div>
+                ) : (
+                  <sl-carousel
+                    slides-per-move="1"
+                    slides-per-page={screenshotNumber}
+                    navigation
+                    loop
                   >
-                    <TbIcon.TbSquareRoundedArrowRightFilled />
-                  </span>
-                </sl-carousel>
+                    <span
+                      style={{ color: `${project.fontColor}` }}
+                      slot="previous-icon"
+                    >
+                      <TbIcon.TbSquareRoundedArrowLeftFilled />
+                    </span>
+                    {(!darkMode ||
+                      (darkMode && !project.content.visualsHaveDarkAssets)) &&
+                      project.content.visuals.map((item, index) => {
+                        return (
+                          <sl-carousel-item>
+                            <img src={item} key={index} />
+                          </sl-carousel-item>
+                        );
+                      })}
+                    {darkMode &&
+                      project.content.visualsHaveDarkAssets &&
+                      project.content?.darkVisuals?.map((item, index) => {
+                        return (
+                          <sl-carousel-item>
+                            <img src={item} key={index} />
+                          </sl-carousel-item>
+                        );
+                      })}
+                    <span
+                      style={{ color: `${project.fontColor}` }}
+                      slot="next-icon"
+                    >
+                      <TbIcon.TbSquareRoundedArrowRightFilled />
+                    </span>
+                  </sl-carousel>
+                )}
               </div>
             )}
           </section>

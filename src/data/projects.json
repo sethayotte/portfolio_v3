@@ -134,7 +134,7 @@
             "slug": "year-end-review",
             "tagline": "An annual look at your <br /> financial progress... <br />Coming soon.",
             "tileColor": "var(--review-tile-tile)",
-            "headerIconColor": "LOREM",
+            "headerIconColor": "var(--review-text)",
             "highlightsHeader": "a sneak peek",
             "highlightsItems": [
                 {
@@ -155,8 +155,8 @@
                 }
             ],
             "descriptionHeader": "product introduction",
-            "descriptionIcon": "LOREM",
-            "description": "LOREM",
+            "descriptionIcon": "TbCardsFilled",
+            "description": "Year End Review allows individuals and families to effortlessly compile and analyze their year-end net worth, income, costs, windfalls, and surprise expenses. Currently in development, this tool aims to streamline the creation of comprehensive financial summaries, providing users with valuable insights into their financial progress over the year.  <br /><br />With what went well, with what could have been done better; taking a step back to look at the big picture of a year’s worth of growth, we help you find patterns and ways to keep moving forward.",
             "visualsHeader": "LOREM",
             "visualsIcon": "LOREM",
             "visuals": [],
@@ -244,9 +244,6 @@
         "weight": "800",
         "content": {
             "tags": [{"title": "Capacitor", "icon": "SiCapacitor"}, {"title": "Progressive Web App", "icon": "SiPwa"}, {"title": "React", "icon": "TbBrandReact"}, {"title": "Netlify", "icon": "SiNetlify"}, {"title": "SCSS", "icon": "TbBrandSass"}, {"title": "Figma", "icon": "TbBrandFigma"}],
-            "technologies": "LOREM",
-            "role": "LOREM",
-            "status": "LOREM",
             "slug": "compound",
             "tagline": "A simple start; <br /> focused on the power of compound interest.",
             "tileColor": "var(--compound-tile-tile)",
@@ -272,14 +269,16 @@
             ],
             "descriptionHeader": "app description",
             "descriptionIcon": "TbAppWindowFilled",
-            "description": "LOREM",
-            "visualsHeader": "LOREM",
-            "visualsIcon": "LOREM",
+            "description": "Whether you're planning for savings, investments, or loans, this calculator offers a seamless experience for determining the future value of your financial assets and gaining an understanding of the power of compound interest. With a minimalist and clean design, users can input a principal amount, additional contributions by the year or month, rate of annual gain, and a number of years to the calculation to visualize the growth of their investments over time. <br /> <br />Available as an iOS app or on the web, this calculator offers a convenient and efficient solution for anyone seeking to understand and optimize the power of compound interest in their financial planning. <br /> <br />Compound is the first app developed by The Blocks and embodies what the company hopes to achieve in bringing a design-forward vision to the world of finance.",
+            "visualsHeader": "screenshots",
+            "visualsIcon": "TbBorderCorners",
+            "visualsHaveDarkAssets": false,
             "visuals": [
-                "https://",
-                "https://",
-                "https://",
-                "https://"
+                "../assets/project-visuals/compound/Compound_Landing.webp",
+                "../assets/project-visuals/compound/Compound_Monthly_Calc.webp",
+                "../assets/project-visuals/compound/Compound_Stat_View.webp",
+                "../assets/project-visuals/compound/Compound_Clipboard_Copy.webp",
+                "../assets/project-visuals/compound/Compound_Yearly_Calc.webp"
             ],
             "hasRoadmap": false
         }
@@ -302,36 +301,40 @@
             "slug": "everyday-portfolio",
             "tagline": "A custom-designed <br /> financial utility.",
             "tileColor": "var(--everyday-portfolio-tile-tile)",
-            "headerIconColor": "LOREM",
+            "headerIconColor": "var(--text-color-inverted)",
             "highlightsHeader": "project features",
             "highlightsItems": [
                 {
-                    "icon": "LOREM",
-                    "label": "LOREM"
+                    "icon": "FaBirthdayCake",
+                    "label": "the start of my financial software journey"
                 },
                 {
-                    "icon": "LOREM",
-                    "label": "LOREM"
+                    "icon": "TbEraser",
+                    "label": "experimental and a learning experience"
                 },
                 {
-                    "icon": "LOREM",
-                    "label": "LOREM"
+                    "icon": "TbApi",
+                    "label": "Finnhub api for stock & index data"
                 },
                 {
-                    "icon": "LOREM",
-                    "label": "LOREM"
+                    "icon": "FaAppStoreIos",
+                    "label": "fully mobile focus, built with react native"
                 }
             ],
-            "descriptionHeader": "LOREM",
-            "descriptionIcon": "LOREM",
-            "description": "LOREM",
-            "visualsHeader": "LOREM",
-            "visualsIcon": "LOREM",
+            "descriptionHeader": "where it began",
+            "descriptionIcon": "FaMapPin",
+            "description": "Everyday Portfolio boasted a clean design, exclusively in dark mode 😎. Its minimalist interface prioritized simplicity and ease of use, allowing users to effortlessly engage with their financial movement day to day. <br /> <br />This project played a crucial role in shaping the foundational principles of my subsequent financial tools and projects, particularly those integrated into The Blocks. The lessons learned, foundational javascript development, and experiences gained during its development continue to influence my commitment to providing intuitive and effective financial software tools.",
+            "visualsHeader": "screenshots",
+            "visualsIcon": "TbBorderCorners",
+            "visualsHaveDarkAssets": false,
             "visuals": [
-                "https://",
-                "https://",
-                "https://",
-                "https://"
+                "../assets/project-visuals/everyday-portfolio/sign-up.webp",
+                "../assets/project-visuals/everyday-portfolio/create-account.webp",
+                "../assets/project-visuals/everyday-portfolio/sign-up-success.webp",
+                "../assets/project-visuals/everyday-portfolio/dashboard-view.webp",
+                "../assets/project-visuals/everyday-portfolio/portfolio-landing.webp",
+                "../assets/project-visuals/everyday-portfolio/portfolio-landing-expanded-item.webp",
+                "../assets/project-visuals/everyday-portfolio/profile-view.webp"
             ],
             "hasRoadmap": true,
             "roadmapHeader": "LOREM",
@@ -370,45 +373,33 @@
             "highlightsHeader": "project highlights",
             "highlightsItems": [
                 {
-                    "icon": "LOREM",
-                    "label": "LOREM"
+                    "icon": "6FaVirusCovid",
+                    "label": "born out of necessity during the pandemic"
                 },
                 {
-                    "icon": "LOREM",
-                    "label": "LOREM"
+                    "icon": "6FaArrowsDownToPeople",
+                    "label": "talent selection platform"
                 },
                 {
-                    "icon": "LOREM",
-                    "label": "LOREM"
+                    "icon": "TbCode",
+                    "label": "my introduction to development"
                 },
                 {
-                    "icon": "LOREM",
-                    "label": "LOREM"
+                    "icon": "6FaPeopleGroup",
+                    "label": "group collaboration and startup exposure"
                 }
             ],
             "descriptionHeader": "the story of Sprout",
             "descriptionIcon": "TbNotebook",
             "description": "<p>When COVID began to make an impact in the United States in early March, stores and restaurants closed with uncertainty of when things would return to normal. At that time, we could never have imagined how the rest of the year would turn out.</p> <p>However, a small team of project management, talent & recruitment specialists came together to try to come up with a solution to help. Sprout would ultimately be a platform that allowed restaurant talent to be easily found and hired to take the search and interview burden off of local restaurants that already had their hands full.</p> <p>While the platform never came to fruition due to the waves of rising COVID cases throughout the year, this project provided an important problem to solve and allowed me to explore how code could make a positive impact.</p> <h4>Cultivating my development interest.</h4> <p>Joining this team, I only came in with my graphic design knowledge. Digging into the problem with the other members, features and functionality began to take shape. This was an exciting design problem that required an easy-to-use, approachable interface. Once the initial mockups were finished, we had an MVP framework to work from.</p> <p>Myself, the novice “front-end” developer, and a working back-end professional began working through the rough structure of the platform. Having not written a line of react before, I began working through tutorials and creating sample elements through CodePen. Largely HTML and CSS, these elements would ultimately be converted to JSX and implemented in their respective react components. While these examples are elementary, they are representative of the project that began my interest in development.</p> <p>A tough problem to solve that required me to learn on the fly and create something meaningful starting from nothing was an exciting opportunity.</p> <h4>A turning point for design & code.</h4> <p>This project was also the moment in which I discovered how my design skillset could complement and be very useful in my journey into software development. It all clicked and from this point forward. As my technical ability grew, each project I’ve worked on has also poised tough interface design problems.</p> <p>This work that I generated for this project is not technically complex, but what it represents for the rest of my growth in 2020, it’s absolutely worth noting.</p>",
-            "visualsHeader": "LOREM",
-            "visualsIcon": "LOREM",
+            "visualsHeader": "product screenshots",
+            "visualsIcon": "TbBorderCorners",
+            "visualsHaveDarkAssets": false,
+            "notMobileVisuals": true,
             "visuals": [
-                "https://",
-                "https://",
-                "https://",
-                "https://"
-            ],
-            "hasRoadmap": true,
-            "roadmapHeader": "LOREM",
-            "roadmapIcon": "LOREM",
-            "roadmap": [
-                {
-                    "icon": "LOREM",
-                    "description": "LOREM"
-                },
-                {
-                    "icon": "LOREM",
-                    "description": "LOREM"
-                }
+                "../assets/project-visuals/sprout/sprout_mobile.webp",
+                "../assets/project-visuals/sprout/sprout_tablet.webp",
+                "../assets/project-visuals/sprout/sprout_tablet2.webp"
             ]
         }
     },
@@ -430,36 +421,38 @@
             "slug": "run-away",
             "tagline": "Ready to get <br /> out of town?",
             "tileColor": "var(--run-away-tile-tile)",
-            "headerIconColor": "LOREM",
-            "highlightsHeader": "LOREM",
+            "headerIconColor": "var(--run-away-text)",
+            "highlightsHeader": "project highlights",
             "highlightsItems": [
                 {
-                    "icon": "LOREM",
-                    "label": "LOREM"
+                    "icon": "FaDiceFive",
+                    "label": "random date generation"
+                },
+                
+                {
+                    "icon": "HiTicket",
+                    "label": "ticket-based UI"
                 },
                 {
-                    "icon": "LOREM",
-                    "label": "LOREM"
+                    "icon": "FaPeopleCarry",
+                    "label": "collaborative project"
                 },
                 {
-                    "icon": "LOREM",
-                    "label": "LOREM"
-                },
-                {
-                    "icon": "LOREM",
-                    "label": "LOREM"
+                    "icon": "6FaPlaneDeparture",
+                    "label": "skyscanner data ingestion"
                 }
             ],
-            "descriptionHeader": "LOREM",
-            "descriptionIcon": "LOREM",
-            "description": "LOREM",
-            "visualsHeader": "LOREM",
-            "visualsIcon": "LOREM",
+            "descriptionHeader": "app description",
+            "descriptionIcon": "TbAppWindowFilled",
+            "description": "Run Away is a past project that demonstrates my expertise in integrating APIs and designing engaging user interfaces. This project utilized a SkyScanner flight data API and a randomized date algorithm to provide users with a fun and unique way to explore new travel destinations. <br /> <br />By entering a departure point, users were presented with a 'ticket-ui' that displayed the basic details of a randomly selected flight to a destination. Clicking on the 'Book Now' button would direct users to Google Flights to explore additional time and date options. Although this project is no longer active, it serves as an example of my ability to create compelling digital experiences.",
+            "visualsHeader": "screenshots",
+            "visualsIcon": "TbBorderCorners",
+            "visualsHaveDarkAssets": false,
             "visuals": [
-                "https://",
-                "https://",
-                "https://",
-                "https://"
+                "../assets/project-visuals/run-away/splash.webp",
+                "../assets/project-visuals/run-away/search-input.webp",
+                "../assets/project-visuals/run-away/search-result.webp",
+                "../assets/project-visuals/run-away/ticket-ui.webp"
             ],
             "hasRoadmap": true,
             "roadmapHeader": "LOREM",

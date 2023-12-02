@@ -38,10 +38,12 @@
 
             @keyframes blur-in-not-found {
                 0% {
+                    will-change: filter;
                     filter: blur(10px);
                     transform: translateY(20px);
                 }
                 100% {
+                    will-change: filter;
                     filter: blur(0px);
                     transform: translateX(0px);
                 }
@@ -85,11 +87,13 @@
             @keyframes fade-in-proj-card {
                 0% {
                     opacity: 0;
+                    will-change: filter;
                     filter: blur(10px);
                     transform: translateY(200px);
                 }
                 100% {
                     opacity: 1;
+                    will-change: filter;
                     filter: blur(0px);
                     transform: translateX(0px);
                 }
@@ -145,11 +149,13 @@
                 @keyframes fade-in-tags {
                     0% {
                         transform: translateX(15px);
+                        will-change: filter;
                         filter: blur(5px);
                         opacity: 0;
                     }
                     100% {
                         transform: translateX(0);
+                        will-change: filter;
                         filter: blur(0px);
                         opacity: 1;
                     }
@@ -273,10 +279,12 @@
         .project-header {
 
             .project-chips {
+                will-change: backdrop-filter;
                 backdrop-filter: blur(0px);
                 transition: backdrop-filter 0.3s ease;
 
                 &.expanded {
+                    will-change: backdrop-filter;
                     backdrop-filter: blur(5px);
                 }
             }
@@ -299,6 +307,7 @@
             }
 
             .project-chips {
+                will-change: backdrop-filter;
                 backdrop-filter: blur(0px);
                 transition: backdrop-filter 0.3s ease;
                 padding: 0;
@@ -307,6 +316,7 @@
                 top: 0;
 
                 &.expanded {
+                    will-change: backdrop-filter;
                     backdrop-filter: blur(0px);
                 }
 
@@ -415,13 +425,43 @@
                 }
             }
         }
+
+        @media only screen and (max-width: 740px) {
+            .highlight-tiles {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                column-gap: 25px;
+                row-gap: 25px;
+                max-width: 290px;
+    
+                .highlight-tile {
+                  justify-self: center;
+                }
+            }
+        }
+
+        @media only screen and (max-width: 375px) {
+            .highlight-tiles {
+                display: grid;
+                grid-template-columns: 1fr;
+                row-gap: 15px;
+                max-width: unset;
+    
+                .highlight-tile {
+                  width: 100%;
+                  font-size: 12pt;
+                }
+            }
+        }
     }
 
-    #compound, #year-end-review, #sprout {
+    #compound, #sprout, #year-end-review {
         .project-hero-items {
     
             .tagline {
-                font-size: 38pt;
+                max-width: 750px;
+                margin: auto;
+                font-size: 44pt;
             }
         }
     }
@@ -448,6 +488,15 @@
         
                 .tagline {
                     font-size: 7vw;
+                }
+            }
+        }
+
+        #sprout {
+            .project-hero-items {
+        
+                .tagline {
+                    font-size: 6vw;
                 }
             }
         }
@@ -497,7 +546,23 @@
 
             h4 {
                 margin-bottom: 10px;
-                font-weight: 600;
+                font-weight: 500;
+                font-style: italic;
+                font-size: 16pt;
+            }
+        }
+
+        @media only screen and (max-width: 740px) {
+            .description {
+                font-size: 14pt;
+                text-align: justify;
+
+                p {
+                    margin-bottom: 15px;
+                    margin-top: 0;
+                    font-size: 14pt;
+                    text-align: justify;
+                }
             }
         }
 
@@ -527,6 +592,46 @@
                 object-fit: cover;
             }
 
+            .not-mobile-screenshot {
+                border: none;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin: auto;
+                min-height: unset;
+                height: unset;
+                width: 120%;
+                max-width: 800px;
+                padding-left: 55px;
+
+                &.phone {
+                    max-width: 500px;
+                    padding: 0;
+                    margin-bottom: 50px;
+                }
+            }
+
+            @media only screen and (max-width: 950px) {
+                .not-mobile-screenshot {
+                    padding-left: 0px;
+    
+                    &.phone {
+                        width: 100%;
+                    }
+                }
+            }
+
+            @media only screen and (max-width: 800px) {
+                .not-mobile-screenshot {
+                    margin-left: -15px;
+    
+                    &.phone {
+                        margin: auto;
+                        margin-bottom: 50px;
+                    }
+                }
+            }
+
             sl-carousel::part(navigation-button--previous) {
                 font-size: 24pt;
                 padding: 0;
@@ -537,6 +642,48 @@
                 font-size: 24pt;
                 padding: 0;
                 padding-left: 8px;
+            }
+        }
+
+        @media only screen and (max-width: 400px) {
+            .visuals {
+
+                sl-carousel {
+                    margin-left: -10px;
+                    margin-right: -10px;
+                }
+
+                sl-carousel::part(base) {
+                    gap: unset;
+                    height: 425px;
+                }
+    
+                sl-carousel-item {
+                    height: 425px;
+                    
+                }
+    
+                img {
+                    border: 2px solid var(--background-color);
+                    border-radius: 25px;
+                    height: 100%;
+                    min-height: 100%;
+                    width: auto;
+                    max-width: 400px;
+                    object-fit: cover;
+                }
+    
+                sl-carousel::part(navigation-button--previous) {
+                    font-size: 18pt;
+                    padding: 0;
+                    padding-right: 3px;
+                }
+    
+                sl-carousel::part(navigation-button--next) {
+                    font-size: 18pt;
+                    padding: 0;
+                    padding-left: 0px;
+                }
             }
         }
     }
