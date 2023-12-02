@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { IoIosMenu } from "react-icons/io";
 import { IoCloseOutline } from "react-icons/io5";
 import { BsFillMoonFill, BsFillSunFill } from "react-icons/bs";
@@ -7,6 +7,7 @@ import Switch from "react-switch";
 
 const Header = ({ darkMode, handleDarkModeToggle }) => {
   const location = useLocation();
+  const navigate = useNavigate();
 
   const [expandedMenu, setExpandedMenu] = useState(false);
   const [isDesktop, setIsDesktop] = useState(false);
@@ -29,15 +30,23 @@ const Header = ({ darkMode, handleDarkModeToggle }) => {
     updateWidth();
   }, []);
 
+  const scrollHandler = () => {
+    if (location.pathname === "/") {
+      window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+    } else {
+      navigate("/");
+    }
+  };
+
   return (
     <header
       id="app-header"
       className={isDesktop || !expandedMenu ? "header" : "header expanded"}
     >
       <div className="header-content">
-        <Link to="/">
+        <a onClick={() => scrollHandler()}>
           <h1>Seth Mitchell</h1>
-        </Link>
+        </a>
         <section className={expandedMenu ? "nav close" : "nav"}>
           {isDesktop ? null : (
             <div className="mobile-menu-toggle">

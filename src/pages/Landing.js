@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { IoIosArrowRoundDown } from "react-icons/io";
 import { BsPlusCircleFill } from "react-icons/bs";
 import HomeData from "../data/home.json";
 import ProjectData from "../data/projects.json";
 
 const Landing = ({ darkMode, isMobileSafari }) => {
+  const navigate = useNavigate();
+
   const [isDesktop, setIsDesktop] = useState(false);
 
   const updateWidth = () => {
@@ -496,10 +498,35 @@ const Landing = ({ darkMode, isMobileSafari }) => {
         );
       })}
       <section className="landing-project-tiles">
-        <h2>Select a tile to explore a project:</h2>
-        {/* {rowDividedData.map((row, index) => {
-          return <RenderTileRow row={row} index={index} key={index} />;
-        })} */}
+        <h2 className="landing-project-help-text">
+          Select a tile to explore a project:
+        </h2>
+        <div className="tiles-container">
+          {ProjectData.map((project, index) => {
+            return (
+              <div
+                className="landing-page-project-card"
+                key={index}
+                style={{
+                  backgroundColor: project.color,
+                  color: project.fontColor,
+                }}
+                onClick={() => navigate(`/work/${project.slug}`)}
+              >
+                <img src={darkMode ? project.logoDark : project.logoLight} />
+                <h2
+                  style={{
+                    fontFamily: project.font,
+                    fontWeight: project.weight,
+                    color: project.fontColor,
+                  }}
+                >
+                  {project.title}
+                </h2>
+              </div>
+            );
+          })}
+        </div>
       </section>
     </section>
   );

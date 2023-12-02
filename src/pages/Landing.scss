@@ -321,224 +321,50 @@
     }
 }
 
-sl-drawer::part(panel) {
-    border-top-right-radius: 30px;
-    border-top-left-radius: 30px;
-    width: calc(100% - 50px);
-    background-color: var(--tile-popup-color);
-    padding: 25px 15px;
-    margin-left: 25px;
-    --size: 90%;
-    --sl-shadow-x-small: 0 1px 2px #0000004e;
-    --sl-shadow-small: 0 1px 2px #0000004e;
-    --sl-shadow-medium: 0 2px 4px #0000004e;
-    --sl-shadow-large: 0 2px 8px #0000004e;
-    --sl-shadow-x-large: 0 4px 16px #0000004e;
-}
+.landing-project-tiles {
+    margin-bottom: 50px;
 
-sl-drawer::part(label) {
-    display: flex;
-    align-items: center;
-}
-
-sl-drawer::part(header) {
-    margin-bottom: 15px;
-}
-
-sl-drawer::part(title) {
-    padding-top: 0;
-    padding-bottom: 0;
-}
-
-sl-drawer::part(close-button) {
-    display: none;
-}
-
-sl-dialog::part(panel) {
-    border-radius: 30px;
-    width: calc(100% - 30px);
-    background-color: var(--tile-popup-color);
-    padding: 25px 15px;
-    height: 70dvh;
-    --size: 90%;
-    --sl-shadow-x-small: 0 1px 2px #0000004e;
-    --sl-shadow-small: 0 1px 2px #0000004e;
-    --sl-shadow-medium: 0 2px 4px #0000004e;
-    --sl-shadow-large: 0 2px 8px #0000004e;
-    --sl-shadow-x-large: 0 4px 16px #0000004e;
-}
-
-sl-dialog::part(label) {
-    display: flex;
-    align-items: center;
-}
-
-sl-dialog::part(header) {
-    margin-bottom: 15px;
-}
-
-sl-dialog::part(title) {
-    padding-top: 0;
-    padding-bottom: 0;
-}
-
-sl-dialog::part(close-button) {
-    display: none;
-}
-
-sl-dialog {
-    color: var(--text-color-main);
-
-    h2 {
-        display: flex;
-        align-items: center;
-        font-size: 24pt;
-        margin: 0;
+    .landing-project-help-text {
+        margin-bottom: 50px;
     }
-    img {
-        height: 50px;
-        margin-right: 10px;
-
-    }
-
-    .close-btn {
-        display: flex;
-        align-items: center;
-        font-size: 28pt;
-        transform: rotate(45deg);
-        cursor: pointer;
-    }
-}
-
-.project-grid-row {
-    position: relative;
-    display: grid;
-    align-items: center;
-    // column-gap: 25px;
-    margin-bottom: 25px;
-    width: calc(100% - 25px);
-    max-height: 95%;
-    transition: all 0.5s ease;
-
-    sl-drawer {
-        color: var(--text-color-main);
-
-        h2 {
-            display: flex;
-            align-items: center;
-            font-size: 24pt;
-            margin: 0;
-        }
-        img {
-            height: 50px;
-            margin-right: 10px;
-
-        }
     
-        .close-btn {
-            display: flex;
-            align-items: center;
-            font-size: 28pt;
-            transform: rotate(45deg);
-            cursor: pointer;
-        }
+    .tiles-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+        column-gap: 25px;
+        row-gap: 25px;
+        width: 100%;
     }
 
-    .project-landing-tile {
-        position: relative;
-        height: 100%;
+    .landing-page-project-card {
+        border-radius: 30px;
+        height: 300px;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        border-radius: 25px;
-        text-align: center;
-        padding: 0 25px;
+        padding: 15px;
+        cursor: pointer;
+        transform: scale(1);
+        transition: transform 0.4s ease; 
 
         img {
-            height: 120px;
+            height: 75px;
         }
 
-        h2 {
-            font-size: 34pt;
-            margin: 0;
-        }
-
-        .project-info-toggle {
-            font-size: 28pt;
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            padding: 25px;
-            cursor: pointer;
-        }
-    }
-
-    .project-landing-tile:first-of-type {
-        margin-right: 25px;
-    }
-
-    #sprout {
-        img {
-            width: 90%;
-            max-width: 170px;
-        }
-    }
-
-    #run-away {
-        h2 {
-            font-style: italic;
-        }
-    }
-
-    #run-away, #compound, #everyday-portfolio, #year-end-review, #shoebox {
-        img {
-            height: 100px;
-        }
-    }
-
-    #compound, #year-end-review, #shoebox {
-        img {
-            margin-bottom: 10px;
+        body.hasHover &:hover {
+            transform: scale(1.04);
         }
     }
 }
 
 @media only screen and (max-width: 740px) {
-    .project-grid-row {
-        grid-template-columns: 100% !important;
-        height: fit-content !important;
-        row-gap: 25px;
-        width: 100%;
+    .landing-project-tiles {
 
-        .project-landing-tile {
-            height: 350px;
-
-            h2 {
-                font-size: 28pt;
-            }
-
-            img {
-                height: 100px;
-            }
+        .landing-project-help-text {
+            margin-bottom: 35px;
+            font-size: min(9vw, 32pt);
+            line-height:normal;
         }
-
-        .project-landing-tile:first-of-type {
-            margin-right: 0;
-        }
-
-        #run-away, #compound, #everyday-portfolio, #year-end-review, #shoebox {
-            img {
-                height: 85px;
-            }
-        }
-    }
-}
-
-@media only screen and (max-width: 500px) {
-    .project-grid-row {
-        row-gap: 15px;
-        margin-bottom: 15px;
-
     }
 }
