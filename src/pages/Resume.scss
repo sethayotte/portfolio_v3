@@ -134,6 +134,7 @@
         font-family: 'Inconsolata', monospace;
         font-size: 16pt;
         border-radius: 25px;
+        margin: auto;
 
         a {
             color: rgb(47, 68, 255);
@@ -336,6 +337,7 @@
             flex-wrap: wrap;
             align-items: center;
             justify-content: space-between;
+            margin: 0;
 
             a {
                 color: var(--link-color);
