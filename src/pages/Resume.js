@@ -264,16 +264,20 @@ const SectionList = ({ item, sectionOpen }) => {
   return (
     <div
       className={
-        sectionOpen === item.section ? "section-list open" : "section-list"
+        sectionOpen === item.section
+          ? "section-list-wrapper open"
+          : "section-list-wrapper"
       }
     >
-      {item.items.map((listItem, index) => {
-        if (sectionOpen && sectionOpen === item.section) {
-          return <span key={index}>{listItem}</span>;
-        } else {
-          return null;
-        }
-      })}
+      <div className="section-list">
+        {item.items.map((listItem, index) => {
+          if (sectionOpen && sectionOpen === item.section) {
+            return <span key={index}>{listItem}</span>;
+          } else {
+            return null;
+          }
+        })}
+      </div>
     </div>
   );
 };
