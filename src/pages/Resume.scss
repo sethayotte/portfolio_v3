@@ -275,6 +275,7 @@
 
     .proficiencies {
         margin: 25px 0;
+
         h3 {
             font-size: 16pt;
             display: flex;
@@ -308,12 +309,6 @@
                 margin-top: 10px;
                 opacity: 1;
                 grid-template-rows: 1fr;
-
-                .section-list {
-                    span {
-                        margin-bottom: 7px;
-                    }
-                }
             }
         }
 
@@ -322,6 +317,10 @@
             flex-direction: column;
             height: fit-content;
             min-height: 0;
+
+            span {
+                margin-bottom: 7px;
+            }
         }
     }
 

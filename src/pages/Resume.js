@@ -271,11 +271,7 @@ const SectionList = ({ item, sectionOpen }) => {
     >
       <div className="section-list">
         {item.items.map((listItem, index) => {
-          if (sectionOpen && sectionOpen === item.section) {
-            return <span key={index}>{listItem}</span>;
-          } else {
-            return null;
-          }
+          return <span key={index}>{listItem}</span>;
         })}
       </div>
     </div>
