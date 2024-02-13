@@ -187,6 +187,8 @@
                 margin: 0;
             }
 
+           
+
             .multiple-positions {
                 display: flex;
                 flex-direction: column;
@@ -209,6 +211,10 @@
                 svg {
                     margin-top: 5px;
                 }
+            }
+
+            .multiple-positions:last-of-type {
+                padding-bottom: 10px;
             }
 
             .experience-detail-wrapper {
@@ -320,6 +326,15 @@
 
             span {
                 margin-bottom: 7px;
+            }
+
+            span > small {
+                display: block;
+                margin-top: -5px;
+                margin-bottom: 0px;
+                font-style: italic;
+                color: var(--copyright-text-color);
+                font-family: "Inconsolata", monospace;
             }
         }
     }

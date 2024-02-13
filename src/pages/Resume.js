@@ -50,7 +50,7 @@ const Resume = () => {
 
   const renderMultiplePositions = (positions) => {
     return (
-      <section>
+      <section className="multiple-position-wrapper">
         {positions.map((position, index) => {
           const renderMarker = () => {
             switch (index) {
@@ -271,7 +271,12 @@ const SectionList = ({ item, sectionOpen }) => {
     >
       <div className="section-list">
         {item.items.map((listItem, index) => {
-          return <span key={index}>{listItem}</span>;
+          return (
+            <span
+              key={index}
+              dangerouslySetInnerHTML={{ __html: listItem }}
+            ></span>
+          );
         })}
       </div>
     </div>

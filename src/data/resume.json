@@ -46,7 +46,7 @@
 			"location": "Atlanta, GA",
 			"position": [
                 {
-                    "title": "Lead Developer",
+                    "title": "Lead UI Developer",
                     "dates": "Apr 2023 — Present",
                     "details": [
                         "Leads team through expansion into new regions across North & South America.",
@@ -132,7 +132,7 @@
         },
         {
             "section": "Design",
-            "items": ["Adobe Creative Suite", "(for indexing purposes: Illustrator, InDesign, Photoshop, After Effects, Xd, Premiere)", "Sketch", "Figma"]
+            "items": ["Adobe Creative Suite", "<small>(for indexing purposes: Illustrator, InDesign, Photoshop, After Effects, Xd, Premiere)</small>", "Sketch", "Figma"]
         },
         {
             "section": "Workflow",
