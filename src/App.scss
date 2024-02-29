@@ -50,6 +50,8 @@ h1, h2, h3, h4, h5, h6 {
 @import './pages/Project.scss';
 @import './pages/Resume.scss';
 @import './pages/travel/Travel.scss';
+@import './pages//travel/Stats.scss';
+@import './pages/travel/Gallery.scss';
 
 @media only screen and (max-width: 500px) {
   body {
