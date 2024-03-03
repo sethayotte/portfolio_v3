@@ -1,4 +1,5 @@
 .travel {
+
     h1 {
         font-size: 32pt;
     }
@@ -7,19 +8,31 @@
         position: fixed;
         z-index: 3;
         top: 0;
-        left: 0;
         height: 100vh;
-        width: 100vw;
+        width: 100%;
+        max-width: 1450px;
+        margin: auto;
+        margin-left: -25px;
         pointer-events: auto;
+
+        .mapboxgl-ctrl-bottom-left {
+            left: 25px;
+        }
+
+        .mapboxgl-ctrl-bottom-right {
+            right: 25px;
+        }
     }
     
     .travel-hero-text {
         height: 200vh;
-        width: 100vw;
+        margin: auto;
+        margin-left: -25px;
         pointer-events: none;
         position: absolute;
         top: 0;
-        left: 0;
+        width: 100%;
+        max-width: 1450px;
         z-index: 4;
 
         .fold-arrow {
@@ -28,6 +41,7 @@
             color: var(--text-color-main);
             bottom: 100px;
             padding: 40px;
+            cursor: pointer;
     
             svg {
                 font-size: 36pt;
@@ -53,9 +67,9 @@
         .travel-hero-blur-layer {
             position: absolute;
             top: 0;
-            left: 0;
+            margin: auto;
             height: 100vh;
-            width: 100vw;
+            width: 100%;
             backdrop-filter: blur(3px);
             display: flex;
             flex-direction: column;
@@ -109,8 +123,24 @@
     }
 
     @media only screen and (max-width: 640px) {
+
         .map-container {
+            max-width: 1430px;
+            margin-left: -15px;
             pointer-events: none;
+    
+            .mapboxgl-ctrl-bottom-left {
+                left: 15px;
+            }
+    
+            .mapboxgl-ctrl-bottom-right {
+                right: 15px;
+            }
+        }
+        
+        .travel-hero-text {
+            margin-left: -15px;
+            max-width: 1430px;
         }
     }
 }

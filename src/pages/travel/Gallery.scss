@@ -12,4 +12,39 @@
         margin: auto;
         text-align: center;
     }
+
+    .image-grid {
+        display: grid;
+        column-gap: 15px;
+        row-gap: 15px;
+        grid-template-columns: repeat(10, 1fr);
+
+        img {
+            height: 100px;
+            width: 100px;
+            border-radius: 25px;
+            object-fit: cover;
+            cursor: pointer;
+            transform: scale(1);
+            will-change: transform;
+            transition: 0.3s ease;
+
+            body.hasHover &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+}
+
+.PhotoView__Photo {
+    border-radius: 40px;
+}
+
+.PhotoView-Slider__Backdrop {
+    backdrop-filter: blur(5px);
+}
+
+
+.PhotoView-Slider__BannerWrap {
+    display: none;
 }
