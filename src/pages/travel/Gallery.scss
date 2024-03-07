@@ -11,6 +11,75 @@
         margin: auto;
         text-align: center;
         z-index: 3;
+
+        &.gallery-select-header {
+            animation: fade-in-bottom 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+            animation-delay: 0.4s;
+            @keyframes fade-in-bottom {
+                0% {
+                    transform: translateY(10px);
+                    filter: blur(10px);
+                    opacity: 0;
+                }
+                100% {
+                    transform: translateY(0);
+                    filter: blur(0px);
+                    opacity: 1;
+                }
+              }
+        }
+
+        &.gallery-select-continent {
+            font-size: 36pt;
+            animation: fade-in-continent 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+            @keyframes fade-in-continent {
+                0% {
+                    transform: translateY(10px);
+                    filter: blur(10px);
+                    opacity: 0;
+                }
+                100% {
+                    transform: translateY(0);
+                    filter: blur(0px);
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    .hover-state {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .select-help-text {
+        margin: auto;
+        text-align: center;
+        z-index: 3;
+        animation: fade-in-help-text 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+        @keyframes fade-in-help-text {
+            0% {
+                transform: translateZ(500px);
+                filter: blur(10px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateZ(0px);
+                filter: blur(0px);
+                opacity: 1;
+            }
+        }
+
+        &:not(.icon) {
+            font-style: italic;
+            color: var(--text-color-secondary);
+        }
+
+        &.icon {
+            font-size: 24pt;
+        }
     }
 
     .desktop-gallery-map-box {
@@ -32,7 +101,7 @@
         }
 
         .north-america, .south-america, .asia, .oceania, .europe, .antarctica, .africa {
-            fill: #2a2a2a;
+            fill: var(--travel-continent-default-fill);
             cursor: pointer;
         } 
     }

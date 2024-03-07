@@ -53,6 +53,8 @@
     --travel-hero-main: #000000;
     --travel-hero-button-bg: #000000;
     --travel-hero-button-text: #ffffff;
+    --travel-continent-default-fill: #ececec;
+    --travel-continent-highlight: #d9dbef;
 }
 
 [data-theme="dark"] {
@@ -114,6 +116,8 @@
     --travel-hero-main: #eaeaea;
     --travel-hero-button-bg: #000000;
     --travel-hero-button-text: #eaeaea;
+    --travel-continent-default-fill: #2a2a2a;
+    --travel-continent-highlight: #474a56;
 }
 
 body {
