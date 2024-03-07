@@ -20,7 +20,6 @@ const Travel = ({ darkMode, isMobileSafari }) => {
   }
 
   const handleGlobeSize = () => {
-    console.log("running", zoom);
     if (window.innerWidth > 640) {
       updateZoom(1.5);
       map.current?.setZoom(1.5); //set map zoom level for desktop size
@@ -111,7 +110,6 @@ const Travel = ({ darkMode, isMobileSafari }) => {
       document.documentElement.scrollTop ||
       document.body.scrollTop ||
       0;
-    console.log(windowHeight, currScrollPos2);
     if (currScrollPos2 >= 100) {
       let percentComplete = (currScrollPos2 - 100) / (windowHeight / 2 - 100);
       let blurAmount = percentComplete * 7;
@@ -122,15 +120,10 @@ const Travel = ({ darkMode, isMobileSafari }) => {
         updateZoom(percentComplete / 3.5 + 0.9);
         map.current.setZoom(percentComplete / 3.5 + 0.9);
       }
-      console.log(percentComplete + zoom);
       let opacity = Math.abs(percentComplete - 1);
-      // document.getElementById("map-container").style.top = blurAmount + "px";
-      // console.log(opacity, blurAmount);
       document.getElementById("hero-content-wrapper").style.opacity = opacity;
       document.getElementById("hero-content-wrapper").style.filter =
         "blur(" + blurAmount + "px)";
-
-      // console.log("opacity", currScrollPos2 / (windowHeight / 3) - 1);
     } else {
       document.getElementById("hero-content-wrapper").style.opacity = 1;
       document.getElementById("hero-content-wrapper").style.filter =
