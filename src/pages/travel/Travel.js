@@ -174,7 +174,11 @@ const Travel = ({ darkMode, isMobileSafari }) => {
           )}
         </div>
       </div>
-      <div ref={mapContainer} id="map-container" className="map-container" />
+      <div
+        ref={mapContainer}
+        id="map-container"
+        className="map-container"
+      ></div>
     </div>
   );
 };
