@@ -5,6 +5,8 @@ import { Link } from "react-router-dom";
 
 const Travel = ({ darkMode, isMobileSafari }) => {
   mapboxgl.accessToken = process.env.REACT_APP_MAPBOX_API_ACCESS_TOKEN;
+  mapboxgl.workerClass =
+    require("worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker").default; // eslint-disable-line
 
   const mapContainer = useRef(null);
   const map = useRef(null);
