@@ -181,6 +181,7 @@ const App = () => {
               }
             />
             <Route path="/travel/gallery" element={<Gallery />} />
+            <Route path="/travel/gallery/:continent" element={<Gallery />} />
             <Route path="/travel/stats" element={<Stats />} />
             <Route path="/404" element={<NotFound />} />
             <Route path="*" element={<Navigate to="/404" replace />} />

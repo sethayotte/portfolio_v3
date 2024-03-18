@@ -1,4 +1,4 @@
-.travel-gallery {
+.gallery-landing {
     height: calc(100vh - 125px);
     max-width: 1400px;
     display: flex;
@@ -126,6 +126,45 @@
 
             body.hasHover &:hover {
                 transform: scale(1.1);
+            }
+        }
+    }
+}
+
+.continent-gallery {
+    .continent-header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        width: fit-content;
+        margin-top: 50px;
+
+        img {
+            position: absolute;
+            height: 300px;
+            z-index: -1;
+            left: 0px;
+            top: -50px;
+        }
+
+        h2 {
+            font-size: 24pt;
+            font-weight: 500;
+            margin: 15px 0;
+        }
+
+        svg {
+            font-size: 16pt;
+            padding: 10px;
+            margin-left: -10px;
+            margin-top: 2px;
+            cursor: pointer;
+            transform: translateX(0);
+            transition: transform 0.3s ease;
+
+            body.hasHover &:hover {
+                transform: translateX(-5px);
             }
         }
     }
