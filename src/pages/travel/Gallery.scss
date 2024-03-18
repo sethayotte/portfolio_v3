@@ -168,6 +168,24 @@
             }
         }
     }
+
+    .country-section {
+        h3 {
+            font-family: 'Inconsolata', monospace;
+            font-size: 24pt;
+            font-weight: 300;
+            margin: 0;
+        }
+
+        h4 {
+            font-family: 'Inconsolata', monospace;
+            font-size: 18pt;
+            font-weight: 300;
+            font-style: italic;
+            margin: 0;
+            color: var(--copyright-text-color);
+        }
+    }
 }
 
 .group-test {

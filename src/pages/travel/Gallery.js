@@ -10,8 +10,11 @@ import europe from "../../assets/continents/europe.svg";
 import asia from "../../assets/continents/asia.svg";
 import oceania from "../../assets/continents/oceania.svg";
 import { useNavigate } from "react-router-dom";
-const images = require.context("../../assets/peru-pics", true);
-const imageList = images.keys().map((image) => images(image));
+// const photoDir = require.context(
+//   `../../../.netlify/blobs/deploy/${selectContinent}`,
+//   true
+// );
+// const countrySections = photoDir.keys().map((dir) => photoDir(dir));
 
 const Gallery = () => {
   useEffect(() => {
@@ -107,6 +110,12 @@ const Gallery = () => {
           <img className="continent-svg" src={selectedContinentImage} />
           <PiCaretLeftBold onClick={() => selectContinent()} />
           <h2>{handleTitling(selectedContinent)}</h2>
+        </section>
+
+        <section className="country-section">
+          <h3>Canada</h3>
+          <h4>Vancouver</h4>
+          <div className="photo-grid"></div>
         </section>
       </div>
     );
