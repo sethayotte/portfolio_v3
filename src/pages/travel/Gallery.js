@@ -10,16 +10,14 @@ import europe from "../../assets/continents/europe.svg";
 import asia from "../../assets/continents/asia.svg";
 import oceania from "../../assets/continents/oceania.svg";
 import { useNavigate } from "react-router-dom";
-// const photoDir = require.context(
-//   `../../../.netlify/blobs/deploy/${selectContinent}`,
-//   true
-// );
-// const countrySections = photoDir.keys().map((dir) => photoDir(dir));
+import { useGalleryContext } from "../../contexts/GalleryContext";
 
 const Gallery = () => {
+  const { continentGalleryData } = useGalleryContext();
+
   useEffect(() => {
     setIsDesktop(window.innerWidth > 740);
-
+    console.log("DATA", continentGalleryData);
     window.addEventListener("resize", () => {
       setIsDesktop(window.innerWidth > 740);
     });
