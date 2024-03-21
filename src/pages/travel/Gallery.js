@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { PhotoProvider, PhotoView } from "react-photo-view";
 import { TbClick, TbCameraOff } from "react-icons/tb";
+import { BsImages } from "react-icons/bs";
 import { PiCaretLeftBold } from "react-icons/pi";
 import north_america from "../../assets/continents/north-america.svg";
 import south_america from "../../assets/continents/south-america.svg";
@@ -17,7 +18,6 @@ const Gallery = () => {
 
   useEffect(() => {
     setIsDesktop(window.innerWidth > 740);
-    console.log("DATA", continentGalleryData);
     window.addEventListener("resize", () => {
       setIsDesktop(window.innerWidth > 740);
     });
@@ -101,6 +101,34 @@ const Gallery = () => {
       .join(" ");
   };
 
+  const renderCities = (cities) => {
+    if (cities.length < 1) {
+      return (
+        <h4 className="upload-placeholder">
+          <BsImages />
+          images en route!
+        </h4>
+      );
+    } else {
+      return cities.map((city) => {
+        return (
+          <>
+            <h4 key={city.slug}>{city.title}</h4>
+            <PhotoProvider maskOpacity={0.7}>
+              <div className="image-grid">
+                {city.images.map((image, index) => (
+                  <PhotoView key={index} src={image}>
+                    <img src={image} alt="" />
+                  </PhotoView>
+                ))}
+              </div>
+            </PhotoProvider>
+          </>
+        );
+      });
+    }
+  };
+
   if (selectedContinent) {
     return (
       <div className="continent-gallery">
@@ -109,26 +137,20 @@ const Gallery = () => {
           <PiCaretLeftBold onClick={() => selectContinent()} />
           <h2>{handleTitling(selectedContinent)}</h2>
         </section>
-
-        <section className="country-section">
-          <h3>Canada</h3>
-          <h4>Vancouver</h4>
-          <div className="photo-grid"></div>
-        </section>
+        {continentGalleryData.map((item) => {
+          return (
+            <section className="country-section" key={item.slug}>
+              <h3>{item.title}</h3>
+              {renderCities(item.cities)}
+              <div className="photo-grid"></div>
+            </section>
+          );
+        })}
       </div>
     );
   } else {
     return (
       <div className="gallery-landing">
-        {/* <PhotoProvider maskOpacity={0.7}>
-          <div className="image-grid">
-            {imageList.map((item, index) => (
-              <PhotoView key={index} src={item}>
-                <img src={item} alt="" />
-              </PhotoView>
-            ))}
-          </div>
-        </PhotoProvider> */}
         {isDesktop ? (
           <>
             <div className="desktop-gallery-map-box">

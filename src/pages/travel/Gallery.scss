@@ -105,33 +105,11 @@
             cursor: pointer;
         } 
     }
-
-    
-
-    .image-grid {
-        display: grid;
-        column-gap: 15px;
-        row-gap: 15px;
-        grid-template-columns: repeat(10, 1fr);
-
-        img {
-            height: 100px;
-            width: 100px;
-            border-radius: 25px;
-            object-fit: cover;
-            cursor: pointer;
-            transform: scale(1);
-            will-change: transform;
-            transition: 0.3s ease;
-
-            body.hasHover &:hover {
-                transform: scale(1.1);
-            }
-        }
-    }
 }
 
 .continent-gallery {
+    margin-bottom: 40px;
+    
     .continent-header {
         display: flex;
         align-items: center;
@@ -141,11 +119,11 @@
         margin-top: 50px;
 
         img {
-            position: absolute;
+            position: fixed;
             height: 300px;
             z-index: -1;
             left: 0px;
-            top: -50px;
+            top: 0px;
         }
 
         h2 {
@@ -170,6 +148,7 @@
     }
 
     .country-section {
+
         h3 {
             font-family: 'Inconsolata', monospace;
             font-size: 24pt;
@@ -183,9 +162,52 @@
             font-weight: 300;
             font-style: italic;
             margin: 0;
+            margin-top: 8px;
             color: var(--copyright-text-color);
+
+            
+
+            &.upload-placeholder {
+                display: flex;
+                align-items: center;
+
+                svg {
+                    font-size: 16pt;
+                    margin-right: 5px;
+                }
+            }
+        }
+
+        .image-grid {
+            margin-top: 10px;
+            padding-bottom: 10px;
+            display: grid;
+            column-gap: 15px;
+            row-gap: 15px;
+            width: 100%;
+            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    
+            img {
+                height: 100%;
+                width: 100%;
+                aspect-ratio: 1 / 1;
+                border-radius: 15px;
+                object-fit: cover;
+                cursor: pointer;
+                transform: scale(1);
+                will-change: transform;
+                transition: 0.3s ease;
+    
+                body.hasHover &:hover {
+                    transform: scale(1.05);
+                }
+            }
         }
     }
+}
+
+.continent-gallery .country-section:not(:nth-child(2)) {
+    margin-top: 25px;
 }
 
 .group-test {
