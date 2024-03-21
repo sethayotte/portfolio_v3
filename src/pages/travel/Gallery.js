@@ -10,17 +10,35 @@ import africa from "../../assets/continents/africa.svg";
 import europe from "../../assets/continents/europe.svg";
 import asia from "../../assets/continents/asia.svg";
 import oceania from "../../assets/continents/oceania.svg";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { useGalleryContext } from "../../contexts/GalleryContext";
 
 const Gallery = () => {
-  const { continentGalleryData } = useGalleryContext();
+  const {
+    continentGalleryData,
+    setContinentGalleryData,
+    getContinentGalleryData,
+  } = useGalleryContext();
+
+  const location = useLocation();
 
   useEffect(() => {
     setIsDesktop(window.innerWidth > 740);
     window.addEventListener("resize", () => {
       setIsDesktop(window.innerWidth > 740);
     });
+    if (
+      !selectedContinent &&
+      location &&
+      (location.pathname.includes("/north-america") ||
+        location.pathname.includes("/south-america") ||
+        location.pathname.includes("/africa") ||
+        location.pathname.includes("/europe") ||
+        location.pathname.includes("/asia") ||
+        location.pathname.includes("/oceania"))
+    ) {
+      handleDeepLink();
+    }
 
     return () => {
       window.removeEventListener("resize", () => {});
@@ -33,6 +51,56 @@ const Gallery = () => {
   const [continentHover, setContinentHover] = useState();
   const [selectedContinent, setSelectedContinent] = useState();
   const [selectedContinentImage, setSelectedContinentImage] = useState();
+
+  const selectContinent = (continent) => {
+    if (!continent) {
+      removeHighlight();
+      setSelectedContinent();
+      setSelectedContinentImage();
+      navigate("/travel/gallery");
+      return;
+    }
+    // if (continent === "antarctica") {
+    //   removeHighlight();
+    //   setSelectedContinent();
+    //   setSelectedContinentImage();
+    //   navigate("/travel/gallery", { replace: true });
+    //   return;
+    // }
+    console.log("I ran");
+    setContinentGalleryData([]);
+    setSelectedContinent(continent);
+    navigate("/travel/gallery/" + continent);
+    getContinentGalleryData(continent);
+    switch (continent) {
+      case "north-america":
+        setSelectedContinentImage(north_america);
+        break;
+      case "south-america":
+        setSelectedContinentImage(south_america);
+        break;
+      case "africa":
+        setSelectedContinentImage(africa);
+        break;
+      case "europe":
+        setSelectedContinentImage(europe);
+        break;
+      case "asia":
+        setSelectedContinentImage(asia);
+        break;
+      case "oceania":
+        setSelectedContinentImage(oceania);
+        break;
+      default:
+        setSelectedContinentImage();
+    }
+  };
+
+  const handleDeepLink = () => {
+    console.log(location.pathname?.slice(16));
+    let continent = location.pathname?.slice(16);
+    selectContinent(continent);
+  };
 
   const highlightContinent = (continent) => {
     let items = document.querySelectorAll("." + continent);
@@ -53,43 +121,6 @@ const Gallery = () => {
       items[index].style.fill = "var(--travel-continent-default-fill)";
     }
     setContinentHover();
-  };
-
-  const selectContinent = (continent) => {
-    if (!continent) {
-      removeHighlight();
-      setSelectedContinent();
-      setSelectedContinentImage();
-      navigate("/travel/gallery");
-      return;
-    }
-    setSelectedContinent(continent);
-    navigate("/travel/gallery/" + continent);
-    switch (continent) {
-      case "north-america":
-        setSelectedContinentImage(north_america);
-        break;
-      case "south-america":
-        setSelectedContinentImage(south_america);
-        break;
-      case "antarctica":
-        setSelectedContinentImage(antarctica);
-        break;
-      case "africa":
-        setSelectedContinentImage(africa);
-        break;
-      case "europe":
-        setSelectedContinentImage(europe);
-        break;
-      case "asia":
-        setSelectedContinentImage(asia);
-        break;
-      case "oceania":
-        setSelectedContinentImage(oceania);
-        break;
-      default:
-        setSelectedContinentImage();
-    }
   };
 
   const handleTitling = (label) => {

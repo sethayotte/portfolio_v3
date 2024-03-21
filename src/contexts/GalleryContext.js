@@ -79,11 +79,12 @@ export function GalleryProvider({ children }) {
 
   useEffect(() => {
     // getContinentCollections("north-america");
-    getContinentGalleryData("north-america");
   }, []);
 
   const value = {
     continentGalleryData,
+    setContinentGalleryData,
+    getContinentGalleryData,
   };
 
   return (
