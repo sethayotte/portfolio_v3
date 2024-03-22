@@ -67,7 +67,6 @@ const Gallery = () => {
     //   navigate("/travel/gallery", { replace: true });
     //   return;
     // }
-    console.log("I ran");
     setContinentGalleryData([]);
     setSelectedContinent(continent);
     navigate("/travel/gallery/" + continent);
@@ -97,7 +96,6 @@ const Gallery = () => {
   };
 
   const handleDeepLink = () => {
-    console.log(location.pathname?.slice(16));
     let continent = location.pathname?.slice(16);
     selectContinent(continent);
   };
