@@ -4,6 +4,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    &.mobile {
+        height: fit-content;
+    }
     
     h1 {
         font-size: 28pt;
@@ -114,7 +118,6 @@
 }
 
 .continent-gallery {
-    margin-bottom: 40px;
     
     .continent-header {
         display: flex;
@@ -122,7 +125,7 @@
         justify-content: center;
         position: relative;
         width: fit-content;
-        margin-top: 50px;
+        margin-top: 30px;
 
         img {
             position: fixed;
@@ -150,6 +153,21 @@
             body.hasHover &:hover {
                 transform: translateX(-5px);
             }
+        }
+    }
+
+    .all-photos {
+        height: calc(100vh - 223.5px);
+        overflow: scroll;
+    }
+
+    @media only screen and (max-width: 500px) {
+        .continent-header {
+            margin-top: 20px;
+        }
+
+        .all-photos {
+            height: calc(100vh - 188.5px);
         }
     }
 
@@ -212,8 +230,12 @@
     }
 }
 
-.continent-gallery .country-section:not(:nth-child(2)) {
+.continent-gallery .all-photos .country-section:not(:first-child) {
     margin-top: 25px;
+}
+
+.continent-gallery .all-photos .country-section:last-child {
+    margin-bottom: 15px;
 }
 
 .group-test {

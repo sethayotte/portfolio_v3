@@ -166,20 +166,22 @@ const Gallery = () => {
           <PiCaretLeftBold onClick={() => selectContinent()} />
           <h2>{handleTitling(selectedContinent)}</h2>
         </section>
-        {continentGalleryData.map((item) => {
-          return (
-            <section className="country-section" key={item.slug}>
-              <h3>{item.title}</h3>
-              {renderCities(item.cities)}
-              <div className="photo-grid"></div>
-            </section>
-          );
-        })}
+        <section className="all-photos">
+          {continentGalleryData.map((item) => {
+            return (
+              <section className="country-section" key={item.slug}>
+                <h3>{item.title}</h3>
+                {renderCities(item.cities)}
+                <div className="photo-grid"></div>
+              </section>
+            );
+          })}
+        </section>
       </div>
     );
   } else {
     return (
-      <div className="gallery-landing">
+      <div className={isDesktop ? "gallery-landing" : "gallery-landing mobile"}>
         {isDesktop ? (
           <>
             <div className="desktop-gallery-map-box">
@@ -2044,13 +2046,13 @@ const Gallery = () => {
         ) : (
           <div className="mobile-gallery-maps">
             <h1>Mobile is here!</h1>
-            {/* <img src={NorthAmerica} id="north-america" />
-          <img src={Europe} id="europe" />
-          <img src={Asia} id="asia" /> */}
-            {/* <img src={Africa} /> */}
-            {/* <img src={Oceania} />
-          <img src={SouthAmerica} />
-          <img src={Antarctica} /> */}
+            <img src={north_america} id="north-america" />
+            <img src={europe} id="europe" />
+            <img src={asia} id="asia" />
+            <img src={africa} />
+            <img src={oceania} />
+            <img src={south_america} />
+            <img src={antarctica} />
           </div>
         )}
       </div>
