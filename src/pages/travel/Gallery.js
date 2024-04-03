@@ -2045,8 +2045,10 @@ const Gallery = () => {
           </>
         ) : (
           <div className="mobile-gallery-maps">
-            <h1>Mobile is here!</h1>
-            <img src={north_america} id="north-america" />
+            <span className="mobile-continent-block">
+              <img src={north_america} id="north-america" />
+              <h2>North America</h2>
+            </span>
             <img src={europe} id="europe" />
             <img src={asia} id="asia" />
             <img src={africa} />
