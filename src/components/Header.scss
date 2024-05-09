@@ -134,6 +134,7 @@
 
         .mobile-menu-toggle {
             padding: 15px;
+            padding-bottom: 10px;
             padding-right: 0;
 
             svg {
@@ -234,6 +235,7 @@ footer {
     bottom: 0;
     left: 0;
     height: 50px;
+    z-index: 99;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -323,7 +325,6 @@ sl-menu-item .menu-item__check, .menu-item .menu-item__chevron {
 
     footer {
         flex-direction: column-reverse;
-        height: 75px;
 
         .version-toggle {
             margin-bottom: 5px;

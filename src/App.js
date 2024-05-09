@@ -7,7 +7,7 @@ import {
   Navigate,
   useLocation,
 } from "react-router-dom";
-import { Travel } from "./pages/Travel";
+import { Travel } from "./pages/travel/Travel";
 import { Landing } from "./pages/Landing";
 import { Resume } from "./pages/Resume";
 import { Work } from "./pages/Work";
@@ -15,6 +15,9 @@ import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
 import { NotFound } from "./components/NotFound";
 import { Project } from "./pages/Project";
+import { Gallery } from "./pages/travel/Gallery";
+import { Stats } from "./pages/travel/Stats";
+import { GalleryProvider } from "./contexts/GalleryContext";
 
 const App = () => {
   const [darkMode, setDarkMode] = useState(false);
@@ -159,23 +162,47 @@ const App = () => {
           />
         </div>
         <ScrollToTop>
-          <Routes>
-            <Route
-              path="/"
-              element={
-                <Landing darkMode={darkMode} isMobileSafari={isMobileSafari} />
-              }
-            />
-            <Route path="/work" element={<Work darkMode={darkMode} />} />
-            <Route
-              path="/work/:projSlug"
-              element={<Project darkMode={darkMode} />}
-            />
-            <Route path="/resume" element={<Resume />} />
-            <Route path="/travel" element={<Travel />} />
-            <Route path="/404" element={<NotFound />} />
-            <Route path="*" element={<Navigate to="/404" replace />} />
-          </Routes>
+          <GalleryProvider>
+            <Routes>
+              <Route
+                path="/"
+                element={
+                  <Landing
+                    darkMode={darkMode}
+                    isMobileSafari={isMobileSafari}
+                  />
+                }
+              />
+              <Route path="/work" element={<Work darkMode={darkMode} />} />
+              <Route
+                path="/work/:projSlug"
+                element={<Project darkMode={darkMode} />}
+              />
+              <Route path="/resume" element={<Resume />} />
+              <Route
+                path="/travel"
+                element={
+                  <Travel darkMode={darkMode} isMobileSafari={isMobileSafari} />
+                }
+              />
+              <Route
+                path="/travel/gallery"
+                element={<Gallery darkMode={darkMode} />}
+              />
+              <Route
+                path="/travel/gallery/:continent"
+                element={<Gallery darkMode={darkMode} />}
+              />
+              <Route
+                exact
+                path="/travel/gallery/antarctica"
+                element={<Navigate to="/travel/gallery" replace />}
+              />
+              <Route path="/travel/stats" element={<Stats />} />
+              <Route path="/404" element={<NotFound />} />
+              <Route path="*" element={<Navigate to="/404" replace />} />
+            </Routes>
+          </GalleryProvider>
         </ScrollToTop>
         <div>
           <Footer domain={domain} />

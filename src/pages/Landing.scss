@@ -358,12 +358,23 @@
     }
 }
 
+@media only screen and (max-width: 950px) {
+    .landing-project-tiles {
+
+        .landing-project-help-text {
+            margin-bottom: 35px;
+            font-size: 24pt;
+            line-height:normal;
+        }
+    }
+}
+
 @media only screen and (max-width: 740px) {
     .landing-project-tiles {
 
         .landing-project-help-text {
             margin-bottom: 35px;
-            font-size: min(9vw, 32pt);
+            font-size: min(9vw, 24pt);
             line-height:normal;
         }
     }

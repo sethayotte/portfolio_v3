@@ -49,8 +49,9 @@
                     "title": "Lead UI Developer",
                     "dates": "Apr 2023 — Present",
                     "details": [
-                        "Leads team through expansion into new regions across North & South America.",
-                        "Holds a deep understanding of our application and maintains responsibility for team capacity and velocity to deliver bi-weekly releases.",
+                        "Leads team through expansion into new regions across North and South America, demonstrating skilled leadership in navigating complex design and technical challenges while fostering collaboration.",
+                        "Responsible for team velocity to ensure delivery of bi-weekly releases.",
+                        "Maintains culture of innovation and continuous improvement, empowering team members to embrace design-thinking practices and design scalable systems.",
                         "Provides architectural recommendations and works closely with business stakeholders to develop and refine requirements for our product roadmap."
                     ]
                 },
@@ -59,7 +60,7 @@
                     "dates": "Jun 2021 — Apr 2023",
                     "details": [
                         "Worked within a small UI development team to build, test, and deploy production-level code to all GM dealerships within the United States.",
-                        "Led team in design implementation while working closely with UX team in solving design problems to alleviate impacts to usability.",
+                        "Led UI design implementation; collaborated with UX team to enhance usability.",
                         "Conducted research for future projects and developed proof of concepts (POCs) to determine feasibility of modular and mobile-first technologies."
                     ]
                 }
@@ -74,9 +75,9 @@
             ],
 			"dates": "2020 — Present",
             "details": [
-                "Operates a lean startup organization architected to support a rich pipeline of digital platforms and financial resources.",
-                "Actively developing the inaugural full-scale financial utility – Shoebox.",
-                "Expanding The Blocks’ products & services roadmap to provide a horizontally- integrated solution across an individual’s financial growth journey."
+                "Running a lean startup aimed at creating a range of digital applications & tools.",
+                "Currently working on Shoebox, our first comprehensive financial tool to help people organize and maximize their Health Savings Accounts (HSAs).",
+                "Expanding our lineup at The Blocks to offer a complete solution for individuals’ financial needs, all along their journey to financial growth."
             ]
 		},
         {
@@ -118,7 +119,7 @@
                     "title": "Product Specialist",
                     "dates": "Jun 2015 — Feb 2017",
                     "details": [
-                        "Maintained expert understanding of new product and iOS/MacOS software to serve as a resource for customers and the rest of my team."
+                        "Maintained expert knowledge of Apple Hardware, Software, & Services to support customers and team."
                     ]
                 }
             ],
@@ -128,7 +129,7 @@
     "proficiencies": [
         {
             "section": "Technologies",
-            "items": ["Javascript", "Angular", "React", "HTML", "Python", "NodeJS", "CSS/SCSS"]
+            "items": ["Javascript", "Angular", "React", "HTML", "Python", "NodeJS", "CSS/SCSS", "CI/CD", "GraphQL"]
         },
         {
             "section": "Design",
@@ -136,11 +137,11 @@
         },
         {
             "section": "Workflow",
-            "items": ["VS Code", "JetBrains IntelliJ", "Design Thinking", "Agile", "Jira", "Confluence", "GitHub (& GitHub Enterprise)", "Notion"]
+            "items": ["VS Code", "JetBrains IntelliJ", "Design Thinking", "Agile", "Jira", "Confluence", "GitHub (& GitHub Enterprise)", "Notion", "Prompt Engineering", "ChatGPT"]
         },
         {
             "section": "Infrastructure",
-            "items": ["Azure DevOps", "Firebase", "Google Cloud Platform", "Netlify", "Stripe"]
+            "items": ["Azure DevOps", "Firebase", "Google Cloud Platform", "Netlify", "Stripe", "Content Management Systems (CMS)"]
         }
     ],
     "footer": {

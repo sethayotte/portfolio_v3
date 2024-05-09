@@ -1,4 +1,18 @@
 {
+    "landing": [],
+    "stats": [],
+    "gallery": [
+        {
+            "continent": "North America",
+            "countries": [
+                {
+                    "country": "Canada",
+                    "images": []
+                }
+            ]
+        }
+
+    ],
     "visited": [
         "United Kingdom",
         "Canada",

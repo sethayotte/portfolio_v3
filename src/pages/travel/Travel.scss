@@ -1,0 +1,163 @@
+.travel {
+    height: 200vh;
+
+    h1 {
+        font-size: 32pt;
+    }
+
+    .map-container {
+        position: fixed;
+        z-index: 3;
+        top: 0;
+        height: 100vh;
+        width: 100%;
+        max-width: 1450px;
+        margin: auto;
+        margin-left: -25px;
+        pointer-events: auto;
+
+        .mapboxgl-ctrl-bottom-left {
+            left: 25px;
+        }
+
+        .mapboxgl-ctrl.mapboxgl-ctrl-attrib {
+            background-color: transparent;
+        }
+
+        .mapboxgl-ctrl-bottom-right {
+            right: 25px;
+            font-family: 'Inconsolata', monospace;
+            background-color: var(--tile-bg-color);
+            border-radius: 7px;
+            padding: 4px;
+            margin-bottom: 10px;
+
+            .mapboxgl-ctrl-attrib-inner > a {
+                font-size: 11pt;
+                padding-bottom: 5px;
+                color: var(--copyright-text-color);
+
+            }
+        }
+    }
+    
+    .travel-hero-text {
+        height: 200vh;
+        margin: auto;
+        margin-left: -25px;
+        pointer-events: none;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        max-width: 1450px;
+        z-index: 4;
+
+        .fold-arrow {
+            position: absolute;
+            text-decoration: none;
+            color: var(--text-color-main);
+            bottom: 100px;
+            padding: 40px;
+            cursor: pointer;
+    
+            svg {
+                font-size: 36pt;
+                animation: slide-arrow 3s cubic-bezier(0.250, 0.460, 0.450, 0.940) infinite both;
+    
+                @keyframes slide-arrow {
+                    0% {
+                        transform: translateY(0);
+                    }
+                    20% {
+                        transform: translateY(30px);
+                    }
+                    40% {
+                        transform: translateY(0);
+                    }
+                    100% {
+                        transform: translateY(0);
+                    }
+                }
+            }
+        }
+
+        .travel-hero-blur-layer {
+            position: absolute;
+            top: 0;
+            margin: auto;
+            height: 100vh;
+            width: 100%;
+            backdrop-filter: blur(3px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            pointer-events: auto;
+
+            #hero-content-wrapper {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                height: 100%;
+            }
+
+            h2 {
+                margin: 0;
+                font-size: min(96pt, 18vw);
+                font-weight: 700;
+                text-align: center;
+                width: 100%;
+                color: var(--travel-hero-main);
+                opacity: 0.4;
+            }
+    
+            .travel-hero-buttons {
+                margin-bottom: 75px;
+                margin-top: 20px;
+                
+                a {
+                    border: none;
+                    text-decoration: none;
+                    background-color: var(--travel-hero-button-bg);
+                    color: var(--travel-hero-button-text);
+                    font-size: 12pt;
+                    font-weight: 400;
+                    padding: 10px 25px;
+                    margin: 0 6px;
+                    border-radius: 50px;
+                    cursor: pointer;
+                    transform: scale(1);
+                    transition: transform 0.3s ease;
+    
+                    body.hasHover &:hover {
+                        transform: scale(1.05);
+                    }
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 640px) {
+
+        .map-container {
+            max-width: 1430px;
+            margin-left: -15px;
+            pointer-events: none;
+    
+            .mapboxgl-ctrl-bottom-left {
+                left: 15px;
+            }
+    
+            .mapboxgl-ctrl-bottom-right {
+                right: 15px;
+            }
+        }
+        
+        .travel-hero-text {
+            margin-left: -15px;
+            max-width: 1430px;
+        }
+    }
+}

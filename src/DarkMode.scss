@@ -49,6 +49,12 @@
     --technologies-link: #5F4DCF;
     --technologies-icon-highlight: #C2D0FF;
     --technologies-icon-shadow: #BDC9F3;
+
+    --travel-hero-main: #000000;
+    --travel-hero-button-bg: #000000;
+    --travel-hero-button-text: #ffffff;
+    --travel-continent-default-fill: #ececec;
+    --travel-continent-highlight: #cae2cc;
 }
 
 [data-theme="dark"] {
@@ -106,6 +112,12 @@
     --technologies-link: #72609C;
     --technologies-icon-highlight: #47386A;
     --technologies-icon-shadow: #362955;
+
+    --travel-hero-main: #eaeaea;
+    --travel-hero-button-bg: #000000;
+    --travel-hero-button-text: #eaeaea;
+    --travel-continent-default-fill: #2a2a2a;
+    --travel-continent-highlight: #474a56;
 }
 
 body {

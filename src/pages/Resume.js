@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import ResumeData from "../data/resume.json";
 import Headshot from "../assets/SethMitchell_Headshot_Scaled.webp";
-import ResumePDF from "../assets/Resume_2023.pdf";
+import ResumePDF from "../assets/Resume_2024.pdf";
 import { HiOutlineEye, HiOutlineEyeOff } from "react-icons/hi";
 import { RxCrumpledPaper } from "react-icons/rx";
 import { IoLogoLinkedin, IoLogoTwitter, IoLogoGithub } from "react-icons/io";
@@ -20,6 +20,8 @@ const Resume = () => {
   const [sectionOpen, setSectionOpen] = useState("");
   const [showEducationDetail, setShowEducationDetail] = useState(false);
   const [showExperienceDetail, setShowExperienceDetail] = useState(false);
+
+  let showFooter = false;
 
   const toggleSection = (section) => {
     if (section === sectionOpen) {
@@ -240,7 +242,7 @@ const Resume = () => {
           );
         })}
       </section>
-      {ResumeData.footer.disclaimer ? (
+      {showFooter ? (
         <section className="disclaimer">
           <div className="disclaimer-container">
             {ResumeData.footer.disclaimer}
