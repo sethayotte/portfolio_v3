@@ -3,17 +3,24 @@ import { PhotoProvider, PhotoView } from "react-photo-view";
 import { TbClick, TbCameraOff } from "react-icons/tb";
 import { BsImages } from "react-icons/bs";
 import { PiCaretLeftBold } from "react-icons/pi";
-import north_america from "../../assets/continents/north-america.svg";
-import south_america from "../../assets/continents/south-america.svg";
-import antarctica from "../../assets/continents/antartica.svg";
-import africa from "../../assets/continents/africa.svg";
-import europe from "../../assets/continents/europe.svg";
-import asia from "../../assets/continents/asia.svg";
-import oceania from "../../assets/continents/oceania.svg";
+import north_america_light from "../../assets/continents/north-america-light.svg";
+import south_america_light from "../../assets/continents/south-america-light.svg";
+import antarctica_light from "../../assets/continents/antartica-light.svg";
+import africa_light from "../../assets/continents/africa-light.svg";
+import europe_light from "../../assets/continents/europe-light.svg";
+import asia_light from "../../assets/continents/asia-light.svg";
+import oceania_light from "../../assets/continents/oceania-light.svg";
+import north_america_dark from "../../assets/continents/north-america-dark.svg";
+import south_america_dark from "../../assets/continents/south-america-dark.svg";
+import antarctica_dark from "../../assets/continents/antartica-dark.svg";
+import africa_dark from "../../assets/continents/africa-dark.svg";
+import europe_dark from "../../assets/continents/europe-dark.svg";
+import asia_dark from "../../assets/continents/asia-dark.svg";
+import oceania_dark from "../../assets/continents/oceania-dark.svg";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useGalleryContext } from "../../contexts/GalleryContext";
 
-const Gallery = () => {
+const Gallery = ({ darkMode }) => {
   const {
     continentGalleryData,
     setContinentGalleryData,
@@ -38,6 +45,9 @@ const Gallery = () => {
         location.pathname.includes("/oceania"))
     ) {
       handleDeepLink();
+      let continent = document.querySelector(".continent-svg");
+      console.log(continent);
+      // continent?.fill = "var(--travel-continent-highlight)";
     }
 
     return () => {
@@ -73,22 +83,34 @@ const Gallery = () => {
     getContinentGalleryData(continent);
     switch (continent) {
       case "north-america":
-        setSelectedContinentImage(north_america);
+        darkMode
+          ? setSelectedContinentImage(north_america_dark)
+          : setSelectedContinentImage(north_america_light);
         break;
       case "south-america":
-        setSelectedContinentImage(south_america);
+        darkMode
+          ? setSelectedContinentImage(south_america_dark)
+          : setSelectedContinentImage(south_america_light);
         break;
       case "africa":
-        setSelectedContinentImage(africa);
+        darkMode
+          ? setSelectedContinentImage(africa_dark)
+          : setSelectedContinentImage(africa_light);
         break;
       case "europe":
-        setSelectedContinentImage(europe);
+        darkMode
+          ? setSelectedContinentImage(europe_dark)
+          : setSelectedContinentImage(europe_light);
         break;
       case "asia":
-        setSelectedContinentImage(asia);
+        darkMode
+          ? setSelectedContinentImage(asia_dark)
+          : setSelectedContinentImage(asia_light);
         break;
       case "oceania":
-        setSelectedContinentImage(oceania);
+        darkMode
+          ? setSelectedContinentImage(oceania_dark)
+          : setSelectedContinentImage(oceania_light);
         break;
       default:
         setSelectedContinentImage();
@@ -2046,15 +2068,18 @@ const Gallery = () => {
         ) : (
           <div className="mobile-gallery-maps">
             <span className="mobile-continent-block">
-              <img src={north_america} id="north-america" />
+              <img
+                src={darkMode ? north_america_dark : north_america_light}
+                id="north-america"
+              />
               <h2>North America</h2>
             </span>
-            <img src={europe} id="europe" />
-            <img src={asia} id="asia" />
-            <img src={africa} />
-            <img src={oceania} />
-            <img src={south_america} />
-            <img src={antarctica} />
+            <img src={darkMode ? europe_dark : europe_light} id="europe" />
+            <img src={darkMode ? asia_dark : asia_light} id="asia" />
+            <img src={darkMode ? africa_dark : africa_light} />
+            <img src={darkMode ? oceania_dark : oceania_light} />
+            <img src={darkMode ? south_america_dark : south_america_light} />
+            <img src={darkMode ? antarctica_dark : antarctica_light} />
           </div>
         )}
       </div>

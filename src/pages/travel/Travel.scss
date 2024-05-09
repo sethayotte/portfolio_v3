@@ -20,8 +20,24 @@
             left: 25px;
         }
 
+        .mapboxgl-ctrl.mapboxgl-ctrl-attrib {
+            background-color: transparent;
+        }
+
         .mapboxgl-ctrl-bottom-right {
             right: 25px;
+            font-family: 'Inconsolata', monospace;
+            background-color: var(--tile-bg-color);
+            border-radius: 7px;
+            padding: 4px;
+            margin-bottom: 10px;
+
+            .mapboxgl-ctrl-attrib-inner > a {
+                font-size: 11pt;
+                padding-bottom: 5px;
+                color: var(--copyright-text-color);
+
+            }
         }
     }
     

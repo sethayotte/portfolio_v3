@@ -185,8 +185,14 @@ const App = () => {
                   <Travel darkMode={darkMode} isMobileSafari={isMobileSafari} />
                 }
               />
-              <Route path="/travel/gallery" element={<Gallery />} />
-              <Route path="/travel/gallery/:continent" element={<Gallery />} />
+              <Route
+                path="/travel/gallery"
+                element={<Gallery darkMode={darkMode} />}
+              />
+              <Route
+                path="/travel/gallery/:continent"
+                element={<Gallery darkMode={darkMode} />}
+              />
               <Route
                 exact
                 path="/travel/gallery/antarctica"

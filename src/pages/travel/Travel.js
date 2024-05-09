@@ -155,8 +155,8 @@ const Travel = ({ darkMode, isMobileSafari }) => {
           <div id="hero-content-wrapper">
             <h2>EXPLORE</h2>
             <div className="travel-hero-buttons">
-              <Link to="/travel/stats">view stats</Link>
-              <Link to="/travel/gallery">visit gallery</Link>
+              {/* <Link to="/travel/stats">view stats</Link> */}
+              <Link to="/travel/gallery">view gallery</Link>
             </div>
           </div>
           {isMobileSafari ? (
