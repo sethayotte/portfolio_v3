@@ -55,6 +55,13 @@ const Gallery = ({ darkMode }) => {
     };
   }, []);
 
+  useEffect(() => {
+    if (selectContinent && location.pathname === "/travel/gallery") {
+      setSelectedContinent();
+      setSelectedContinentImage();
+    }
+  }, [location]);
+
   const navigate = useNavigate();
 
   const [isDesktop, setIsDesktop] = useState();
@@ -70,13 +77,6 @@ const Gallery = ({ darkMode }) => {
       navigate("/travel/gallery");
       return;
     }
-    // if (continent === "antarctica") {
-    //   removeHighlight();
-    //   setSelectedContinent();
-    //   setSelectedContinentImage();
-    //   navigate("/travel/gallery", { replace: true });
-    //   return;
-    // }
     setContinentGalleryData([]);
     setSelectedContinent(continent);
     navigate("/travel/gallery/" + continent);
@@ -178,6 +178,89 @@ const Gallery = ({ darkMode }) => {
         );
       });
     }
+  };
+
+  const mobileContinents = [
+    {
+      id: "north-america",
+      darkSrc: north_america_dark,
+      lightSrc: north_america_light,
+      title: "North America",
+    },
+    {
+      id: "south-america",
+      darkSrc: south_america_dark,
+      lightSrc: south_america_light,
+      title: "South America",
+    },
+    {
+      id: "europe",
+      darkSrc: europe_dark,
+      lightSrc: europe_light,
+      title: "Europe",
+    },
+    {
+      id: "asia",
+      darkSrc: asia_dark,
+      lightSrc: asia_light,
+      title: "Asia",
+    },
+    {
+      id: "africa",
+      darkSrc: africa_dark,
+      lightSrc: africa_light,
+      title: "Africa",
+    },
+    {
+      id: "oceania",
+      darkSrc: oceania_dark,
+      lightSrc: oceania_light,
+      title: "Oceania",
+    },
+    {
+      id: "antarctica",
+      darkSrc: antarctica_dark,
+      lightSrc: antarctica_light,
+      title: "Antarctica",
+    },
+  ];
+
+  const renderMobileMaps = (darkMode) => {
+    return mobileContinents.map((continent) => {
+      return (
+        <span
+          className={
+            continent.id === "antarctica"
+              ? "mobile-continent-block"
+              : "mobile-continent-block clickable"
+          }
+          onClick={
+            continent.id !== "antarctica"
+              ? () => {
+                  selectContinent(continent.id);
+                }
+              : null
+          }
+        >
+          <img
+            src={darkMode ? continent.darkSrc : continent.lightSrc}
+            id={continent.id}
+          />
+          <div className="title-text">
+            <h2>{continent.title}</h2>
+            {continent.id === "antarctica" ? (
+              <span>
+                <TbCameraOff /> no pictures ... yet!
+              </span>
+            ) : (
+              <span>
+                <TbClick /> click to select
+              </span>
+            )}
+          </div>
+        </span>
+      );
+    });
   };
 
   if (selectedContinent) {
@@ -2067,19 +2150,7 @@ const Gallery = ({ darkMode }) => {
           </>
         ) : (
           <div className="mobile-gallery-maps">
-            <span className="mobile-continent-block">
-              <img
-                src={darkMode ? north_america_dark : north_america_light}
-                id="north-america"
-              />
-              <h2>North America</h2>
-            </span>
-            <img src={darkMode ? europe_dark : europe_light} id="europe" />
-            <img src={darkMode ? asia_dark : asia_light} id="asia" />
-            <img src={darkMode ? africa_dark : africa_light} />
-            <img src={darkMode ? oceania_dark : oceania_light} />
-            <img src={darkMode ? south_america_dark : south_america_light} />
-            <img src={darkMode ? antarctica_dark : antarctica_light} />
+            {renderMobileMaps(darkMode)}
           </div>
         )}
       </div>
