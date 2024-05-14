@@ -53,7 +53,8 @@ export function GalleryProvider({ children }) {
     listAll(collectionRef)
       .then((res) => {
         res.prefixes.forEach((folderRef) => {
-          getCityImages(folderRef.fullPath);
+          getCityImages(folderRef.fullPath, folderRef.name);
+          console.log(folderRef.name);
         });
       })
       .catch((error) => {
@@ -62,15 +63,23 @@ export function GalleryProvider({ children }) {
       });
   };
 
-  const getCityImages = (cityPath) => {
+  const getCityImages = (cityPath, city) => {
     const collectionRef = ref(storage, cityPath);
     listAll(collectionRef)
       .then(async (res) => {
-        let city = {};
-        const { images } = res;
+        console.log(res);
+        const { items } = res;
+        console.log("items", items);
         const urls = await Promise.all(
-          images.map((item) => getDownloadURL(item))
+          items.map((item) => getDownloadURL(item))
         );
+        // if (!urls) {
+        //     city = {
+        //         title:
+        //     }
+        // }
+        // Array of download URLs of all files in that folder
+        console.log(city, urls);
       })
       .catch((error) => {
         // Uh-oh, an error occurred!
@@ -78,7 +87,7 @@ export function GalleryProvider({ children }) {
   };
 
   useEffect(() => {
-    // getContinentCollections("north-america");
+    // getContinentCollections("europe");
   }, []);
 
   const value = {
