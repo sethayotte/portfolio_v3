@@ -10,6 +10,11 @@
                     "type": "certificate",
                     "description": "Product Design Innovation Certificate",
                     "url": "./assets/documents/PDI_Certificate.pdf"
+                },
+                {
+                    "type": "certificate",
+                    "description": "Methods & Tools for Product Innovation Certificate",
+                    "url": "./assets/documents/MT-PI_Certificate.pdf"
                 }
             ]
         },
