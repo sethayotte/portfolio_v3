@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import ResumeData from "../data/resume.json";
 import Headshot from "../assets/SethMitchell_Headshot_Scaled.webp";
-import ResumePDF from "../assets/Resume_2024.pdf";
+import ResumePDF from "../assets/Resume_2025.pdf";
 import { HiOutlineEye, HiOutlineEyeOff } from "react-icons/hi";
 import { RxCrumpledPaper } from "react-icons/rx";
-import { IoLogoLinkedin, IoLogoTwitter, IoLogoGithub } from "react-icons/io";
+import { IoLogoTwitter, IoLogoGithub } from "react-icons/io";
 import { IoPaperPlane } from "react-icons/io5";
 import {
   TbSquareRoundedNumber0,
@@ -102,13 +102,6 @@ const Resume = () => {
           <p>I'm a designer, developer, & traveler.</p>
           <p className="mobile-intro-text">I'm a </p>
           <div className="social-icons">
-            <a
-              className="link"
-              href="https://www.linkedin.com/in/sethayottemitchell/"
-              target="_blank"
-            >
-              <IoLogoLinkedin />
-            </a>
             <a
               className="link"
               href="https://twitter.com/sethmitchelldev"
